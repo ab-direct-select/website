@@ -355,9 +355,89 @@
             background: linear-gradient(90deg, #ffffff, #e0e0e0);
         }
 
+        /* 韓國篩選器 - 電腦版換行布局 */
+        #korea-categories > div {
+            display: block;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        #korea-categories > div:last-child {
+            margin-bottom: 0;
+        }
+
+        #korea-categories > div > div:first-child {
+            text-align: center !important;
+        }
+
+        .korea-filter-grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: flex-start;
+        }
+
+        .korea-filter-grid button {
+            flex-shrink: 0;
+            white-space: nowrap;
+            padding: 10px 20px;
+            font-size: 0.95em;
+        }
+
+        /* 平板版改為網格布局 */
+        @media (max-width: 768px) {
+            #korea-categories {
+                overflow-x: visible;
+                overflow-y: visible;
+                padding-bottom: 0;
+            }
+
+            #korea-categories > div {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            #korea-categories > div:last-child {
+                margin-bottom: 0;
+            }
+
+            #korea-categories > div > div:first-child {
+                text-align: center;
+            }
+
+            .korea-filter-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+                gap: 8px;
+            }
+
+            .korea-filter-grid button {
+                width: 100%;
+                flex-shrink: 1;
+                white-space: normal;
+                padding: 8px 10px;
+                font-size: 0.85em;
+            }
+        }
+
+        /* 手機版網格參數 */
+        @media (max-width: 480px) {
+            .korea-filter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+                gap: 6px;
+            }
+
+            .korea-filter-grid button {
+                padding: 7px 8px;
+                font-size: 0.8em;
+            }
+        }
+
         .cart-badge {
             position: fixed;
-            top: 20px;
+            bottom: 20px;
             right: 20px;
             background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
             color: white;
@@ -433,29 +513,182 @@
 
         /* 響應式導航 */
         @media (max-width: 768px) {
+            /* 移除外框，增加手機版顯示空間 */
+            body {
+                padding: 0;
+            }
+
+            .container {
+                padding: 5px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            /* 導航選單 - 修正邊距 */
+            .nav-menu {
+                margin: 0 -5px 15px -5px;
+                border-radius: 0;
+            }
+
+            /* 導航選單 - 4*1 排列 */
             .nav-menu ul {
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
             .nav-menu li {
-                flex: 1 1 50%;
+                flex: 0 0 auto;
+                min-width: 25%;
                 border-right: 1px solid #000;
-                border-bottom: 1px solid #000;
-            }
-
-            .nav-menu li:nth-child(2),
-            .nav-menu li:nth-child(4) {
-                border-right: none;
-            }
-
-            .nav-menu li:nth-child(3),
-            .nav-menu li:nth-child(4) {
                 border-bottom: none;
             }
 
+            .nav-menu li:last-child {
+                border-right: none;
+            }
+
             .nav-menu a {
+                font-size: 0.9em;
+                padding: 12px 8px;
+                white-space: nowrap;
+                display: block;
+            }
+
+            /* 文字縮小 - Smaller text for mobile */
+            body {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .product-name {
+                font-size: 0.9em;
+            }
+
+            .product-description {
+                font-size: 0.85em;
+            }
+
+            .product-price {
+                font-size: 1em;
+            }
+
+            /* 商品兩排 - 2-column product grid */
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0px;
+                margin-bottom: 10px;
+            }
+
+            .product-card {
+                padding: 4px;
+                border-radius: 0px !important;
+                margin: 0;
+            }
+
+            .product-card img {
+                height: 160px;
+                border-radius: 0px !important;
+            }
+
+            .product-image-wrapper {
+                margin-bottom: 3px;
+                border-radius: 0px !important;
+            }
+
+            .product-name {
+                font-size: 0.8em;
+                margin-bottom: 2px;
+                line-height: 1.3;
+            }
+
+            .product-description {
+                font-size: 0.75em;
+                margin-bottom: 2px;
+            }
+
+            .product-price {
+                font-size: 0.9em;
+                margin-bottom: 0;
+            }
+
+            .add-to-cart {
+                padding: 8px 12px;
+                font-size: 0.85em;
+            }
+
+            /* 商品圖片懸停提示也要縮小 */
+            .product-image-overlay-text {
+                font-size: 0.75em;
+                padding: 8px 12px;
+            }
+
+            /* 分類導航橫向滑動 - Category navigation horizontal scroll */
+            .category-nav {
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                padding: 10px 5px;
+                margin-bottom: 10px;
+            }
+
+            .category-nav > div {
+                display: flex;
+                gap: 6px;
+                min-width: min-content;
+                flex-wrap: nowrap;
+            }
+
+            .category-nav button {
+                font-size: 0.85em;
+                padding: 8px 12px;
+                min-width: auto;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            /* 韓國篩選器保持網格布局 */
+            #korea-categories > div {
+                display: block !important;
+            }
+
+            /* 國家選擇橫向滑動 - Country cards horizontal scroll */
+            .country-cards {
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                padding: 5px;
+            }
+
+            .country-card {
+                min-width: 180px;
+                flex-shrink: 0;
+            }
+
+            /* 國家選擇容器 */
+            .country-selector {
+                margin-bottom: 10px;
+            }
+
+            .country-selector-title {
+                margin-bottom: 5px;
+            }
+
+            /* 購物車按鈕調整 */
+            .cart-badge {
+                padding: 12px 20px;
                 font-size: 0.95em;
-                padding: 10px 15px;
+                bottom: 15px;
+                right: 15px;
             }
         }
 
@@ -768,11 +1001,79 @@
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
+        .product-detail-image-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
         .product-detail-image {
             width: 100%;
             height: 100%;
             object-fit: contain;
             padding: 30px;
+        }
+
+        /* 圖片輪播按鈕 */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-btn-prev {
+            left: 20px;
+        }
+
+        .slider-btn-next {
+            right: 20px;
+        }
+
+        /* 圖片指示器 */
+        .product-detail-image-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .image-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .image-dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: scale(1.2);
+        }
+
+        .image-dot.active {
+            background: white;
+            border-color: #d32f2f;
+            transform: scale(1.3);
         }
 
         .product-detail-info {
@@ -1276,51 +1577,98 @@
         <div class="country-selector">
             <div class="country-selector-title">選擇代購國家</div>
             <div class="country-cards">
-                <!-- 新加坡 - 當前可購買 -->
-                <div class="country-card active" onclick="selectCountry('singapore')">
-                    <div class="country-name">新加坡 🇸🇬</div>
-                    <div class="country-deadline">截止：2025/12/5</div>
+                <!-- 日本 - 當前可購買 -->
+                <div class="country-card" id="japan-card" onclick="selectCountry('japan')">
+                    <div class="country-name">日本 🇯🇵</div>
+                    <div class="country-deadline">截止：2025/1/17</div>
+                    <div class="country-deadline">預計1/23出貨</div>
                 </div>
-                
+
+                <!-- 韓國 - 當前可購買 -->
+                <div class="country-card" id="korea-card" onclick="selectCountry('korea')">
+                    <div class="country-name">韓國 🇰🇷</div>
+                    <div class="country-deadline">截止：2025/2/1</div>
+                    <div class="country-deadline">預計2/7出貨</div>
+                </div>
+
+                <!-- 新加坡 - 暫不開放購買 -->
+                <div class="country-card" id="singapore-card" onclick="selectCountry('singapore')" style="opacity: 0.85;">
+                    <span class="coming-soon-badge" style="background: #ff9800;">暫不開放</span>
+                    <div class="country-name">新加坡 🇸🇬</div>
+                    <div class="country-status" style="color: #666;">僅供瀏覽</div>
+                </div>
+
                 <!-- 馬來西亞 - 即將推出 -->
                 <div class="country-card coming-soon">
                     <span class="coming-soon-badge">即將推出</span>
                     <div class="country-name">馬來西亞 🇲🇾</div>
-                    <div class="country-status">敬請期待</div>
+                    <div class="country-status">預計2/1開放</div>
                 </div>
-                
-                <!-- 韓國 - 即將推出 -->
-                <div class="country-card coming-soon">
-                    <span class="coming-soon-badge">即將推出</span>
-                    <div class="country-name">韓國 🇰🇷</div>
-                    <div class="country-status">敬請期待</div>
-                </div>
-                
+
                 <!-- 美國 - 即將推出 -->
                 <div class="country-card coming-soon">
                     <span class="coming-soon-badge">即將推出</span>
                     <div class="country-name">美國 🇺🇸</div>
-                    <div class="country-status">敬請期待</div>
-                </div>
-                
-                <!-- 日本 - 即將推出 -->
-                <div class="country-card coming-soon">
-                    <span class="coming-soon-badge">即將推出</span>
-                    <div class="country-name">日本 🇯🇵</div>
-                    <div class="country-status">敬請期待</div>
+                    <div class="country-status">預計2/18開放</div>
                 </div>
             </div>
         </div>
 
-        <div class="category-nav">
+        <!-- 新加坡分類導航 -->
+        <div class="category-nav" id="singapore-categories">
             <div>
                 <button class="active" onclick="filterByCategory('all')">全部商品</button>
-                <button onclick="filterByCategory('twg-tea')">TWG 經典茶品</button>
-                <button onclick="filterByCategory('twg-dessert')">TWG 特色商品</button>
+                <button onclick="filterByCategory('twg')">TWG</button>
                 <button onclick="filterByCategory('noodles')">泡麵系列</button>
                 <button onclick="filterByCategory('snacks')">零食系列</button>
                 <button onclick="filterByCategory('condiments')">亞坤醬 & 松發肉骨茶包</button>
                 <button onclick="filterByCategory('coffee')">Kims Duet咖啡</button>
+            </div>
+        </div>
+
+        <!-- 韓國分類導航 -->
+        <div class="category-nav" id="korea-categories" style="display: none;">
+            <!-- 品牌篩選器 -->
+            <div style="margin-bottom: 20px;">
+                <div style="font-weight: 600; margin-bottom: 10px; color: #333; font-size: 1.05em;">品牌</div>
+                <div class="korea-filter-grid">
+                    <button class="active" onclick="filterByBrand('all')">全部品牌</button>
+                    <button onclick="filterByBrand('Aestura')">Aestura</button>
+                    <button onclick="filterByBrand('Arencia')">Arencia</button>
+                    <button onclick="filterByBrand('Bioheal BOH - Panthecell')">Bioheal BOH</button>
+                    <button onclick="filterByBrand('Beplain')">Beplain</button>
+                    <button onclick="filterByBrand('Celimax')">Celimax</button>
+                    <button onclick="filterByBrand('Centellian')">Centellian</button>
+                    <button onclick="filterByBrand('Dr.Althea')">Dr.Althea</button>
+                    <button onclick="filterByBrand('Dr.G')">Dr.G</button>
+                    <button onclick="filterByBrand('Fully 綠番茄')">Fully 綠番茄</button>
+                    <button onclick="filterByBrand('ilso')">ilso</button>
+                    <button onclick="filterByBrand('Laneige')">Laneige</button>
+                    <button onclick="filterByBrand('Medicube')">Medicube</button>
+                    <button onclick="filterByBrand('Mediheal')">Mediheal</button>
+                    <button onclick="filterByBrand('numbuzin')">numbuzin</button>
+                </div>
+            </div>
+            <!-- 商品種類篩選器 -->
+            <div>
+                <div style="font-weight: 600; margin-bottom: 10px; color: #333; font-size: 1.05em;">商品種類</div>
+                <div class="korea-filter-grid">
+                    <button class="active" onclick="filterByType('all')">全部種類</button>
+                    <button onclick="filterByType('化妝品')">化妝品</button>
+                    <button onclick="filterByType('保養品')">保養品</button>
+                    <button onclick="filterByType('零食')">零食</button>
+                    <button onclick="filterByType('泡麵')">泡麵</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 日本分類導航 -->
+        <div class="category-nav" id="japan-categories" style="display: none;">
+            <div>
+                <button class="active" onclick="filterByCategory('all')">全部商品</button>
+                <button onclick="filterByCategory('japan-cosmetics')">藥妝類</button>
+                <button onclick="filterByCategory('japan-food')">飲食類</button>
+                <button onclick="filterByCategory('japan-electronics')">電器類</button>
             </div>
         </div>
 
@@ -1334,6 +1682,7 @@
             <div id="cartItems"></div>
             <div class="total">
                 <div style="margin-bottom: 8px;">小計：NT$ <span id="subtotalPrice">0</span></div>
+                <div id="discountRow" style="margin-bottom: 8px; color: #d32f2f; display: none;">優惠折扣（9折）：-NT$ <span id="discountAmount">0</span></div>
                 <div style="margin-bottom: 8px;">運費：NT$ <span id="shippingFee">55</span> <span id="shippingNote" style="color: #666; font-size: 0.9em;"></span></div>
                 <div style="border-top: 2px solid #000; padding-top: 8px; font-size: 1.2em;">總計：NT$ <span id="totalPrice">0</span></div>
             </div>
@@ -1417,6 +1766,17 @@
                     <small style="color: #666; font-size: 0.9em;">如果知道門市代碼可以填寫，不知道可以留空</small>
                 </div>
 
+                <!-- 優惠碼輸入區域 -->
+                <div class="form-group" style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <label style="font-weight: 600; margin-bottom: 5px; display: block;">🎁 優惠碼（選填）</label>
+                    <small style="color: #666; font-size: 0.85em; display: block; margin-bottom: 10px;">若您還沒有優惠券，請至<a href="https://line.me/ti/g2/D3VCIE43VK_0RxUmeUq5Ql49ci0pul9GODja5Q?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" style="color: #0066cc; text-decoration: underline;">Line匿名社群</a>參閱快速獲取九折券的方法</small>
+                    <div style="display: flex; gap: 10px; align-items: flex-start;">
+                        <input type="text" id="discountCodeInput" placeholder="請輸入優惠碼" style="flex: 1;">
+                        <button type="button" onclick="applyDiscountCode()" style="padding: 12px 20px; background: #000; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; white-space: nowrap;">套用</button>
+                    </div>
+                    <div id="discountMessage" style="margin-top: 8px; font-size: 0.9em;"></div>
+                </div>
+
                 <!-- 匯款資訊顯示 -->
                 <div style="background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%); color: white; padding: 20px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);">
                     <h3 style="margin: 0 0 15px 0; font-size: 1.2em; display: flex; align-items: center; color: white;">
@@ -1435,18 +1795,13 @@
                         </p>
                     </div>
                     <p style="margin: 15px 0 0 0; font-size: 0.9em; opacity: 0.9;">
-                        ⚠️ 請完成匯款後，將匯款證明截圖上傳至下方欄位
+                        ⚠️ 請完成匯款後，填寫下方匯款帳號後五碼
                     </p>
                 </div>
 
                 <div class="form-group">
                     <label>匯款帳號後五碼 *</label>
                     <input type="text" id="accountLast5" maxlength="5" required>
-                </div>
-                <div class="form-group">
-                    <label>匯款截圖 *</label>
-                    <input type="file" id="paymentScreenshot" accept="image/*" required style="padding: 10px;">
-                    <small style="color: #666; display: block; margin-top: 5px;">請上傳匯款證明截圖（支援 JPG、PNG 格式）</small>
                 </div>
                 <div class="form-group">
                     <label>備註</label>
@@ -1464,46 +1819,520 @@
 
     <script>
         let products = [
-            { id: 1, name: 'TWG 奶韻烏龍茶包', price: 900, description: '盒裝 15入', image: 'https://drive.google.com/thumbnail?id=14l7l-41wt5heKdPW4UFH8QcV9qBvptZf&sz=w1000', category: 'twg-tea', detailedDescription: '台灣烏龍茶為基底的奶香午茶，尾調帶有一點花香喝起來順口，是一款最貼近台灣人口味的TWG茶'  },
-            { id: 2, name: 'TWG 獅城早餐茶包', price: 900, description: '盒裝 15入', image: 'https://drive.google.com/thumbnail?id=1frkWsCOy8QHd20-7Psjtd7Ji3kRpAvjd&sz=w1000', category: 'twg-tea', detailedDescription: '口感偏濃厚的紅茶混合茶，以新加坡為靈感，有很厚實的南洋茶味，帶一點焦糖跟麥穗的香味，是一款適合提神的早茶'  },
-            { id: 3, name: 'TWG 特威經典茶包', price: 900, description: '盒裝 15入', image: 'https://drive.google.com/thumbnail?id=1yhefmyDqMeYh94kAOsMweRcGkIHXs6MV&sz=w1000', category: 'twg-tea', detailedDescription: 'TWG 的代表性紅茶，帶有果香和花香調，香氣圓潤溫和，適合初次皆觸TWG的人'  },
-            { id: 4, name: 'TWG 經典組合', price: 900, description: '英國早餐茶、法式伯爵茶、洋甘菊茶盒裝 15入 (各5入)', image: 'https://drive.google.com/thumbnail?id=19IdsZN5fcf--8sznQX5nHgV8ZVy5LdWK&sz=w1000', category: 'twg-tea', detailedDescription: '可以一次收齊三款TWG的經典風味茶：<br>英國早餐茶 - 濃郁系紅茶，很適合加牛奶調成早餐奶茶<br>法式伯爵茶 - 加入佛手柑與花瓣帶出明亮果香，是偏清新酸甜味的南法果茶<br>洋甘菊茶 - 無咖啡因草本茶，最適合放松助眠，香氣柔和，適合冷冷的秋冬天夜晚'  },
-            { id: 5, name: 'TWG 茶葉五組禮品盒', price: 5000, description: '盒裝 5罐', image: 'https://drive.google.com/thumbnail?id=18vwo94GGu3LzIR5H9AXJGpCTVZVEbmG8&sz=w1000', category: 'twg-tea', detailedDescription: 'TWG 的五組禮品盒集結品牌多款人氣茶葉，從濃郁到清香一次收齊。每款茶都有獨立小罐，包裝典雅，拆開時就像開小型茶香收藏盒。<br>不論是自己想換著喝、找出最喜歡的茶風味，或是想送一份不失手的質感禮物，這款組合都很合適。沖泡簡單、香氣穩定，是想認識 TWG 茶款的最佳入門組。' },
-            { id: 6, name: 'TWG Teasticks 糖棒', price: 180, description: '4根入', image: 'https://drive.google.com/thumbnail?id=1-lunyL7C_3ooAaTG-n-ksshjvmTRp1sM&sz=w1000', category: 'twg-dessert', detailedDescription: 'TWG的隱藏版小眾商品 – 糖棒！小小一根幫你的茶加點味道，糖棒形調味讓填度慢慢釋放，就算放著當裝飾也很好看，顏值跟品質都在線'  },
-            { id: 7, name: 'TWG 小熊茶香軟糖 - 草莓茶', price: 550, description: '罐裝(200g)', image: 'https://drive.google.com/thumbnail?id=1vtkI5z162RazTMe81O8PGxP6GMbHEVn4&sz=w1000', category: 'twg-dessert', detailedDescription: '小熊茶糖系列是TWG最新的高顏值明星產品，剛進駐台灣超多人搶購直接秒殺，到現在台灣只剩 4 個口味，網購的價格直接被炒到 900+可見他受歡迎的程度⋯這次直接開放全 8 種口味代購！一顆小熊可以直接吃或是泡在水/茶裡變成豐富口味的果茶，讓你點滿日常儀式感～'  },
-            { id: 8, name: 'TWG 小熊茶香軟糖 - 覆盆子與香草茶', price: 550, description: '罐裝(200g)', image: 'https://drive.google.com/thumbnail?id=1AL3ChRznx9Q9s72HMN0MhTaDFFL9Oc9n&sz=w1000', category: 'twg-dessert' , detailedDescription: '小熊茶糖系列是TWG最新的高顏值明星產品，剛進駐台灣超多人搶購直接秒殺，到現在台灣只剩 4 個口味，網購的價格直接被炒到 900+可見他受歡迎的程度⋯這次直接開放全 8 種口味代購！一顆小熊可以直接吃或是泡在水/茶裡變成豐富口味的果茶，讓你點滿日常儀式感～'  },
-            { id: 9, name: 'TWG 小熊茶香軟糖 - 西柚橙茶', price: 550, description: '罐裝(200g)', image: 'https://drive.google.com/thumbnail?id=1sxuIwlnoR7IG8RDaFOh3qSaF-mMcyyoL&sz=w1000', category: 'twg-dessert' , detailedDescription: '小熊茶糖系列是TWG最新的高顏值明星產品，剛進駐台灣超多人搶購直接秒殺，到現在台灣只剩 4 個口味，網購的價格直接被炒到 900+可見他受歡迎的程度⋯這次直接開放全 8 種口味代購！一顆小熊可以直接吃或是泡在水/茶裡變成豐富口味的果茶，讓你點滿日常儀式感～'  },
-            { id: 10, name: 'TWG 小熊茶香軟糖 - 芒果橙茶', price: 550, description: '罐裝(200g)', image: 'https://drive.google.com/thumbnail?id=1OgTCFKItMzoPmHz26Qqb79cqzcFeFE_5&sz=w1000', category: 'twg-dessert' , detailedDescription: '小熊茶糖系列是TWG最新的高顏值明星產品，剛進駐台灣超多人搶購直接秒殺，到現在台灣只剩 4 個口味，網購的價格直接被炒到 900+可見他受歡迎的程度⋯這次直接開放全 8 種口味代購！一顆小熊可以直接吃或是泡在水/茶裡變成豐富口味的果茶，讓你點滿日常儀式感～'  },
-            { id: 11, name: 'TWG 小熊茶香軟糖 - 薑汁檸檬茶', price: 550, description: '罐裝(200g)', image: 'https://drive.google.com/thumbnail?id=18VK7Ad0PMjQFMewq5UZyPuNJrHqYETLC&sz=w1000', category: 'twg-dessert' , detailedDescription: '小熊茶糖系列是TWG最新的高顏值明星產品，剛進駐台灣超多人搶購直接秒殺，到現在台灣只剩 4 個口味，網購的價格直接被炒到 900+可見他受歡迎的程度⋯這次直接開放全 8 種口味代購！一顆小熊可以直接吃或是泡在水/茶裡變成豐富口味的果茶，讓你點滿日常儀式感～' },
-            { id: 12, name: 'TWG 小熊茶香軟糖 - 橙香肉桂茶', price: 550, description: '罐裝(200g)', image: 'https://drive.google.com/thumbnail?id=1q34TV7wrEg1e2HKCM2w9QqEtznhSn6F2&sz=w1000', category: 'twg-dessert' , detailedDescription: '小熊茶糖系列是TWG最新的高顏值明星產品，剛進駐台灣超多人搶購直接秒殺，到現在台灣只剩 4 個口味，網購的價格直接被炒到 900+可見他受歡迎的程度⋯這次直接開放全 8 種口味代購！一顆小熊可以直接吃或是泡在水/茶裡變成豐富口味的果茶，讓你點滿日常儀式感～' },
-            { id: 13, name: 'TWG 小熊茶香軟糖 - 藍莓茶', price: 550, description: '罐裝(200g)', image: 'https://drive.google.com/thumbnail?id=1bWT0aX1Zd3a8DMbzwBakdhlntHWo7mh2&sz=w1000', category: 'twg-dessert' , detailedDescription: '小熊茶糖系列是TWG最新的高顏值明星產品，剛進駐台灣超多人搶購直接秒殺，到現在台灣只剩 4 個口味，網購的價格直接被炒到 900+可見他受歡迎的程度⋯這次直接開放全 8 種口味代購！一顆小熊可以直接吃或是泡在水/茶裡變成豐富口味的果茶，讓你點滿日常儀式感～'  },
-            { id: 14, name: 'TWG 小熊茶香軟糖 - 蘋果與葡萄茶', price: 550, description: '罐裝(200g)', image: 'https://drive.google.com/thumbnail?id=1hqzCV6hBNVmIVzidQ7p7-CS5Ld1dMYfT&sz=w1000', category: 'twg-dessert' , detailedDescription: '小熊茶糖系列是TWG最新的高顏值明星產品，剛進駐台灣超多人搶購直接秒殺，到現在台灣只剩 4 個口味，網購的價格直接被炒到 900+可見他受歡迎的程度⋯這次直接開放全 8 種口味代購！一顆小熊可以直接吃或是泡在水/茶裡變成豐富口味的果茶，讓你點滿日常儀式感～' },
-            { id: 15, name: '百勝廚叻沙泡麵', price: 350, description: '4包入', image: 'https://drive.google.com/thumbnail?id=1wPMFdpAdLtA-hJu1kYT5-jA42B3dUBby&sz=w1000', category: 'noodles', detailedDescription: '世界冠軍的百勝廚泡麵這次幫大家挑了三個最受歡迎口味 - 叻沙、蝦湯跟辣螃蟹泡麵。叻沙是人氣最高的口味，湯是乳白色的那種超濃郁系，蠟油的香氣很香但不辣，怕辣的人也完全可以吃，麵體不是油炸的，口感介於拉麵跟烏龍麵之間的QQ麵體，加一些青菜跟蝦仁再打一顆蛋完全是超爽的一餐，叻沙味道還原度超高，跟當地吃的味道可以說90%像，好吃程度每次都會不知不覺把湯喝乾淨的那種! 很推完全是必入款'  },
-            { id: 16, name: '百勝廚蝦湯泡麵', price: 350, description: '4包入', image: 'https://drive.google.com/thumbnail?id=1ZVJNsOE3lil-OAweebpFyOdRkliRZzxb&sz=w1000', category: 'noodles', detailedDescription: '蝦麵也是南洋色小吃之一，比較小眾但絕對是被低估的選手! 蝦湯泡麵走一個鮮味路線，比叻沙泡麵口味再重一點點，辣度跟叻沙差不多可能再辣一點點點，超級適合冷冷的冬天吃，蝦香味有帶一點咖哩跟椰奶的濃郁感，是直接被香到醒過來的程度，特別適合加魚丸還有吸湯的青菜一起吃，滿口都是蝦蝦蝦蝦蝦，跟叻沙口味完全有得比，推推！'  },
-            { id: 17, name: '百勝廚辣螃蟹泡麵', price: 350, description: '4包入', image: 'https://drive.google.com/thumbnail?id=1GDL6BTA1sX1A0szlpFxON4bWnTgiZaws&sz=w1000', category: 'noodles', detailedDescription: '辣螃蟹泡麵是偏清澈感的辣湯麵，辣度偏高，大概介在小辣到中辣之間，調理包很簡單只有一包蟹黃醬，可以吃到滿滿的蟹黃碎碎（完全是靈魂！）可以做成湯的跟乾的，大家完全可以試試看炒辣螃蟹泡麵加奶油跟起司，你就會獲得超香又濃郁的南洋奶油螃蟹炒麵，喜歡清爽口味或濃郁系的都可以入，做什麼變化都100分🤌🏻'  },
-            { id: 18, name: 'IRVINS 鹹蛋泡麵', price: 275, description: '5包入', image: 'https://drive.google.com/thumbnail?id=125700upQGXoG4Pnzk5Zub43wO3R1Yht-&sz=w1000', category: 'noodles', detailedDescription: 'IRVINS家的鹹蛋黃產品永遠悍在新加坡必吃必買榜上，如果覺得鹹蛋黃魚皮太貴但又真的很想吃的人，超級推薦這款鹹蛋黃泡麵！除了跟鹹蛋黃魚皮一樣涮嘴的味道之外，泡麵的蛋黃香更濃，而且醬給的超級夠，每一根麵都能裹滿鹹蛋黃醬，鹹但不會死鹹，根本是新加坡鹹蛋黃界最權威的存在，推到不能再推，很適合台灣人的口味'  },
-            { id: 19, name: 'IRVINS 魚皮（小包 95g)', price: 270, description: '1包', image: 'https://drive.google.com/thumbnail?id=14AlKpwF0s5piopxZBkdhTL2vhpvDclPO&sz=w1000', category: 'snacks', detailedDescription: 'IRVINS魚皮的受歡迎程度完全是店家擺一整面牆給你買的程度，如果說韓國最強零食是那個全口味杏仁果，那新加坡就一定是IRVINS 魚皮。但它也號稱零食界的愛馬仕，貴也是確實挺貴，但真的很值得買一兩包回家慢慢配酒吃，是我們吃過還會遺憾怎麼沒有多買一點點的味道，出去玩拿出來完全是三兩下就被掃光，驚艷所有人的存在'  },
-            { id: 20, name: 'IRVINS 魚皮（大包 230g）', price: 530, description: '1包', image: 'https://drive.google.com/thumbnail?id=19_kPfhQxPzzgK6l_IDyjTJm8eVib8PG2&sz=w1000', category: 'snacks' , detailedDescription: 'IRVINS魚皮的受歡迎程度完全是店家擺一整面牆給你買的程度，如果說韓國最強零食是那個全口味杏仁果，那新加坡就一定是IRVINS 魚皮。但它也號稱零食界的愛馬仕，貴也是確實挺貴，但真的很值得買一兩包回家慢慢配酒吃，是我們吃過還會遺憾怎麼沒有多買一點點的味道，出去玩拿出來完全是三兩下就被掃光，驚艷所有人的存在🫵🏻'},
-            { id: 21, name: '328 加東叻沙泡麵', price: 280, description: '5包入', image: 'https://drive.google.com/thumbnail?id=1N59SmB0QxaHwUq1-UQ5403qUifktFV55&sz=w1000', category: 'noodles', detailedDescription: '328加東叻沙是新加坡比較老牌的叻沙泡麵，有點像是台灣的統一肉臊麵的地位，作為百勝廚叻沙麵的平替款，基本上就是很基本的平民美味。但328在各個網站的評價絕對不輸百勝廚！搜叻沙泡麵有百勝廚就一定也有它！跟百勝廚可以比拼的味道連我們都想買來試試看'  },
-            { id: 22, name: '珍寶泡麵', price: 280, description: '5包入', image: 'https://drive.google.com/thumbnail?id=1Z6Eq62SzJ_76Af3uUk0vhS-YKd0OKHjs&sz=w1000', category: 'noodles', detailedDescription: '珍寶泡麵就是新加坡超有名的珍寶海鮮坊出的泡麵款，聽起來很像新加坡泡麵愛馬仕但其實高貴不貴，吃不起珍寶海鮮但一定吃得起珍寶海鮮泡麵，這也是新加坡的老牌泡麵了，受歡迎程度大概在全網第三，新加坡的朋都推薦一定要吃吃看（非常好奇'  },
-            { id: 23, name: '亞坤醬（咖椰）', price: 280, description: '罐裝', image: 'https://drive.google.com/thumbnail?id=1r47HSEvHbqt1hq7r1-yk41nlN4KOq0Ri&sz=w1000', category: 'condiments' , detailedDescription: '亞坤在新加坡是很有名的早餐店，咖椰吐司這個品向大家一定也不陌生，這次選了亞坤的咖椰醬，有濃濃的椰香跟蛋香，甜度比較高一點，可以直接在家享受飛到新加坡吃亞坤的感覺！'},
-            { id: 24, name: '亞坤醬（豐一咖椰）', price: 150, description: '罐裝', image: 'https://drive.google.com/thumbnail?id=1zKhdXf7IHfL3nLUacjCEvs5Pg3cjLteE&sz=w1000', category: 'condiments' , detailedDescription: '豐一咖椰醬是亞坤醬的平替版，味道比較柔和，也帶一點點清新的香蘭葉香氣，適合早餐搭配吐司或餅乾，很適合不喜歡吃太甜，還有喜歡香蘭葉香氣的人！'},
-            { id: 25, name: '松發肉骨茶調理包（袋裝）', price: 69, description: '1包入', image: 'https://drive.google.com/thumbnail?id=1_g9dsgrpZu7yDx6pINeHiucpwayWXtC2&sz=w1000', category: 'condiments' , detailedDescription: '松發肉骨茶大家一定也多少有聽過~ 是新加坡的連鎖肉骨茶品牌，它的湯頭是胡椒香料派，相較馬來西亞是藥膳黑湯，新加坡的肉骨茶多是白湯的風味。調理包分成袋裝跟盒裝，很適合現在冷冷的冬天，就算不放排骨直接拿來煮麵或煮火鍋都非常棒！'},
-            { id: 26, name: '松發肉骨茶調理包（盒裝）', price: 680, description: '10包入', image: 'https://drive.google.com/thumbnail?id=17hLQXNY9AP5PIwVaj-KzuZSwXGkHQUOP&sz=w1000', category: 'condiments' , detailedDescription: '松發肉骨茶大家一定也多少有聽過~ 是新加坡的連鎖肉骨茶品牌，它的湯頭是胡椒香料派，相較馬來西亞是藥膳黑湯，新加坡的肉骨茶多是白湯的風味。調理包分成袋裝跟盒裝，很適合現在冷冷的冬天，就算不放排骨直接拿來煮麵或煮火鍋都非常棒！'},
-            { id: 27, name: 'Kims Duet 濾包式經典黑咖啡', price: 350, description: '5包入', image: 'https://drive.google.com/thumbnail?id=16f0YLekgLcN738vz8ICIklnzGOuOH3qT&sz=w1000', category: 'coffee' , detailedDescription: 'Kim’s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim’s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
-            { id: 28, name: 'Kims Duet 新加坡濾包式南洋四口味組合', price: 500, description: '8包入', image: 'https://drive.google.com/thumbnail?id=1oqZMtMjFWbosTHDMGWlT6icul28FswCp&sz=w1000', category: 'coffee' , detailedDescription: 'Kim’s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim’s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
-            { id: 29, name: 'Kims Duet 深焙膠囊咖啡', price: 450, description: '10入', image: 'https://drive.google.com/thumbnail?id=1To_5YSr1NV4NO02yZRdbBBvEd7Zx85MM&sz=w1000', category: 'coffee' , detailedDescription: 'Kim’s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim’s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
-            { id: 30, name: 'Kims Duet 濾包式奶咖', price: 550, description: '15入', image: 'https://drive.google.com/thumbnail?id=1psstQ6x9TTc1XjbaX2756RRNWSTSl9Lr&sz=w1000', category: 'coffee' , detailedDescription: 'Kim’s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim’s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
-            { id: 31, name: 'Kims Duet 濾包式經典口味三入組', price: 750, description: '15入', image: 'https://drive.google.com/thumbnail?id=1zEKYdnDTo-ZR_tjIaNYVnYkgCCpZsh5h&sz=w1000', category: 'coffee' , detailedDescription: 'Kim’s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim’s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
-            { id: 32, name: '金鴨 辣椒蟹天婦羅紫菜', price: 299, description: '102g', image: 'https://drive.google.com/thumbnail?id=1GPnN-rMqiYp_PN0kpqrD-LJjwXYVTPkl&sz=w1000', category: 'snacks', detailedDescription: '辣椒蟹天婦羅紫菜運用蟹肉、咖哩葉、辣椒等多種原材製作，香脆微辣的口感吃起來超過癮，喜歡辣味零食的朋友們千萬別錯過！'},
-            { id: 33, name: '金鴨 鹹蛋黃蟹天婦羅紫菜', price: 299, description: '102g', image: 'https://drive.google.com/thumbnail?id=1co2bGsvkxK3n7L2zvI1ijo_u29xRg0VJ&sz=w1000', category: 'snacks', detailedDescription: '鹹蛋黃蟹天婦羅紫菜將香濃鹹蛋黃和蟹肉結合，再加上炸得香脆的紫菜解膩，入口有濃郁的海鮮風味，非常適合作為下酒菜。'},
-            { id: 34, name: '金鴨 鹹蛋黃炸魚皮', price: 299, description: '102g', image: 'https://drive.google.com/thumbnail?id=1LORX9kXDnBwe4Wolc99KNHjrGPET-sPm&sz=w1000', category: 'snacks', detailedDescription: '金鴨鹹蛋黃炸魚皮，酥脆可口，鹹蛋黃風味濃郁，是新加坡國民零食！'},
-            { id: 35, name: '金鴨 鹹蛋黃鹹薯片', price: 299, description: '102g', image: 'https://drive.google.com/thumbnail?id=1Yaa4KOBWPtYOcJkqgqNB92ni1ELBRa0G&sz=w1000', category: 'snacks', detailedDescription: '金鴨鹹蛋黃鹹薯片，薯片香脆，搭配濃郁的鹹蛋黃醬，一吃就停不下來的美味！'}
+            {
+                id: 1,
+                name: 'TWG 茶包',
+                price: 900,
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=14l7l-41wt5heKdPW4UFH8QcV9qBvptZf&sz=w1000',
+                category: 'twg',
+                country: 'singapore',
+                detailedDescription: 'TWG 精選茶包系列，集結品牌經典風味，從濃郁到清新一應俱全，每款茶都有獨特香氣與風味。',
+                variants: [
+                    { id: 101, name: '奶韻烏龍茶包', price: 900, image: 'https://drive.google.com/thumbnail?id=14l7l-41wt5heKdPW4UFH8QcV9qBvptZf&sz=w1000', description: '台灣烏龍茶為基底的奶香午茶，尾調帶有一點花香喝起來順口，是一款最貼近台灣人口味的TWG茶' },
+                    { id: 102, name: '獅城早餐茶包', price: 900, image: 'https://drive.google.com/thumbnail?id=1frkWsCOy8QHd20-7Psjtd7Ji3kRpAvjd&sz=w1000', description: '口感偏濃厚的紅茶混合茶，以新加坡為靈感，有很厚實的南洋茶味，帶一點焦糖跟麥穗的香味，是一款適合提神的早茶' },
+                    { id: 103, name: '特威經典茶包', price: 900, image: 'https://drive.google.com/thumbnail?id=1yhefmyDqMeYh94kAOsMweRcGkIHXs6MV&sz=w1000', description: 'TWG 的代表性紅茶，帶有果香和花香調，香氣圓潤溫和，適合初次皆觸TWG的人' },
+                    { id: 104, name: '經典組合', price: 900, image: 'https://drive.google.com/thumbnail?id=19IdsZN5fcf--8sznQX5nHgV8ZVy5LdWK&sz=w1000', description: '可以一次收齊三款TWG的經典風味茶：英國早餐茶、法式伯爵茶、洋甘菊茶（各5入）' }
+                ]
+            },
+            { id: 5, name: 'TWG 茶葉五組禮品盒', price: 5000, description: '盒裝 5罐', image: 'https://drive.google.com/thumbnail?id=18vwo94GGu3LzIR5H9AXJGpCTVZVEbmG8&sz=w1000', category: 'twg', country: 'singapore', detailedDescription: 'TWG 的五組禮品盒集結品牌多款人氣茶葉，從濃郁到清香一次收齊。每款茶都有獨立小罐，包裝典雅，拆開時就像開小型茶香收藏盒。<br>不論是自己想換著喝、找出最喜歡的茶風味，或是想送一份不失手的質感禮物，這款組合都很合適。沖泡簡單、香氣穩定，是想認識 TWG 茶款的最佳入門組。' },
+            { id: 6, name: 'TWG Teasticks 糖棒', price: 180, description: '4根入', image: 'https://drive.google.com/thumbnail?id=1-lunyL7C_3ooAaTG-n-ksshjvmTRp1sM&sz=w1000', category: 'twg', country: 'singapore', detailedDescription: 'TWG的隱藏版小眾商品 – 糖棒！小小一根幫你的茶加點味道，糖棒形調味讓填度慢慢釋放，就算放著當裝飾也很好看，顏值跟品質都在線'  },
+            {
+                id: 7,
+                name: 'TWG 小熊茶香軟糖',
+                price: 550,
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1vtkI5z162RazTMe81O8PGxP6GMbHEVn4&sz=w1000',
+                category: 'twg',
+                country: 'singapore',
+                detailedDescription: '小熊茶糖系列是TWG最新的高顏值明星產品，剛進駐台灣超多人搶購直接秒殺，到現在台灣只剩 4 個口味，網購的價格直接被炒到 900+可見他受歡迎的程度⋯這次直接開放全 8 種口味代購！一顆小熊可以直接吃或是泡在水/茶裡變成豐富口味的果茶，讓你點滿日常儀式感～',
+                variants: [
+                    { id: 701, name: '草莓茶', price: 550, image: 'https://drive.google.com/thumbnail?id=1vtkI5z162RazTMe81O8PGxP6GMbHEVn4&sz=w1000', description: '罐裝(200g)' },
+                    { id: 702, name: '覆盆子與香草茶', price: 550, image: 'https://drive.google.com/thumbnail?id=1AL3ChRznx9Q9s72HMN0MhTaDFFL9Oc9n&sz=w1000', description: '罐裝(200g)' },
+                    { id: 703, name: '西柚橙茶', price: 550, image: 'https://drive.google.com/thumbnail?id=1sxuIwlnoR7IG8RDaFOh3qSaF-mMcyyoL&sz=w1000', description: '罐裝(200g)' },
+                    { id: 704, name: '芒果橙茶', price: 550, image: 'https://drive.google.com/thumbnail?id=1OgTCFKItMzoPmHz26Qqb79cqzcFeFE_5&sz=w1000', description: '罐裝(200g)' },
+                    { id: 705, name: '薑汁檸檬茶', price: 550, image: 'https://drive.google.com/thumbnail?id=18VK7Ad0PMjQFMewq5UZyPuNJrHqYETLC&sz=w1000', description: '罐裝(200g)' },
+                    { id: 706, name: '橙香肉桂茶', price: 550, image: 'https://drive.google.com/thumbnail?id=1q34TV7wrEg1e2HKCM2w9QqEtznhSn6F2&sz=w1000', description: '罐裝(200g)' },
+                    { id: 707, name: '藍莓茶', price: 550, image: 'https://drive.google.com/thumbnail?id=1bWT0aX1Zd3a8DMbzwBakdhlntHWo7mh2&sz=w1000', description: '罐裝(200g)' },
+                    { id: 708, name: '蘋果與葡萄茶', price: 550, image: 'https://drive.google.com/thumbnail?id=1hqzCV6hBNVmIVzidQ7p7-CS5Ld1dMYfT&sz=w1000', description: '罐裝(200g)' }
+                ]
+            },
+            {
+                id: 15,
+                name: '百勝廚 泡麵',
+                price: 350,
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1wPMFdpAdLtA-hJu1kYT5-jA42B3dUBby&sz=w1000',
+                category: 'noodles',
+                country: 'singapore',
+                detailedDescription: '世界冠軍的百勝廚泡麵這次幫大家挑了三個最受歡迎口味 - 叻沙、蝦湯跟辣螃蟹泡麵。麵體不是油炸的，口感介於拉麵跟烏龍麵之間的QQ麵體，每種口味都有獨特的南洋風味。',
+                variants: [
+                    {
+                        id: 1501,
+                        name: '叻沙泡麵',
+                        price: 350,
+                        image: 'https://drive.google.com/thumbnail?id=1wPMFdpAdLtA-hJu1kYT5-jA42B3dUBby&sz=w1000',
+                        description: '4包入 - 叻沙是人氣最高的口味，湯是乳白色的那種超濃郁系，蠟油的香氣很香但不辣，怕辣的人也完全可以吃，加一些青菜跟蝦仁再打一顆蛋完全是超爽的一餐，叻沙味道還原度超高，跟當地吃的味道可以說90%像，好吃程度每次都會不知不覺把湯喝乾淨的那種! 很推完全是必入款'
+                    },
+                    {
+                        id: 1502,
+                        name: '蝦湯泡麵',
+                        price: 350,
+                        image: 'https://drive.google.com/thumbnail?id=1ZVJNsOE3lil-OAweebpFyOdRkliRZzxb&sz=w1000',
+                        description: '4包入 - 蝦麵也是南洋色小吃之一，比較小眾但絕對是被低估的選手! 蝦湯泡麵走一個鮮味路線，比叻沙泡麵口味再重一點點，辣度跟叻沙差不多可能再辣一點點點，超級適合冷冷的冬天吃，蝦香味有帶一點咖哩跟椰奶的濃郁感，是直接被香到醒過來的程度，特別適合加魚丸還有吸湯的青菜一起吃，滿口都是蝦蝦蝦蝦蝦，跟叻沙口味完全有得比，推推！'
+                    },
+                    {
+                        id: 1503,
+                        name: '辣螃蟹泡麵',
+                        price: 350,
+                        image: 'https://drive.google.com/thumbnail?id=1GDL6BTA1sX1A0szlpFxON4bWnTgiZaws&sz=w1000',
+                        description: '4包入 - 辣螃蟹泡麵是偏清澈感的辣湯麵，辣度偏高，大概介在小辣到中辣之間，調理包很簡單只有一包蟹黃醬，可以吃到滿滿的蟹黃碎碎（完全是靈魂！）可以做成湯的跟乾的，大家完全可以試試看炒辣螃蟹泡麵加奶油跟起司，你就會獲得超香又濃郁的南洋奶油螃蟹炒麵，喜歡清爽口味或濃郁系的都可以入，做什麼變化都100分'
+                    }
+                ]
+            },
+            { id: 18, name: 'IRVINS 鹹蛋泡麵', price: 275, description: '5包入', image: 'https://drive.google.com/thumbnail?id=125700upQGXoG4Pnzk5Zub43wO3R1Yht-&sz=w1000', category: 'noodles', country: 'singapore', detailedDescription: 'IRVINS家的鹹蛋黃產品永遠悍在新加坡必吃必買榜上，如果覺得鹹蛋黃魚皮太貴但又真的很想吃的人，超級推薦這款鹹蛋黃泡麵！除了跟鹹蛋黃魚皮一樣涮嘴的味道之外，泡麵的蛋黃香更濃，而且醬給的超級夠，每一根麵都能裹滿鹹蛋黃醬，鹹但不會死鹹，根本是新加坡鹹蛋黃界最權威的存在，推到不能再推，很適合台灣人的口味'  },
+            {
+                id: 19,
+                name: 'IRVINS 魚皮',
+                price: 270,
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=14AlKpwF0s5piopxZBkdhTL2vhpvDclPO&sz=w1000',
+                category: 'snacks',
+                country: 'singapore',
+                detailedDescription: 'IRVINS魚皮的受歡迎程度完全是店家擺一整面牆給你買的程度，如果說韓國最強零食是那個全口味杏仁果，那新加坡就一定是IRVINS 魚皮。但它也號稱零食界的愛馬仕，貴也是確實挺貴，但真的很值得買一兩包回家慢慢配酒吃，是我們吃過還會遺憾怎麼沒有多買一點點的味道，出去玩拿出來完全是三兩下就被掃光，驚艷所有人的存在。',
+                variants: [
+                    {
+                        id: 1901,
+                        name: '小包 95g',
+                        price: 270,
+                        image: 'https://drive.google.com/thumbnail?id=14AlKpwF0s5piopxZBkdhTL2vhpvDclPO&sz=w1000',
+                        description: '1包'
+                    },
+                    {
+                        id: 1902,
+                        name: '大包 230g',
+                        price: 530,
+                        image: 'https://drive.google.com/thumbnail?id=19_kPfhQxPzzgK6l_IDyjTJm8eVib8PG2&sz=w1000',
+                        description: '1包'
+                    }
+                ]
+            },
+            { id: 21, name: '328 加東叻沙泡麵', price: 280, description: '5包入', image: 'https://drive.google.com/thumbnail?id=1N59SmB0QxaHwUq1-UQ5403qUifktFV55&sz=w1000', category: 'noodles', country: 'singapore', detailedDescription: '328加東叻沙是新加坡比較老牌的叻沙泡麵，有點像是台灣的統一肉臊麵的地位，作為百勝廚叻沙麵的平替款，基本上就是很基本的平民美味。但328在各個網站的評價絕對不輸百勝廚！搜叻沙泡麵有百勝廚就一定也有它！跟百勝廚可以比拼的味道連我們都想買來試試看'  },
+            { id: 22, name: '珍寶泡麵', price: 280, description: '5包入', image: 'https://drive.google.com/thumbnail?id=1Z6Eq62SzJ_76Af3uUk0vhS-YKd0OKHjs&sz=w1000', category: 'noodles', country: 'singapore', detailedDescription: '珍寶泡麵就是新加坡超有名的珍寶海鮮坊出的泡麵款，聽起來很像新加坡泡麵愛馬仕但其實高貴不貴，吃不起珍寶海鮮但一定吃得起珍寶海鮮泡麵，這也是新加坡的老牌泡麵了，受歡迎程度大概在全網第三，新加坡的朋都推薦一定要吃吃看（非常好奇'  },
+            { id: 23, name: '亞坤醬（咖椰）', price: 280, description: '罐裝', image: 'https://drive.google.com/thumbnail?id=1r47HSEvHbqt1hq7r1-yk41nlN4KOq0Ri&sz=w1000', category: 'condiments', country: 'singapore' , detailedDescription: '亞坤在新加坡是很有名的早餐店，咖椰吐司這個品向大家一定也不陌生，這次選了亞坤的咖椰醬，有濃濃的椰香跟蛋香，甜度比較高一點，可以直接在家享受飛到新加坡吃亞坤的感覺！'},
+            { id: 24, name: '亞坤醬（豐一咖椰）', price: 150, description: '罐裝', image: 'https://drive.google.com/thumbnail?id=1zKhdXf7IHfL3nLUacjCEvs5Pg3cjLteE&sz=w1000', category: 'condiments', country: 'singapore' , detailedDescription: '豐一咖椰醬是亞坤醬的平替版，味道比較柔和，也帶一點點清新的香蘭葉香氣，適合早餐搭配吐司或餅乾，很適合不喜歡吃太甜，還有喜歡香蘭葉香氣的人！'},
+            {
+                id: 25,
+                name: '松發肉骨茶調理包',
+                price: 69,
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1_g9dsgrpZu7yDx6pINeHiucpwayWXtC2&sz=w1000',
+                category: 'condiments',
+                country: 'singapore',
+                detailedDescription: '松發肉骨茶大家一定也多少有聽過~ 是新加坡的連鎖肉骨茶品牌，它的湯頭是胡椒香料派，相較馬來西亞是藥膳黑湯，新加坡的肉骨茶多是白湯的風味。調理包分成袋裝跟盒裝，很適合現在冷冷的冬天，就算不放排骨直接拿來煮麵或煮火鍋都非常棒！',
+                variants: [
+                    {
+                        id: 2501,
+                        name: '袋裝',
+                        price: 69,
+                        image: 'https://drive.google.com/thumbnail?id=1_g9dsgrpZu7yDx6pINeHiucpwayWXtC2&sz=w1000',
+                        description: '1包入'
+                    },
+                    {
+                        id: 2502,
+                        name: '盒裝',
+                        price: 680,
+                        image: 'https://drive.google.com/thumbnail?id=17hLQXNY9AP5PIwVaj-KzuZSwXGkHQUOP&sz=w1000',
+                        description: '10包入'
+                    }
+                ]
+            },
+            { id: 27, name: 'Kims Duet 濾包式經典黑咖啡', price: 350, description: '5包入', image: 'https://drive.google.com/thumbnail?id=16f0YLekgLcN738vz8ICIklnzGOuOH3qT&sz=w1000', category: 'coffee', country: 'singapore' , detailedDescription: 'Kim\'s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim\'s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
+            { id: 28, name: 'Kims Duet 濾包式南洋四口味組合', price: 500, description: '8包入', image: 'https://drive.google.com/thumbnail?id=1oqZMtMjFWbosTHDMGWlT6icul28FswCp&sz=w1000', category: 'coffee', country: 'singapore' , detailedDescription: 'Kim\'s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim\'s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
+            { id: 29, name: 'Kims Duet 深焙膠囊咖啡', price: 450, description: '10入', image: 'https://drive.google.com/thumbnail?id=1To_5YSr1NV4NO02yZRdbBBvEd7Zx85MM&sz=w1000', category: 'coffee', country: 'singapore' , detailedDescription: 'Kim\'s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim\'s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
+            { id: 30, name: 'Kims Duet 濾包式奶咖', price: 550, description: '15入', image: 'https://drive.google.com/thumbnail?id=1psstQ6x9TTc1XjbaX2756RRNWSTSl9Lr&sz=w1000', category: 'coffee', country: 'singapore' , detailedDescription: 'Kim\'s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim\'s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
+            { id: 31, name: 'Kims Duet 濾包式經典口味三入組', price: 750, description: '15入', image: 'https://drive.google.com/thumbnail?id=1zEKYdnDTo-ZR_tjIaNYVnYkgCCpZsh5h&sz=w1000', category: 'coffee', country: 'singapore' , detailedDescription: 'Kim\'s Duet 是新加坡在地的傳統咖啡品牌，(可能大家到新加坡會想買 Bacha? 但 Kim\'s Duet 才是最道地的喔！) 金隊咖啡是當地老字號烘焙商 Kim Guan Guan 推出的深焙咖啡，味道偏苦但不酸，整體偏濃香、有存在感，帶一點焦香，是新加坡及南洋 Kopi 店很典型的味道'},
+            {
+                id: 32,
+                name: '金鴨 零食',
+                price: 299,
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1GPnN-rMqiYp_PN0kpqrD-LJjwXYVTPkl&sz=w1000',
+                category: 'snacks',
+                country: 'singapore',
+                detailedDescription: '金鴨是新加坡知名零食品牌，以獨特的鹹蛋黃風味聞名，每款產品都香酥可口，是新加坡國民零食。',
+                variants: [
+                    {
+                        id: 3201,
+                        name: '辣椒蟹天婦羅紫菜',
+                        price: 299,
+                        image: 'https://drive.google.com/thumbnail?id=1GPnN-rMqiYp_PN0kpqrD-LJjwXYVTPkl&sz=w1000',
+                        description: '102g - 運用蟹肉、咖哩葉、辣椒等多種原材製作，香脆微辣的口感吃起來超過癮，喜歡辣味零食的朋友們千萬別錯過！'
+                    },
+                    {
+                        id: 3202,
+                        name: '鹹蛋黃蟹天婦羅紫菜',
+                        price: 299,
+                        image: 'https://drive.google.com/thumbnail?id=1co2bGsvkxK3n7L2zvI1ijo_u29xRg0VJ&sz=w1000',
+                        description: '102g - 將香濃鹹蛋黃和蟹肉結合，再加上炸得香脆的紫菜解膩，入口有濃郁的海鮮風味，非常適合作為下酒菜。'
+                    },
+                    {
+                        id: 3203,
+                        name: '鹹蛋黃炸魚皮',
+                        price: 299,
+                        image: 'https://drive.google.com/thumbnail?id=1LORX9kXDnBwe4Wolc99KNHjrGPET-sPm&sz=w1000',
+                        description: '102g - 酥脆可口，鹹蛋黃風味濃郁，是新加坡國民零食！'
+                    },
+                    {
+                        id: 3204,
+                        name: '鹹蛋黃鹹薯片',
+                        price: 299,
+                        image: 'https://drive.google.com/thumbnail?id=1Yaa4KOBWPtYOcJkqgqNB92ni1ELBRa0G&sz=w1000',
+                        description: '102g - 薯片香脆，搭配濃郁的鹹蛋黃醬，一吃就停不下來的美味！'
+                    }
+                ]
+            },
+            // ========== 日本商品 - 藥妝類 ==========
+            {
+                id: 5001,
+                name: '興和 KOWA Q&P 夜間修復 睡前舒緩錠',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1KEKbtjRLmdu3wAAKxRp43zJrO3ckHoBa&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '【夜間修復冠軍】 這款是專為忙碌現代人設計的「睡前舒緩錠」，利用夜間黃金修復時間，幫助身體深度放鬆，一覺醒來精力滿點！適合生活壓力大、追求高效休息的您！',
+                variants: [
+                    { id: 50011, name: '30 粒', price: 350, image: 'https://drive.google.com/thumbnail?id=1KEKbtjRLmdu3wAAKxRp43zJrO3ckHoBa&sz=w1000', description: '30日份' },
+                    { id: 50012, name: '60 粒', price: 550, image: 'https://drive.google.com/thumbnail?id=167t0zShwsBfrNAiVMU_zX5XNSyTn8eko&sz=w1000', description: '60日份' },
+                    { id: 50013, name: '120 粒', price: 750, image: 'https://drive.google.com/thumbnail?id=1iJMX_wuIuAtP7cvcqevJwMNrsECWxyoQ&sz=w1000', description: '120日份' }
+                ]
+            },
+            {
+                id: 5002,
+                name: '獅王 Pair Acne 淨痘化粧水',
+                price: 350,
+                description: '弱酸性淨痘水',
+                image: 'https://drive.google.com/thumbnail?id=155A56X13ACOTKGm8jY4wp9KD-hk1wmCt&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '【淨痘神隊友】 日本獅王 Pair Acne 系列的明星商品！這款弱酸性、無色素的溫和化妝水，能有效調理肌膚油脂，收斂毛孔。是您的「速攻～淨痘の對策」，讓肌膚清爽不緊繃！'
+            },
+            {
+                id: 5003,
+                name: '獅王 PAIR ACNE 淨痘洗面乳',
+                price: 288,
+                description: '深層淨痘洗顏',
+                image: 'https://drive.google.com/thumbnail?id=1i4SnuWZjQjICNEk6ZLTG6Ej3tSrLTTYB&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '【毛孔清道夫】 專為痘痘肌打造！細緻泡沫可深入毛孔，徹底洗淨多餘油脂和污垢，同時添加了殺菌消炎成分，能預防痘痘再生。洗後肌膚水潤不乾澀，是開啟淨痘旅程的第一步！'
+            },
+            {
+                id: 5004,
+                name: '獅王 Pair Acne 痘痘膏W',
+                price: 300,
+                description: '醫藥品級痘痘膏',
+                image: 'https://drive.google.com/thumbnail?id=1VSoH1DKiCWvf-4yikQpsR8bfx6sVRjN8&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '【隱形抗痘救星】 日本家庭常備的醫藥品級痘痘膏！擁有消炎和殺菌雙重療效，能快速收斂紅腫痘痘。白色乳霜狀，塗抹後透明無色，可立即上妝，讓您輕鬆告別痘痘困擾！'
+            },
+            {
+                id: 5005,
+                name: 'DHC速攻藍莓',
+                price: 399,
+                description: '30日份 速攻藍莓',
+                image: 'https://drive.google.com/thumbnail?id=1j3BQFX2bEtRMTMrDm2_8axo24IKe9RG1&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '【3C重度使用者・酸澀救星】 專為長時間盯著電腦、手機的現代人打造！長時間用眼導致的酸澀、模糊、對焦困難，都需要這款「急救型」補給。除了高濃度的北歐野生藍莓萃取，更奢華添加了葉黃素、藏紅花酸與巴西莓。多重護眼配方能強力舒緩眼部疲勞，就像幫眼睛做了一場深層SPA，讓您的視野隨時保持高清HD狀態！'
+            },
+            {
+                id: 5006,
+                name: 'UHA 味覺糖 補鐵軟糖',
+                price: 280,
+                description: '30日份（60粒）',
+                image: 'https://drive.google.com/thumbnail?id=11LSXPCGm9O_3UgFSPalx-ZuLSi91ZPBd&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: 'UHA 味覺糖推出的補鐵軟糖，每日補充適量鐵質，幫助維持健康活力。'
+            },
+            {
+                id: 5007,
+                name: 'ELIXIR 怡麗絲爾',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1GfLs00Tcbaugz-_6aF5_OoagzM4jOqNK&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '熱賣NO.1經典款！一擦養成飽滿彈潤肌，超強防曬力同時注入膠原修護因子，是「上妝前的素顏神器」。',
+                variants: [
+                    { id: 50071, name: '小金管 彈潤多效美肌乳SP+', price: 700, image: 'https://drive.google.com/thumbnail?id=1GfLs00Tcbaugz-_6aF5_OoagzM4jOqNK&sz=w1000', description: '熱賣NO.1經典款！一擦養成飽滿彈潤肌，超強防曬力同時注入膠原修護因子，是「上妝前的素顏神器」。核心功效：保濕、彈潤、高防曬 (SPF50+ PA++++)。適合族群：適合所有膚質，特別是注重保濕和抗老的族群。' },
+                    { id: 50072, name: '小銀管 淨白多效美肌乳WT+', price: 760, image: 'https://drive.google.com/thumbnail?id=1xANC1Umm2uLHw5mjG5eu4Hwjivau5Edm&sz=w1000', description: '清爽版抗老！添加傳明酸美白成分，質地更輕盈不黏膩，在防曬同時抑制黑色素生成，維持肌膚明亮透潤感。核心功效：美白淨斑、清爽控油 (SPF50+ PA++++)。適合族群：適合油性、混合性肌膚，或有美白需求者。' },
+                    { id: 50073, name: '潤色小金管 膠原亮妍多效美肌乳PK', price: 800, image: 'https://drive.google.com/thumbnail?id=1OaMgrqFNpw_zZKj2MQ-x7brPSac2_mT9&sz=w1000', description: '懶人速成好氣色！在經典保濕防曬基礎上增加潤色功能，一瓶完成所有步驟，自然校正膚色，讓您輕鬆擁有彷彿剛上完底妝般的紅潤透亮。核心功效：潤色提亮、自然好氣色 (SPF50+ PA++++)。適合族群：適合想節省底妝時間，或追求自然紅潤好氣色者。' }
+                ]
+            },
+            {
+                id: 5008,
+                name: 'TAKAMI 角質道小藍瓶',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=149QEXUUW_AhI9G-G8LJXeDB9Ib3E43__&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '【溫和角質拋光術】 傳說中的「角質道」精華！它不是去角質產品，而是溫和代謝老廢角質的肌膚調理液。天天使用，能幫助肌膚回到最佳健康狀態，讓後續所有昂貴保養品都能「吃」進去，吸收力瞬間翻倍！',
+                variants: [
+                    { id: 50081, name: '30ml', price: 1400, image: 'https://drive.google.com/thumbnail?id=149QEXUUW_AhI9G-G8LJXeDB9Ib3E43__&sz=w1000', description: '標準容量' },
+                    { id: 50082, name: '60ml', price: 2200, image: 'https://drive.google.com/thumbnail?id=14vTeLCRZr5_e2XU9QwvUyeTxKhEiuhM1&sz=w1000', description: '加大容量' }
+                ]
+            },
+            {
+                id: 5009,
+                name: 'TAKAMI 維他命5C+E精華',
+                price: 1500,
+                description: '30ml',
+                image: 'https://drive.google.com/thumbnail?id=1ZRLeA1C8obg2TwVrezPC-MbZHAANh26q&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '【高濃度美白光環】 業界矚目的高濃度維他命C與E複合配方，能迅速滲透肌底，擊退暗沉與斑點，帶來驚人的提亮效果。強效抗氧化，讓您的肌膚從內而外透出鑽石般的光澤！'
+            },
+            {
+                id: 5010,
+                name: 'KANEBO保濕緻潤洗顏皂霜',
+                price: 1700,
+                description: '130g',
+                image: 'https://drive.google.com/thumbnail?id=1xQgJ9AuVaNrqc1kONmhFyD6kde_HjwZJ&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '【細紋掰掰】 KANEBO洗顏史上首次推出「可預防乾燥所引起細紋的皂霜」！新一代大K黑皂以**「不摩擦‧超水潤‧徹底洗顏」**為核心，讓您持續擁有水潤細緻的透亮光澤！'
+            },
+            {
+                id: 5011,
+                name: 'TRANSINO White C美白錠 Clear',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1Co5L6EKQrK1ydE4gpgZ7xoRGEFe5xDW_&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '這是許多人開始內服美白的第一站！它採用日本厚生勞動省規範內的最大 L-半胱胺酸劑量，搭配1000mg 維他命C和多種B群。定位為溫和、持續、高CP值的日常保養。推薦族群：適合初次嘗試美白錠、膚色暗沉不均、或想長期維持肌膚健康光澤的人。',
+                variants: [
+                    { id: 50111, name: '60錠 15日份', price: 599, image: 'https://drive.google.com/thumbnail?id=1Co5L6EKQrK1ydE4gpgZ7xoRGEFe5xDW_&sz=w1000', description: '15日份' },
+                    { id: 50112, name: '120錠 30日份', price: 999, image: 'https://drive.google.com/thumbnail?id=1ingFXfD8bmB8ADu0hBa9i_JMm-pCc871&sz=w1000', description: '30日份' },
+                    { id: 50113, name: '240錠 60日份', price: 1699, image: 'https://drive.google.com/thumbnail?id=1bgSZsi2tTOZCIEFkdmXGc3XHi9BopeRs&sz=w1000', description: '60日份' }
+                ]
+            },
+            {
+                id: 5012,
+                name: 'TRANSINO White C美白錠 Premium',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1wpUsqU5njvtc_eGtemvvgaVggOOj0mqP&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '專為追求極致速效的人士打造。在同樣高劑量的 L-半胱胺酸基礎上，將維他命C提升至驚人的 2000mg (日本最高上限)。高濃度的活性成分猶如美白火箭，能夠集中火力對抗明顯斑點和色素沉澱。推薦族群：適合臉上有明顯斑點困擾、曾服用 Clear 想升級加強、或希望在短期內（如夏季後）迅速亮白的人。',
+                variants: [
+                    { id: 50121, name: '90錠 15日份', price: 699, image: 'https://drive.google.com/thumbnail?id=1wpUsqU5njvtc_eGtemvvgaVggOOj0mqP&sz=w1000', description: '15日份' },
+                    { id: 50122, name: '180錠 30日份', price: 1299, image: 'https://drive.google.com/thumbnail?id=1xCv4C1P06Fd9EvWCCeQofU1a40b2hemj&sz=w1000', description: '30日份' },
+                    { id: 50123, name: '270錠 45日份', price: 1799, image: 'https://drive.google.com/thumbnail?id=1zobZ4QF-kP0LNAIqalqVuw0zJwAZPcgT&sz=w1000', description: '45日份' }
+                ]
+            },
+            {
+                id: 5013,
+                name: 'Obagi 維他命精華液',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1r7M7vlrxxuaJsZnh4L07oiqfXWgk1Lhw&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: 'Obagi小橘瓶系列，針對不同肌膚需求提供多種濃度選擇',
+                variants: [
+                    { id: 50131, name: 'C5', price: 950, image: 'https://drive.google.com/thumbnail?id=1r7M7vlrxxuaJsZnh4L07oiqfXWgk1Lhw&sz=w1000', description: '【入門級・肌膚維穩打底】 溫和的入門濃度，適合初次使用高濃度維他命C或敏感肌膚。主攻日常提亮與輕微的毛孔困擾，為肌膚打下健康的基礎，讓肌膚維持透亮穩定。' },
+                    { id: 50132, name: 'C10', price: 1200, image: 'https://drive.google.com/thumbnail?id=13quMVWGkllYHU5y1Z3MvV5fuqphSPyoY&sz=w1000', description: '【中階級・毛孔與痘印對策】 黃金濃度！這是系列中極受歡迎的款式，滲透力與溫和度的完美平衡。針對明顯的毛孔粗大、粗糙顆粒和新生痘印有卓越改善效果，是追求細緻膚質的必備單品。' },
+                    { id: 50133, name: 'C20', price: 1900, image: 'https://drive.google.com/thumbnail?id=1SUoBMEXOk3bsF9-40zZ6JTSZ73csM5P9&sz=w1000', description: '【高階級・深度淡斑與瑕疵修復】 堪稱「小橘瓶」系列中的精華彈藥！適合肌膚問題較多或較嚴重的使用者。它以高濃度維他命C深入肌底，強效淡化頑固斑點、改善膚色不均，讓您重拾無瑕透亮肌。' },
+                    { id: 50134, name: 'C25 Neo', price: 2800, image: 'https://drive.google.com/thumbnail?id=1SOTaHMsDBlmHrxBA5ZBeBQ86tC1sg4yO&sz=w1000', description: '【頂級旗艦・全方位抗老精華】 系列最高濃度！除了維他命C的亮白功效，更專注於抗衰老對策。它能有效改善因年齡增長引起的鬆弛、乾燥、細紋等所有老化跡象，讓肌膚重現緊緻澎潤的青春光采。' }
+                ]
+            },
+            {
+                id: 5014,
+                name: 'Aux Paradis 香水 #1 Rose',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1WFg_YdMNVzx6rpDu84LxmwSJ_Fje-rae&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '土耳其大馬士革玫瑰據說是世界上最著名的玫瑰。它的香氣既寧靜又優雅，散發著精緻迷人的氣息。你會沉浸在玫瑰的芬芳之中，彷彿漫步在玫瑰園中。',
+                variants: [
+                    { id: 50141, name: '15ml', price: 1080, image: 'https://drive.google.com/thumbnail?id=1WFg_YdMNVzx6rpDu84LxmwSJ_Fje-rae&sz=w1000', description: '隨身瓶' },
+                    { id: 50142, name: '30ml', price: 1380, image: 'https://drive.google.com/thumbnail?id=1WFg_YdMNVzx6rpDu84LxmwSJ_Fje-rae&sz=w1000', description: '標準瓶' },
+                    { id: 50143, name: '60ml', price: 1780, image: 'https://drive.google.com/thumbnail?id=1WFg_YdMNVzx6rpDu84LxmwSJ_Fje-rae&sz=w1000', description: '加大瓶' }
+                ]
+            },
+            {
+                id: 5015,
+                name: 'Aux Paradis 香水 #2 Citron',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1EvCozxjk7cdrTbS-2ESCE-oGOWB5t2kf&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '沐浴在陽光下、充滿活力的西西里水果，散發著如同新鮮採摘的水果般的清新柑橘香氣，令人身心舒暢。',
+                variants: [
+                    { id: 50151, name: '15ml', price: 1080, image: 'https://drive.google.com/thumbnail?id=1EvCozxjk7cdrTbS-2ESCE-oGOWB5t2kf&sz=w1000', description: '隨身瓶' },
+                    { id: 50152, name: '30ml', price: 1380, image: 'https://drive.google.com/thumbnail?id=1EvCozxjk7cdrTbS-2ESCE-oGOWB5t2kf&sz=w1000', description: '標準瓶' },
+                    { id: 50153, name: '60ml', price: 1780, image: 'https://drive.google.com/thumbnail?id=1EvCozxjk7cdrTbS-2ESCE-oGOWB5t2kf&sz=w1000', description: '加大瓶' }
+                ]
+            },
+            {
+                id: 5016,
+                name: 'Aux Paradis 香水 #3 Fleur [熱賣款式]',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1h0G7B9F2CkWzgt50JVVyK-ynrEm9LA_U&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '柔和淡雅的香氣輕柔地縈繞在周圍。這是一款高品質的花香調香水，展現出一種高貴典雅的氣質，可以說是日式美學的精髓所在。',
+                variants: [
+                    { id: 50161, name: '15ml', price: 1080, image: 'https://drive.google.com/thumbnail?id=1h0G7B9F2CkWzgt50JVVyK-ynrEm9LA_U&sz=w1000', description: '隨身瓶' },
+                    { id: 50162, name: '30ml', price: 1380, image: 'https://drive.google.com/thumbnail?id=1h0G7B9F2CkWzgt50JVVyK-ynrEm9LA_U&sz=w1000', description: '標準瓶' },
+                    { id: 50163, name: '60ml', price: 1780, image: 'https://drive.google.com/thumbnail?id=1h0G7B9F2CkWzgt50JVVyK-ynrEm9LA_U&sz=w1000', description: '加大瓶' }
+                ]
+            },
+            {
+                id: 5017,
+                name: 'Aux Paradis 香水 #4 Savon [熱賣款式]',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1SwowKrxZyywMihh0-6KiPPjG6Z86SYUO&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '為了營造柔和淡雅的香氣，使用了大量來自法國南部的薰衣草。這款淡雅的香氣令人舒緩放鬆，就像洗完澡後享受了一次香皂沐浴一樣。',
+                variants: [
+                    { id: 50171, name: '15ml', price: 1080, image: 'https://drive.google.com/thumbnail?id=1SwowKrxZyywMihh0-6KiPPjG6Z86SYUO&sz=w1000', description: '隨身瓶' },
+                    { id: 50172, name: '30ml', price: 1380, image: 'https://drive.google.com/thumbnail?id=1SwowKrxZyywMihh0-6KiPPjG6Z86SYUO&sz=w1000', description: '標準瓶' },
+                    { id: 50173, name: '60ml', price: 1780, image: 'https://drive.google.com/thumbnail?id=1SwowKrxZyywMihh0-6KiPPjG6Z86SYUO&sz=w1000', description: '加大瓶' }
+                ]
+            },
+            {
+                id: 5018,
+                name: 'Aux Paradis 香水 #5 Fraise',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1XGNs4F7MR051DIek-C0AUBDlxHo-CnAx&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '那一刻，你身上既有少女的純真，又有成熟女性的美。周圍人都喜歡的成熟紅草莓的甜美香氣撲鼻而來。',
+                variants: [
+                    { id: 50181, name: '15ml', price: 1080, image: 'https://drive.google.com/thumbnail?id=1XGNs4F7MR051DIek-C0AUBDlxHo-CnAx&sz=w1000', description: '隨身瓶' },
+                    { id: 50182, name: '30ml', price: 1380, image: 'https://drive.google.com/thumbnail?id=1XGNs4F7MR051DIek-C0AUBDlxHo-CnAx&sz=w1000', description: '標準瓶' },
+                    { id: 50183, name: '60ml', price: 1780, image: 'https://drive.google.com/thumbnail?id=1XGNs4F7MR051DIek-C0AUBDlxHo-CnAx&sz=w1000', description: '加大瓶' }
+                ]
+            },
+            {
+                id: 5019,
+                name: 'Aux Paradis 香水 #6 Homme',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1VGJ92Cz6ymbMdQwPsU9m_38JPfu9iHpU&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '適合成年人的柑橘香調香水，不僅清新怡人，也溫暖深沉的氣息和諧交融，令人倍感親切。這款香水展現的是"你自己"，即使在人潮擁擠、容易被淹沒的場合，它也不會被人群所掩蓋。',
+                variants: [
+                    { id: 50191, name: '15ml', price: 1080, image: 'https://drive.google.com/thumbnail?id=1VGJ92Cz6ymbMdQwPsU9m_38JPfu9iHpU&sz=w1000', description: '隨身瓶' },
+                    { id: 50192, name: '30ml', price: 1380, image: 'https://drive.google.com/thumbnail?id=1VGJ92Cz6ymbMdQwPsU9m_38JPfu9iHpU&sz=w1000', description: '標準瓶' },
+                    { id: 50193, name: '60ml', price: 1780, image: 'https://drive.google.com/thumbnail?id=1VGJ92Cz6ymbMdQwPsU9m_38JPfu9iHpU&sz=w1000', description: '加大瓶' }
+                ]
+            },
+            {
+                id: 5020,
+                name: 'Aux Paradis 香水 #8 Pure [熱賣款式]',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1rEgsNLNbGQJVBX9IWf8gzg1w3nNL0TB6&sz=w1000',
+                category: 'japan-cosmetics',
+                country: 'japan',
+                detailedDescription: '潔白的花朵在湛藍的天空下盛開於田野。它既迷人又高貴，卻又不矯揉造作。清新淡雅的粉香，讓你自在做自己。',
+                variants: [
+                    { id: 50201, name: '15ml', price: 1080, image: 'https://drive.google.com/thumbnail?id=1rEgsNLNbGQJVBX9IWf8gzg1w3nNL0TB6&sz=w1000', description: '隨身瓶' },
+                    { id: 50202, name: '30ml', price: 1380, image: 'https://drive.google.com/thumbnail?id=1rEgsNLNbGQJVBX9IWf8gzg1w3nNL0TB6&sz=w1000', description: '標準瓶' },
+                    { id: 50203, name: '60ml', price: 1780, image: 'https://drive.google.com/thumbnail?id=1rEgsNLNbGQJVBX9IWf8gzg1w3nNL0TB6&sz=w1000', description: '加大瓶' }
+                ]
+            },
+            // ========== 日本商品 - 飲食類 ==========
+            {
+                id: 6002,
+                name: 'NEW YORK PERFECT CHEESE',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=18x2kETmGs1TZXR0yWFPZIf_8EcGnP6IH&sz=w1000',
+                category: 'japan-food',
+                country: 'japan',
+                detailedDescription: '東京伴手禮第一名\n這款 NewYork Perfect Cheese 起司奶油脆餅，愛吃起司的朋友絕對不能錯過。餅乾是由前白宮的甜品廚師 Bill Yosses、日本第一位起司專業鑑評家村瀨美幸，以及獲得法國政府頒發最優秀起司職人 Rodolphe Le Meunier，三位起司達人共同研發而成。\n三位對奶酪起司瞭如指掌的專業人士的監督下，打造的新紐約風味。從世界各地的起司中精心挑選，口感濃郁、柔滑的起司，並採用最佳溫度、濕度和烘焙方法製作。\n薄脆的貓舌頭餅乾包裹著濃郁起司、白巧克力、牛奶奶油，口感豐富兼且味道濃郁，一推出即登上東京伴手禮第一名。',
+                variants: [
+                    { id: 60021, name: '8 入', price: 500, image: 'https://drive.google.com/thumbnail?id=18x2kETmGs1TZXR0yWFPZIf_8EcGnP6IH&sz=w1000', description: '8入裝' },
+                    { id: 60022, name: '12 入', price: 700, image: 'https://drive.google.com/thumbnail?id=1uz020nUD-bTDEhEzLM1SMKqdP_oTWUL9&sz=w1000', description: '12入裝' },
+                    { id: 60023, name: '18 入', price: 1000, image: 'https://drive.google.com/thumbnail?id=1fn0E1SICD-uX24zx61oBG1AqHEl9Y5eG&sz=w1000', description: '18入裝' }
+                ]
+            },
+            {
+                id: 6003,
+                name: 'PRESS BUTTER SAND',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1sFXzw131NTSw4ZXATe1082BPrOYbeldZ&sz=w1000',
+                category: 'japan-food',
+                country: 'japan',
+                detailedDescription: '以焦糖奶油夾心餅聞名的「PRESS BUTTER SAND」是近年來眾多網友一致推薦東京必買伴手禮',
+                variants: [
+                    { id: 60031, name: '5 入', price: 400, image: 'https://drive.google.com/thumbnail?id=1sFXzw131NTSw4ZXATe1082BPrOYbeldZ&sz=w1000', description: '5入裝' },
+                    { id: 60032, name: '9 入', price: 650, image: 'https://drive.google.com/thumbnail?id=1sFXzw131NTSw4ZXATe1082BPrOYbeldZ&sz=w1000', description: '9入裝' }
+                ]
+            },
+            {
+                id: 6004,
+                name: '白色戀人',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=198Hsn-wkjOWNJHWGIChn7t4Vv88E9-1Y&sz=w1000',
+                category: 'japan-food',
+                country: 'japan',
+                detailedDescription: '「白色戀人」是北海道知名點心製造商「ISHIYA」於1976年12月販售的甜點餅乾，一推出後便大受歡迎，年銷最高曾達2億塊，於1986年更獲得瑞士國際品質評鑑大賞Monde Selection金獎。',
+                variants: [
+                    { id: 60041, name: '12片', price: 389, image: 'https://drive.google.com/thumbnail?id=198Hsn-wkjOWNJHWGIChn7t4Vv88E9-1Y&sz=w1000', description: '12片裝' },
+                    { id: 60042, name: '18片', price: 529, image: 'https://drive.google.com/thumbnail?id=1EL_B13M2P2KeCbqv79kEMnGPIE7w8EON&sz=w1000', description: '18片裝' },
+                    { id: 60043, name: '24片', price: 699, image: 'https://drive.google.com/thumbnail?id=16JomvjZZXutK6mg3eYT_jwp-WGyQCJ5o&sz=w1000', description: '24片裝' }
+                ]
+            },
+            {
+                id: 6005,
+                name: '東京香蕉Tokyo Banana',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1nJcKlCSb3EMX4cso3ukbvDvPFmO4sFJL&sz=w1000',
+                category: 'japan-food',
+                country: 'japan',
+                detailedDescription: '鬆軟的海綿蛋糕中，包著滿滿的香蕉卡士達奶油，香濃美味。\n為了堅守人人喜愛的經典好味道，以真材實料的香蕉悉心壓成香蕉泥，從原料開始把關。\n另一個廣受喜愛的原因，則是製作過程中運用高超技術，安全且衛生地製造、單個包裝，讓旅客們帶回家時仍可享受新鮮滋味。',
+                variants: [
+                    { id: 60051, name: '經典原味 4個', price: 239, image: 'https://drive.google.com/thumbnail?id=1nJcKlCSb3EMX4cso3ukbvDvPFmO4sFJL&sz=w1000', description: '4個裝' },
+                    { id: 60052, name: '經典原味 8個', price: 449, image: 'https://drive.google.com/thumbnail?id=1qY-bhe5wHAHA-I2E-P3QXLWglHMeOrr1&sz=w1000', description: '8個裝' },
+                    { id: 60053, name: '經典原味 12個', price: 599, image: 'https://drive.google.com/thumbnail?id=1-AiRlAigfFwodQuCssgrmCj9uGuYNc1P&sz=w1000', description: '12個裝' }
+                ]
+            },
+            // ========== 日本商品 - 電器類 ==========
+            {
+                id: 7001,
+                name: 'Panasonic Vitalift RF EH-SR85',
+                price: 15999,
+                description: '時光逆轉光波美容儀',
+                image: 'https://drive.google.com/thumbnail?id=18laLqBFietSZbjjD26Y4Y5N7BL2UdSh-&sz=w1000',
+                category: 'japan-electronics',
+                country: 'japan',
+                detailedDescription: '【時光逆轉光波】 曾獲日本美妝大賞美容儀器部門獎項，採用先進的1MHz 射頻（RF）深度溫熱肌膚，促進膠原蛋白自生，搭配獨特的EMS 微電流，精準鍛鍊表情肌，達到深層緊緻、立體輪廓的效果！特別適合想初次嘗試旗艦級 RF 儀器，追求有效、穩定抗衰老護理的您。'
+            },
+            {
+                id: 7002,
+                name: 'Panasonic Vitalift RF EH-SR86',
+                price: 17999,
+                description: '年度最強V臉神器',
+                image: 'https://drive.google.com/thumbnail?id=1TedukGD-vLyVZdV_OS02Zpv44OFl9IuV&sz=w1000',
+                category: 'japan-electronics',
+                country: 'japan',
+                detailedDescription: '【年度最強V臉神器】 在 SR85 的強大功能基礎上，通常代表著技術的微調升級與設計優化（如更舒適的握感、更精準的溫度控制或升級的 LED 波長）。它將 RF 溫熱與 EMS 提拉完美結合，目標是撫平細紋、改善法令紋，讓肌膚重現緊緻、彈潤的年輕狀態。追求最新技術和極致細節的您，絕不能錯過！'
+            }
         ];
- 
+
         let currentCategory = 'all';
+        let currentBrand = 'all';  // 韓國商品品牌篩選
+        let currentType = 'all';   // 韓國商品種類篩選
 
         let cart = [];
+
+        // 優惠碼系統
+        let discountCodes = ['DISCOUNT10', 'VIP2024', 'SAVE90', 'WELCOME9'];  // 可用的 9 折優惠碼
+        let appliedDiscountCode = null;  // 已套用的優惠碼
 
         function filterByCategory(category) {
             currentCategory = category;
@@ -1516,23 +2345,426 @@
             event.target.classList.add('active');
         }
 
+        // 韓國商品品牌篩選
+        function filterByBrand(brand) {
+            currentBrand = brand;
+            renderProducts();
+
+            // Update active button - 只更新品牌篩選器的按鈕
+            const brandButtons = document.querySelectorAll('#korea-categories .korea-filter-grid:first-of-type button');
+            brandButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // 韓國商品種類篩選
+        function filterByType(type) {
+            currentType = type;
+            renderProducts();
+
+            // Update active button - 只更新商品種類篩選器的按鈕
+            const typeButtons = document.querySelectorAll('#korea-categories .korea-filter-grid:last-of-type button');
+            typeButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // 當前查看的產品數據（用於圖片輪播）
+        let currentProduct = null;
+        let currentImageIndex = 0;
+        let productImages = [];
+
         // 顯示商品詳情
+        // 檢查商品是否有詳細的款式介紹（而非只是容量差異）
+        function hasDetailedVariantDescriptions(product) {
+            if (!product.variants || product.variants.length === 0) return false;
+
+            // 檢查是否有任何一個variant的description長度超過50字
+            // 長度超過50字通常表示是詳細的產品介紹，而非簡單的容量描述
+            return product.variants.some(v => v.description && v.description.length > 50);
+        }
+
         function showProductDetail(productId) {
             const product = products.find(p => p.id === productId);
             if (!product) return;
 
-            document.getElementById('productDetailImage').src = product.image;
+            currentProduct = product;
+            const hasVariants = product.variants && product.variants.length > 0;
+            const hasDetailedDescriptions = hasDetailedVariantDescriptions(product);
+
+            // 準備圖片列表
+            if (hasVariants) {
+                productImages = product.variants.map(v => v.image);
+            } else {
+                productImages = [product.image];
+            }
+            currentImageIndex = 0;
+
+            // 顯示第一張圖片
+            document.getElementById('productDetailImage').src = productImages[0];
             document.getElementById('productDetailImage').alt = product.name;
             document.getElementById('productDetailName').textContent = product.name;
-            document.getElementById('productDetailPrice').textContent = `NT$ ${product.price}`;
-            document.getElementById('productDetailSpec').textContent = product.description;
-            
-            // 使用商品的詳細介紹，如果沒有則使用預設文案
-            const descriptionText = product.detailedDescription || '這是一個精選的優質商品，品質保證，值得您的信賴與選購。';
+
+            // 根據是否有款式顯示不同的價格
+            if (hasVariants) {
+                const minPrice = Math.min(...product.variants.map(v => v.price));
+                const maxPrice = Math.max(...product.variants.map(v => v.price));
+                if (minPrice === maxPrice) {
+                    document.getElementById('productDetailPrice').textContent = `NT$ ${minPrice}`;
+                } else {
+                    document.getElementById('productDetailPrice').textContent = `NT$ ${minPrice} - ${maxPrice}`;
+                }
+                document.getElementById('productDetailSpec').textContent = product.description;
+            } else {
+                document.getElementById('productDetailPrice').textContent = `NT$ ${product.price}`;
+                document.getElementById('productDetailSpec').textContent = product.description;
+            }
+
+            // 使用商品的詳細介紹
+            // 只有在variants有詳細介紹時才使用variant的description，否則使用主商品的description
+            let descriptionText;
+            if (hasDetailedDescriptions && product.variants[0] && product.variants[0].description) {
+                descriptionText = product.variants[0].description;
+            } else {
+                descriptionText = product.detailedDescription || '這是一個精選的優質商品，品質保證，值得您的信賴與選購。';
+            }
             document.getElementById('productDetailDescriptionText').innerHTML = descriptionText;
+
+            // 顯示/隱藏圖片輪播按鈕
+            const showSliderBtns = productImages.length > 1;
+            document.getElementById('sliderPrevBtn').style.display = showSliderBtns ? 'block' : 'none';
+            document.getElementById('sliderNextBtn').style.display = showSliderBtns ? 'block' : 'none';
+
+            // 渲染圖片指示器
+            renderImageDots();
+
+            // 顯示/隱藏款式切換提示
+            const variantHint = document.getElementById('variantSwitchHint');
+            if (variantHint) {
+                variantHint.style.display = hasDetailedDescriptions ? 'block' : 'none';
+            }
+
+            // 處理款式選擇區域
+            if (hasVariants) {
+                document.getElementById('productVariantsSection').style.display = 'block';
+                document.getElementById('productSimpleSection').style.display = 'none';
+                renderVariantsList(product.variants);
+
+                // 如果是新加坡商品，禁用加入購物車按鈕
+                const variantBtn = document.getElementById('variantAddToCartBtn');
+                if (product.country === 'singapore') {
+                    variantBtn.disabled = true;
+                    variantBtn.style.background = '#ccc';
+                    variantBtn.style.cursor = 'not-allowed';
+                    variantBtn.textContent = '暫不開放購買（僅供瀏覽）';
+                } else {
+                    variantBtn.disabled = false;
+                    variantBtn.style.background = '';
+                    variantBtn.style.cursor = '';
+                    variantBtn.textContent = '確認加入購物車';
+                }
+            } else {
+                document.getElementById('productVariantsSection').style.display = 'none';
+                document.getElementById('productSimpleSection').style.display = 'block';
+                document.getElementById('simpleProductQty').value = 1;
+
+                // 如果是新加坡商品，禁用加入購物車按鈕
+                const simpleBtn = document.getElementById('simpleAddToCartBtn');
+                if (product.country === 'singapore') {
+                    simpleBtn.disabled = true;
+                    simpleBtn.style.background = '#ccc';
+                    simpleBtn.style.cursor = 'not-allowed';
+                    simpleBtn.textContent = '暫不開放購買（僅供瀏覽）';
+                } else {
+                    simpleBtn.disabled = false;
+                    simpleBtn.style.background = '';
+                    simpleBtn.style.cursor = '';
+                    simpleBtn.textContent = '加入購物車';
+                }
+            }
 
             document.getElementById('productDetailModal').style.display = 'block';
             document.body.style.overflow = 'hidden'; // 防止背景滾動
+
+            // 初始化圖片滑動功能
+            initImageSwipe();
+        }
+
+        // 渲染款式列表
+        function renderVariantsList(variants) {
+            const container = document.getElementById('productVariantsList');
+            container.innerHTML = variants.map((variant, index) => `
+                <div class="variant-item" onclick="switchToVariantImage(${index})" style="
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    padding: 8px;
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    min-height: 60px;
+                    max-height: 60px;
+                " onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
+                    <!-- 左側：商品圖片 -->
+                    <img src="${variant.image}" alt="${variant.name}" style="
+                        width: 45px;
+                        height: 45px;
+                        object-fit: cover;
+                        border-radius: 4px;
+                        flex-shrink: 0;
+                    ">
+
+                    <!-- 中間：商品資訊 -->
+                    <div style="flex: 1; min-width: 0; overflow: hidden;">
+                        <div style="font-weight: 600; font-size: 13px; margin-bottom: 2px; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${variant.name}</div>
+                        <div style="color: #d32f2f; font-weight: 600; font-size: 14px; white-space: nowrap;">NT$ ${variant.price}</div>
+                    </div>
+
+                    <!-- 右側：數量控制 -->
+                    <div style="display: flex; align-items: center; gap: 6px; flex-shrink: 0;" onclick="event.stopPropagation();">
+                        <button onclick="decreaseVariantQty(${variant.id})" style="
+                            width: 28px;
+                            height: 28px;
+                            border: none;
+                            background: #333;
+                            color: white;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            font-size: 16px;
+                            font-weight: bold;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        ">-</button>
+                        <input type="number" id="variant-qty-${variant.id}" value="0" min="0" style="
+                            width: 40px;
+                            text-align: center;
+                            border: 1px solid #ddd;
+                            border-radius: 4px;
+                            padding: 4px 2px;
+                            font-size: 13px;
+                        " onclick="event.stopPropagation();">
+                        <button onclick="increaseVariantQty(${variant.id})" style="
+                            width: 28px;
+                            height: 28px;
+                            border: none;
+                            background: #333;
+                            color: white;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            font-size: 16px;
+                            font-weight: bold;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        ">+</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 增加款式數量
+        function increaseVariantQty(variantId) {
+            const input = document.getElementById(`variant-qty-${variantId}`);
+            input.value = parseInt(input.value) + 1;
+        }
+
+        // 減少款式數量
+        function decreaseVariantQty(variantId) {
+            const input = document.getElementById(`variant-qty-${variantId}`);
+            if (parseInt(input.value) > 0) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        // 增加單一商品數量
+        function increaseSimpleQty() {
+            const input = document.getElementById('simpleProductQty');
+            input.value = parseInt(input.value) + 1;
+        }
+
+        // 減少單一商品數量
+        function decreaseSimpleQty() {
+            const input = document.getElementById('simpleProductQty');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        // 將單一商品加入購物車
+        function addSimpleProductToCart() {
+            // 檢查是否為新加坡商品
+            if (currentProduct.country === 'singapore') {
+                alert('新加坡商品目前暫不開放購買，僅供瀏覽。');
+                return;
+            }
+
+            const qty = parseInt(document.getElementById('simpleProductQty').value);
+            if (qty < 1) {
+                alert('請選擇數量！');
+                return;
+            }
+
+            // 加入購物車
+            const existingItem = cart.find(item => item.id === currentProduct.id);
+            if (existingItem) {
+                existingItem.quantity += qty;
+            } else {
+                cart.push({
+                    id: currentProduct.id,
+                    name: currentProduct.name,
+                    price: currentProduct.price,
+                    quantity: qty,
+                    image: currentProduct.image
+                });
+            }
+
+            updateCartBadge();
+            alert(`已將 ${qty} 個 ${currentProduct.name} 加入購物車！`);
+            closeProductDetail();
+        }
+
+        // 切換到指定款式的圖片
+        function switchToVariantImage(index) {
+            currentImageIndex = index;
+            document.getElementById('productDetailImage').src = productImages[index];
+            renderImageDots();
+
+            // 更新商品描述為當前選中款式的介紹
+            if (currentProduct.variants && currentProduct.variants[index]) {
+                const variant = currentProduct.variants[index];
+                if (variant.description) {
+                    document.getElementById('productDetailDescriptionText').innerHTML = variant.description;
+                }
+            }
+        }
+
+        // 上一張圖片
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + productImages.length) % productImages.length;
+            document.getElementById('productDetailImage').src = productImages[currentImageIndex];
+            renderImageDots();
+
+            // 更新商品描述為當前款式的介紹
+            updateVariantDescription();
+        }
+
+        // 下一張圖片
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % productImages.length;
+            document.getElementById('productDetailImage').src = productImages[currentImageIndex];
+            renderImageDots();
+
+            // 更新商品描述為當前款式的介紹
+            updateVariantDescription();
+        }
+
+        // 更新款式描述
+        function updateVariantDescription() {
+            // 只有當商品有詳細的款式介紹時才更新描述
+            if (hasDetailedVariantDescriptions(currentProduct)) {
+                if (currentProduct.variants && currentProduct.variants[currentImageIndex]) {
+                    const variant = currentProduct.variants[currentImageIndex];
+                    if (variant.description) {
+                        document.getElementById('productDetailDescriptionText').innerHTML = variant.description;
+                    }
+                }
+            }
+        }
+
+        // 渲染圖片指示器
+        function renderImageDots() {
+            const dotsContainer = document.getElementById('productDetailImageDots');
+            if (productImages.length <= 1) {
+                dotsContainer.innerHTML = '';
+                return;
+            }
+            dotsContainer.innerHTML = productImages.map((_, index) => `
+                <span class="image-dot ${index === currentImageIndex ? 'active' : ''}" onclick="switchToVariantImage(${index})"></span>
+            `).join('');
+        }
+
+        // 圖片滑動功能
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        function initImageSwipe() {
+            const imageElement = document.getElementById('productDetailImage');
+
+            imageElement.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            imageElement.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+        }
+
+        function handleSwipe() {
+            const swipeThreshold = 50; // 最小滑動距離
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // 向左滑動，顯示下一張
+                    nextImage();
+                } else {
+                    // 向右滑動，顯示上一張
+                    previousImage();
+                }
+            }
+        }
+
+        // 將選中的款式加入購物車
+        function addVariantsToCart() {
+            if (!currentProduct || !currentProduct.variants) return;
+
+            // 檢查是否為新加坡商品
+            if (currentProduct.country === 'singapore') {
+                alert('新加坡商品目前暫不開放購買，僅供瀏覽。');
+                return;
+            }
+
+            let addedCount = 0;
+            currentProduct.variants.forEach(variant => {
+                const qty = parseInt(document.getElementById(`variant-qty-${variant.id}`).value);
+                if (qty > 0) {
+                    const cartItem = {
+                        id: variant.id,
+                        name: `${currentProduct.name} - ${variant.name}`,
+                        price: variant.price,
+                        quantity: qty,
+                        image: variant.image
+                    };
+
+                    // 檢查購物車中是否已有此款式
+                    const existingIndex = cart.findIndex(item => item.id === variant.id);
+                    if (existingIndex > -1) {
+                        cart[existingIndex].quantity += qty;
+                    } else {
+                        cart.push(cartItem);
+                    }
+                    addedCount++;
+                }
+            });
+
+            if (addedCount > 0) {
+                alert(`已加入 ${addedCount} 個款式到購物車！`);
+                updateCartBadge();
+                closeProductDetail();
+
+                // 重置所有款式數量為 0
+                currentProduct.variants.forEach(variant => {
+                    document.getElementById(`variant-qty-${variant.id}`).value = 0;
+                });
+            } else {
+                alert('請至少選擇一個款式！');
+            }
         }
 
         // 關閉商品詳情
@@ -1551,29 +2783,71 @@
 
         function renderProducts() {
             const grid = document.getElementById('productsGrid');
-            const filteredProducts = currentCategory === 'all' 
-                ? products 
-                : products.filter(p => p.category === currentCategory);
-            
-            grid.innerHTML = filteredProducts.map(product => `
-                <div class="product-card">
-                    <div class="product-image-wrapper" onclick="showProductDetail(${product.id})">
-                        <img src="${product.image}" alt="${product.name}">
-                        <div class="product-image-overlay">
-                            <div class="product-image-overlay-text">🔍 點擊查看詳情</div>
+
+            // 先根據國家篩選
+            let countryProducts = products.filter(p => p.country === currentCountry);
+
+            // 韓國商品：使用品牌和商品種類雙重篩選
+            let filteredProducts;
+            if (currentCountry === 'korea') {
+                filteredProducts = countryProducts;
+
+                // 品牌篩選
+                if (currentBrand !== 'all') {
+                    filteredProducts = filteredProducts.filter(p => p.brand === currentBrand);
+                }
+
+                // 商品種類篩選
+                if (currentType !== 'all') {
+                    filteredProducts = filteredProducts.filter(p => p.type === currentType);
+                }
+            } else {
+                // 其他國家：使用分類篩選
+                filteredProducts = currentCategory === 'all'
+                    ? countryProducts
+                    : countryProducts.filter(p => p.category === currentCategory);
+            }
+
+            grid.innerHTML = filteredProducts.map(product => {
+                // 判斷是否為商品系列（有 variants）
+                const hasVariants = product.variants && product.variants.length > 0;
+
+                if (hasVariants) {
+                    // 商品系列：整個卡片可點擊，顯示價格範圍
+                    const minPrice = Math.min(...product.variants.map(v => v.price));
+                    const maxPrice = Math.max(...product.variants.map(v => v.price));
+                    const priceDisplay = minPrice === maxPrice ? `NT$ ${minPrice}` : `NT$ ${minPrice}~${maxPrice}`;
+
+                    return `
+                        <div class="product-card" onclick="showProductDetail(${product.id})" style="cursor: pointer;">
+                            <div class="product-image-wrapper">
+                                <img src="${product.image}" alt="${product.name}">
+                                <div class="product-image-overlay">
+                                    <div class="product-image-overlay-text">🔍 點擊查看詳情</div>
+                                </div>
+                            </div>
+                            <div class="product-name">${product.name}</div>
+                            <div class="product-description">${product.description}</div>
+                            <div class="product-price">${priceDisplay}</div>
                         </div>
-                    </div>
-                    <div class="product-name">${product.name}</div>
-                    <div class="product-description">${product.description}</div>
-                    <div class="product-price">NT$ ${product.price}</div>
-                    <div class="quantity-control">
-                        <button onclick="decreaseQty(${product.id})">-</button>
-                        <input type="number" id="qty-${product.id}" value="1" min="1">
-                        <button onclick="increaseQty(${product.id})">+</button>
-                    </div>
-                    <button class="add-to-cart" onclick="addToCart(${product.id})">加入購物車</button>
-                </div>
-            `).join('');
+                    `;
+                } else {
+                    // 一般商品：整個卡片可點擊，需進入詳情頁才能加入購物車
+                    return `
+                        <div class="product-card" onclick="showProductDetail(${product.id})" style="cursor: pointer;">
+                            <div class="product-image-wrapper">
+                                <img src="${product.image}" alt="${product.name}">
+                                <div class="product-image-overlay">
+                                    <div class="product-image-overlay-text">🔍 點擊查看詳情</div>
+                                </div>
+                            </div>
+                            <div class="product-name">${product.name}</div>
+                            <div class="product-description">${product.description}</div>
+                            <div class="product-price">NT$ ${product.price}</div>
+                        </div>
+                    `;
+                }
+            }).join('');
         }
 
         function increaseQty(productId) {
@@ -1590,15 +2864,22 @@
 
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
+
+            // 檢查是否為新加坡商品
+            if (product.country === 'singapore') {
+                alert('新加坡商品目前暫不開放購買，僅供瀏覽。');
+                return;
+            }
+
             const qty = parseInt(document.getElementById(`qty-${productId}`).value);
-            
+
             const existingItem = cart.find(item => item.id === productId);
             if (existingItem) {
                 existingItem.quantity += qty;
             } else {
                 cart.push({ ...product, quantity: qty });
             }
-            
+
             updateCartBadge();
             alert('已加入購物車！');
         }
@@ -1610,6 +2891,13 @@
 
         function openCart() {
             renderCart();
+            // 重置優惠碼輸入欄位（如果沒有套用優惠碼的話）
+            const discountInput = document.getElementById('discountCodeInput');
+            if (discountInput && !appliedDiscountCode) {
+                discountInput.disabled = false;
+                discountInput.value = '';
+                document.getElementById('discountMessage').innerHTML = '';
+            }
             document.getElementById('cartModal').style.display = 'block';
         }
 
@@ -1622,6 +2910,7 @@
             if (cart.length === 0) {
                 cartItemsDiv.innerHTML = '<p style="text-align: center; color: #999;">購物車是空的</p>';
                 document.getElementById('subtotalPrice').textContent = '0';
+                document.getElementById('discountRow').style.display = 'none';
                 document.getElementById('shippingFee').textContent = '55';
                 document.getElementById('shippingNote').textContent = '';
                 document.getElementById('totalPrice').textContent = '55';
@@ -1631,9 +2920,9 @@
             cartItemsDiv.innerHTML = cart.map((item, index) => `
                 <div class="cart-item">
                     <div class="cart-item-content">
-                        <img src="${item.image}" 
-                             alt="${item.name}" 
-                             class="cart-item-image" 
+                        <img src="${item.image}"
+                             alt="${item.name}"
+                             class="cart-item-image"
                              onclick="showProductDetail(${item.id})"
                              title="點擊查看商品詳情">
                         <div class="cart-item-info">
@@ -1647,12 +2936,24 @@
             `).join('');
 
             const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            const shippingFee = subtotal >= 600 ? 0 : 55;
-            const total = subtotal + shippingFee;
+
+            // 計算優惠折扣（如果有套用優惠碼）
+            let discount = 0;
+            if (appliedDiscountCode) {
+                discount = Math.round(subtotal * 0.1);  // 9折 = 減10%
+                document.getElementById('discountRow').style.display = 'block';
+                document.getElementById('discountAmount').textContent = discount;
+            } else {
+                document.getElementById('discountRow').style.display = 'none';
+            }
+
+            const subtotalAfterDiscount = subtotal - discount;
+            const shippingFee = subtotalAfterDiscount >= 600 ? 0 : 55;
+            const total = subtotalAfterDiscount + shippingFee;
 
             document.getElementById('subtotalPrice').textContent = subtotal;
             document.getElementById('shippingFee').textContent = shippingFee;
-            document.getElementById('shippingNote').textContent = subtotal >= 600 ? '(滿600元免運)' : '(滿600免運費)';
+            document.getElementById('shippingNote').textContent = subtotalAfterDiscount >= 600 ? '(滿600元免運)' : '(滿600免運費)';
             document.getElementById('totalPrice').textContent = total;
         }
 
@@ -1660,6 +2961,37 @@
             cart.splice(index, 1);
             updateCartBadge();
             renderCart();
+        }
+
+        // 套用優惠碼功能
+        function applyDiscountCode() {
+            const input = document.getElementById('discountCodeInput');
+            const code = input.value.trim().toUpperCase();
+            const messageDiv = document.getElementById('discountMessage');
+
+            if (!code) {
+                messageDiv.innerHTML = '<span style="color: #d32f2f;">❌ 請輸入優惠碼</span>';
+                return;
+            }
+
+            // 檢查優惠碼是否有效
+            if (discountCodes.includes(code)) {
+                appliedDiscountCode = code;
+
+                // 計算最終匯款金額
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                const discount = Math.round(subtotal * 0.1);  // 9折 = 減10%
+                const subtotalAfterDiscount = subtotal - discount;
+                const shippingFee = subtotalAfterDiscount >= 600 ? 0 : 55;
+                const finalTotal = subtotalAfterDiscount + shippingFee;
+
+                messageDiv.innerHTML = `<span style="color: #2e7d32;">✅ 優惠碼套用成功！已享 9 折優惠<br>💰 最終匯款金額：NT$ ${finalTotal}<br><small>（上方已計算出最新價格）</small></span>`;
+                input.value = '';
+                input.disabled = true;
+                renderCart();  // 重新計算並顯示折扣
+            } else {
+                messageDiv.innerHTML = '<span style="color: #d32f2f;">❌ 優惠碼無效或已使用</span>';
+            }
         }
 
         // 複製銀行帳號功能
@@ -1773,10 +3105,9 @@
             const address = `${storeType}-${storeCity}-${storeName}${storeCode ? '-代碼' + storeCode : ''}`;
             const account = document.getElementById('accountLast5').value;
             const note = document.getElementById('orderNote').value;
-            const screenshotFile = document.getElementById('paymentScreenshot').files[0];
 
-            if (!name || !phone || !email || !storeType || !storeCity || !storeName || !account || !screenshotFile) {
-                alert('請填寫所有必填欄位並上傳匯款截圖！');
+            if (!name || !phone || !email || !storeType || !storeCity || !storeName || !account) {
+                alert('請填寫所有必填欄位！');
                 submitButton.disabled = false;
                 submitButton.style.opacity = '1';
                 submitButton.style.cursor = 'pointer';
@@ -1804,38 +3135,33 @@
             }
 
             const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            const shippingFee = subtotal >= 600 ? 0 : 55;
-            const total = subtotal + shippingFee;
+
+            // 計算優惠折扣
+            let discount = 0;
+            if (appliedDiscountCode) {
+                discount = Math.round(subtotal * 0.1);  // 9折 = 減10%
+            }
+
+            const subtotalAfterDiscount = subtotal - discount;
+            const shippingFee = subtotalAfterDiscount >= 600 ? 0 : 55;
+            const total = subtotalAfterDiscount + shippingFee;
             const orderTime = new Date().toLocaleString('zh-TW');
 
             // 合併姓名和匿名稱號
             const nameWithNickname = `${name}(${lineNickname})`;
-
-            // 顯示處理進度
-            document.getElementById('orderSummary').innerHTML = `
-                <div style="text-align: center; padding: 40px;">
-                    <div style="font-size: 3em;">📸</div>
-                    <h3>正在處理圖片...</h3>
-                    <p style="color: #666; margin-top: 10px;">請稍候，圖片壓縮中</p>
-                </div>
-            `;
-
-            // 壓縮截圖（最大寬度1200px，品質0.7）
-            const screenshotBase64 = await compressImage(screenshotFile, 1200, 0.7);
-
-            console.log('原始檔案大小:', screenshotFile.size, 'bytes');
-            console.log('壓縮後大小:', screenshotBase64.length, 'bytes');
 
             const orderData = {
                 orderTime,
                 customer: { name: nameWithNickname, phone, email, address, account },
                 items: cart,
                 subtotal,
+                discount,
+                discountCode: appliedDiscountCode || '無',
                 shippingFee,
                 total,
                 note,
-                paymentScreenshot: screenshotBase64,
-                screenshotFilename: screenshotFile.name
+                paymentScreenshot: appliedDiscountCode ? `優惠碼:${appliedDiscountCode}` : '無優惠碼',  // 將優惠碼回傳到此欄位
+                screenshotFilename: null
             };
 
             // 更新為傳送狀態
@@ -1849,10 +3175,9 @@
 
             try {
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyWPRhVC9RI2xmE8yLC1wAQi1bsMH2kpJPDPDD1AqTKRdjyHBuUjfQufeJzDmGoZfkJiQ/exec';
-                
+
                 console.log('準備送出訂單資料:', orderData);
-                console.log('截圖大小:', screenshotBase64.length, 'bytes');
-                
+
                 // 使用 fetch POST 方式傳送（支援大量資料）
                 const response = await fetch(scriptUrl, {
                     method: 'POST',
@@ -1881,10 +3206,14 @@
                         <p><strong>Email：</strong>${email || '未提供'}</p>
                         <p><strong>取貨門市：</strong>${storeCity} - ${storeName}</p>
                         <p><strong>匯款帳號後五碼：</strong>${account}</p>
+                        ${appliedDiscountCode ? `<p><strong>使用優惠碼：</strong>${appliedDiscountCode}</p>` : ''}
                         ${note ? `<p><strong>備註：</strong>${note}</p>` : ''}
                         <hr style="margin: 15px 0;">
                         <h4>商品清單：</h4>
                         ${cart.map(item => `<p>• ${item.name}(${item.description}) × ${item.quantity} = NT$ ${item.price * item.quantity}</p>`).join('')}
+                        <p style="margin-top: 10px;"><strong>小計：</strong>NT$ ${subtotal}</p>
+                        ${discount > 0 ? `<p style="color: #d32f2f;"><strong>優惠折扣（9折）：</strong>-NT$ ${discount}</p>` : ''}
+                        <p><strong>運費：</strong>NT$ ${shippingFee}</p>
                         <h3 style="color: #000000; margin-top: 15px;">總金額：NT$ ${total}</h3>
                         <p style="margin-top: 20px; color: #666; font-size: 0.9em;">📧 訂單確認信已寄送至您的信箱，請查收</p>
                     </div>
@@ -1894,6 +3223,16 @@
                 document.getElementById('cartItems').style.display = 'none';
                 document.querySelector('.form-section').style.display = 'none';
                 document.querySelector('.total').style.display = 'none';
+
+                // 如果有使用優惠碼，從清單中移除（防止重複使用）
+                if (appliedDiscountCode) {
+                    const codeIndex = discountCodes.indexOf(appliedDiscountCode);
+                    if (codeIndex > -1) {
+                        discountCodes.splice(codeIndex, 1);
+                        console.log(`優惠碼 ${appliedDiscountCode} 已使用並移除`);
+                    }
+                    appliedDiscountCode = null;  // 重置已套用的優惠碼
+                }
 
                 cart = [];
                 updateCartBadge();
@@ -1950,16 +3289,72 @@
         
         // 頁面載入和視窗大小改變時更新路徑
         window.addEventListener('load', initAirplaneAnimation);
+        window.addEventListener('load', function() {
+            selectCountry('japan');
+        });
         window.addEventListener('resize', initAirplaneAnimation);
+
+        // 當前選擇的國家
+        let currentCountry = 'japan';
 
         // 國家選擇功能
         function selectCountry(country) {
+            // 移除所有國家卡片的 active 樣式
+            document.querySelectorAll('.country-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // 為選中的國家添加 active 樣式
+            const selectedCard = document.getElementById(`${country}-card`);
+            if (selectedCard) {
+                selectedCard.classList.add('active');
+            }
+
+            // 隱藏所有分類導航
+            document.getElementById('singapore-categories').style.display = 'none';
+            document.getElementById('korea-categories').style.display = 'none';
+            document.getElementById('japan-categories').style.display = 'none';
+
+            // 顯示對應國家的分類導航
             if (country === 'singapore') {
-                // 新加坡已經是當前國家，不需要做任何事
-                console.log('新加坡代購服務開放中，截止日期：2025/12/5');
+                document.getElementById('singapore-categories').style.display = 'block';
+                console.log('新加坡代購服務開放中，截止日期：2025/1/15');
+            } else if (country === 'korea') {
+                document.getElementById('korea-categories').style.display = 'block';
+                console.log('韓國代購服務開放中，截止日期：2025/1/20');
+            } else if (country === 'japan') {
+                document.getElementById('japan-categories').style.display = 'block';
+                console.log('日本代購服務開放中，截止日期：2025/1/25');
+            }
+
+            // 更新當前國家
+            currentCountry = country;
+
+            // 重置篩選器
+            if (country === 'korea') {
+                // 韓國：重置品牌和商品種類篩選器
+                currentBrand = 'all';
+                currentType = 'all';
+
+                // 重置品牌和種類篩選器的active狀態
+                setTimeout(() => {
+                    const brandButtons = document.querySelectorAll('#korea-categories .korea-filter-grid:first-of-type button');
+                    brandButtons.forEach((btn, index) => {
+                        btn.classList.remove('active');
+                        if (index === 0) btn.classList.add('active'); // 第一個按鈕設為active
+                    });
+
+                    const typeButtons = document.querySelectorAll('#korea-categories .korea-filter-grid:last-of-type button');
+                    typeButtons.forEach((btn, index) => {
+                        btn.classList.remove('active');
+                        if (index === 0) btn.classList.add('active'); // 第一個按鈕設為active
+                    });
+                }, 0);
+
+                renderProducts();
             } else {
-                // 其他國家尚未開放
-                alert('此國家代購服務即將推出，敬請期待！');
+                // 其他國家：使用分類篩選
+                filterByCategory('all');
             }
         }
 
@@ -1970,7 +3365,14 @@
         <div class="product-detail-content">
             <span class="product-detail-close" onclick="closeProductDetail()">&times;</span>
             <div class="product-detail-image-container">
-                <img id="productDetailImage" src="" alt="" class="product-detail-image">
+                <!-- 圖片輪播容器 -->
+                <div class="product-detail-image-slider">
+                    <button class="slider-btn slider-btn-prev" id="sliderPrevBtn" onclick="previousImage()" style="display: none;">&lt;</button>
+                    <img id="productDetailImage" src="" alt="" class="product-detail-image">
+                    <button class="slider-btn slider-btn-next" id="sliderNextBtn" onclick="nextImage()" style="display: none;">&gt;</button>
+                </div>
+                <!-- 圖片指示器 -->
+                <div class="product-detail-image-dots" id="productDetailImageDots"></div>
             </div>
             <div class="product-detail-info">
                 <h2 class="product-detail-name" id="productDetailName"></h2>
@@ -1979,6 +3381,57 @@
                 <div class="product-detail-description" id="productDetailDescription">
                     <h4>📝 商品介紹</h4>
                     <p id="productDetailDescriptionText"></p>
+                </div>
+
+                <!-- 款式選擇區域（僅商品系列顯示） -->
+                <div id="productVariantsSection" style="display: none;">
+                    <h4 style="margin: 20px 0 10px 0; font-size: 16px;">🛍️ 選擇款式</h4>
+                    <div id="variantSwitchHint" style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 12px 15px; margin-bottom: 15px; border-radius: 4px; font-size: 13px; color: #e65100; display: none;">
+                        <span style="font-weight: 600;">💡 小提示：</span>點擊不同款式的圖片或使用左右箭頭切換，即可查看各款式的詳細介紹與功效說明！
+                    </div>
+                    <div id="productVariantsList"></div>
+                    <button id="variantAddToCartBtn" class="add-to-cart" onclick="addVariantsToCart()" style="margin-top: 20px; width: 100%;">確認加入購物車</button>
+                </div>
+
+                <!-- 單一商品數量選擇區域（新加坡商品） -->
+                <div id="productSimpleSection" style="display: none;">
+                    <div style="margin: 20px 0; padding: 15px; background: #f9f9f9; border-radius: 8px;">
+                        <h4 style="margin: 0 0 15px 0; font-size: 16px;">🛒 選擇數量</h4>
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                            <button onclick="decreaseSimpleQty()" style="
+                                width: 40px;
+                                height: 40px;
+                                border: none;
+                                background: #333;
+                                color: white;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                font-size: 20px;
+                                font-weight: bold;
+                            ">-</button>
+                            <input type="number" id="simpleProductQty" value="1" min="1" style="
+                                width: 80px;
+                                text-align: center;
+                                border: 2px solid #ddd;
+                                border-radius: 5px;
+                                padding: 10px;
+                                font-size: 18px;
+                                font-weight: 600;
+                            ">
+                            <button onclick="increaseSimpleQty()" style="
+                                width: 40px;
+                                height: 40px;
+                                border: none;
+                                background: #333;
+                                color: white;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                font-size: 20px;
+                                font-weight: bold;
+                            ">+</button>
+                        </div>
+                    </div>
+                    <button id="simpleAddToCartBtn" class="add-to-cart" onclick="addSimpleProductToCart()" style="margin-top: 10px; width: 100%;">加入購物車</button>
                 </div>
             </div>
         </div>
@@ -2276,6 +3729,7 @@
                 const fullProduct = products.find(p => p.id === product.id);
                 const price = fullProduct ? fullProduct.price : 0;
                 const spec = fullProduct ? fullProduct.description : '';
+                const isSingapore = fullProduct && fullProduct.country === 'singapore';
 
                 return `
                     <div class="hot-product-item">
@@ -2289,12 +3743,18 @@
                             <div style="color: #000000; font-weight: bold; font-size: 1.3em; margin-bottom: 15px;">
                                 NT$ ${price}
                             </div>
-                            <div class="quantity-control">
-                                <button onclick="updateHotProductQuantity(${product.id}, -1)">-</button>
-                                <input type="number" id="hot-qty-${product.id}" value="1" min="1" readonly>
-                                <button onclick="updateHotProductQuantity(${product.id}, 1)">+</button>
-                            </div>
-                            <button class="add-to-cart" onclick="addHotProductToCart(${product.id})">加入購物車</button>
+                            ${isSingapore ? `
+                                <div style="padding: 10px; background: #fff3e0; border: 1px solid #ff9800; border-radius: 5px; color: #f57c00; font-size: 0.9em; margin-bottom: 10px;">
+                                    ⚠️ 暫不開放購買（僅供瀏覽）
+                                </div>
+                            ` : `
+                                <div class="quantity-control">
+                                    <button onclick="updateHotProductQuantity(${product.id}, -1)">-</button>
+                                    <input type="number" id="hot-qty-${product.id}" value="1" min="1" readonly>
+                                    <button onclick="updateHotProductQuantity(${product.id}, 1)">+</button>
+                                </div>
+                                <button class="add-to-cart" onclick="addHotProductToCart(${product.id})">加入購物車</button>
+                            `}
                         </div>
                     </div>
                 `;
@@ -2314,6 +3774,12 @@
         function addHotProductToCart(productId) {
             const product = products.find(p => p.id === productId);
             if (!product) return;
+
+            // 檢查是否為新加坡商品
+            if (product.country === 'singapore') {
+                alert('新加坡商品目前暫不開放購買，僅供瀏覽。');
+                return;
+            }
 
             const quantityInput = document.getElementById(`hot-qty-${productId}`);
             const quantity = parseInt(quantityInput.value) || 1;
