@@ -1577,18 +1577,18 @@
         <div class="country-selector">
             <div class="country-selector-title">選擇代購國家</div>
             <div class="country-cards">
-                <!-- 日本 - 當前可購買 -->
-                <div class="country-card" id="japan-card" onclick="selectCountry('japan')">
-                    <div class="country-name">日本 🇯🇵</div>
-                    <div class="country-deadline">截止：2025/1/17</div>
-                    <div class="country-deadline">預計1/23出貨</div>
-                </div>
-
                 <!-- 韓國 - 當前可購買 -->
                 <div class="country-card" id="korea-card" onclick="selectCountry('korea')">
                     <div class="country-name">韓國 🇰🇷</div>
-                    <div class="country-deadline">截止：2025/2/1</div>
+                    <div class="country-deadline">截止：2025/2/4</div>
                     <div class="country-deadline">預計2/7出貨</div>
+                </div>
+
+                <!-- 日本 - 暫不開放購買 -->
+                <div class="country-card" id="japan-card" onclick="selectCountry('japan')" style="opacity: 0.85;">
+                    <span class="coming-soon-badge" style="background: #ff9800;">暫不開放</span>
+                    <div class="country-name">日本 🇯🇵</div>
+                    <div class="country-status" style="color: #666;">僅供瀏覽</div>
                 </div>
 
                 <!-- 新加坡 - 暫不開放購買 -->
@@ -1633,9 +1633,22 @@
                 <div style="font-weight: 600; margin-bottom: 10px; color: #333; font-size: 1.05em;">品牌</div>
                 <div class="korea-filter-grid">
                     <button class="active" onclick="filterByBrand('all')">全部品牌</button>
-                    <button onclick="filterByBrand('Aestura')">Aestura</button>
+                    <button onclick="filterByBrand('Mediheal')">Mediheal</button>
+                    <button onclick="filterByBrand('numbuzin')">Numbuzin</button>
+                    <button onclick="filterByBrand('Dasique')">Dasique</button>
+                    <button onclick="filterByBrand('Fillimilli')">Fillimilli</button>
+                    <button onclick="filterByBrand('FIXX')">FIXX</button>
+                    <button onclick="filterByBrand('Fwee')">Fwee</button>
+                    <button onclick="filterByBrand('Hince')">Hince</button>
+                    <button onclick="filterByBrand('Lilybyred')">Lilybyred</button>
+                    <button onclick="filterByBrand('Peripera')">Peripera</button>
+                    <button onclick="filterByBrand('Rom&nd')">Rom&nd</button>
+                    <button onclick="filterByBrand('The Seam')">The Seam</button>
+                    <button onclick="filterByBrand('Too Cool For School')">Too Cool For School</button>
+                    <button onclick="filterByBrand('Wakemake')">Wakemake</button>
+                    <button onclick="filterByBrand('AESTURA')">AESTURA</button>
                     <button onclick="filterByBrand('Arencia')">Arencia</button>
-                    <button onclick="filterByBrand('Bioheal BOH - Panthecell')">Bioheal BOH</button>
+                    <button onclick="filterByBrand('Bioheal BOH')">Bioheal BOH - Panthecell</button>
                     <button onclick="filterByBrand('Beplain')">Beplain</button>
                     <button onclick="filterByBrand('Celimax')">Celimax</button>
                     <button onclick="filterByBrand('Centellian')">Centellian</button>
@@ -1643,10 +1656,9 @@
                     <button onclick="filterByBrand('Dr.G')">Dr.G</button>
                     <button onclick="filterByBrand('Fully 綠番茄')">Fully 綠番茄</button>
                     <button onclick="filterByBrand('ilso')">ilso</button>
-                    <button onclick="filterByBrand('Laneige')">Laneige</button>
-                    <button onclick="filterByBrand('Medicube')">Medicube</button>
-                    <button onclick="filterByBrand('Mediheal')">Mediheal</button>
-                    <button onclick="filterByBrand('numbuzin')">numbuzin</button>
+                    <button onclick="filterByBrand('Laneige')">Laneige 蘭芝</button>
+                    <button onclick="filterByBrand('Medicube')">medicube</button>
+                    <button onclick="filterByBrand('Ongredients')">Ongredients</button>
                 </div>
             </div>
             <!-- 商品種類篩選器 -->
@@ -1656,8 +1668,7 @@
                     <button class="active" onclick="filterByType('all')">全部種類</button>
                     <button onclick="filterByType('化妝品')">化妝品</button>
                     <button onclick="filterByType('保養品')">保養品</button>
-                    <button onclick="filterByType('零食')">零食</button>
-                    <button onclick="filterByType('泡麵')">泡麵</button>
+                    <button onclick="filterByType('其他')">其他</button>
                 </div>
             </div>
         </div>
@@ -2321,11 +2332,1143 @@
                 category: 'japan-electronics',
                 country: 'japan',
                 detailedDescription: '【年度最強V臉神器】 在 SR85 的強大功能基礎上，通常代表著技術的微調升級與設計優化（如更舒適的握感、更精準的溫度控制或升級的 LED 波長）。它將 RF 溫熱與 EMS 提拉完美結合，目標是撫平細紋、改善法令紋，讓肌膚重現緊緻、彈潤的年輕狀態。追求最新技術和極致細節的您，絕不能錯過！'
+            },
+            // ========== 韓國商品 ==========
+            {
+                id: 8001,
+                name: 'Mediheal 精華棉片 100 片入',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=19IY9Q7JTaU9xJCj5NfWT4QYIH7Op547s&sz=w1000',
+                brand: 'Mediheal',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Mediheal 精華棉片，每盒 100 片入，多種功效可選，適合日常肌膚護理使用',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1539LTYRuRvQFTWxqZa5GSsm35MHCJ_6t&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=12b-IG-xkpYnL7FlyXqvkT4ePV6KQoBg5&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1z0C7aFs1I6PKqiSqU_JOuBD_yjEGt33A&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=11S7Ptt9rU4OjD167veL6Q5NLL5ddP_tk&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=10zTvEA8wF9va8zdTdRKRhZmcGqsIi5zg&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1reY-99fKj2PjWDCoLzQ13UJHdVisLG_R&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1H26dBpxHTHGWvPDFfCM95M4hCt1zLY6f&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1KjsBjLXnImsyTW8HlEAMPpe6Db8FYiNN&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1dlHvdxs61LzRBSIRg-Dq3ACIW46ofEKP&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Icqerjpn5nCe3-PPNK9nuQKSY2XulH-a&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1R7yFg8KD_WdH2jKsDYU1kVlSKGhHP0O5&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1_8nHzZ6mdRvn-LWi2-qrlo3KDawwjf6U&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Qzxq1GIf8hZuul5-RyOhVtheCv4-DUnl&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=19IY9Q7JTaU9xJCj5NfWT4QYIH7Op547s&sz=w1000'
+                ],
+                variants: [
+                    { id: 80011, name: '茶樹集中鎮靜', price: 480, image: 'https://drive.google.com/thumbnail?id=1539LTYRuRvQFTWxqZa5GSsm35MHCJ_6t&sz=w1000', description: '茶樹精華，有效鎮靜舒緩肌膚' },
+                    { id: 80012, name: '積雪草去痘鎮靜', price: 480, image: 'https://drive.google.com/thumbnail?id=1z0C7aFs1I6PKqiSqU_JOuBD_yjEGt33A&sz=w1000', description: '積雪草精華，改善痘痘肌膚' },
+                    { id: 80013, name: '沁涼補水保濕涼感', price: 480, image: 'https://drive.google.com/thumbnail?id=10zTvEA8wF9va8zdTdRKRhZmcGqsIi5zg&sz=w1000', description: '涼感配方，快速補水保濕' },
+                    { id: 80014, name: '膠原蛋白提升彈力', price: 480, image: 'https://drive.google.com/thumbnail?id=1H26dBpxHTHGWvPDFfCM95M4hCt1zLY6f&sz=w1000', description: '補充膠原蛋白，提升肌膚彈力' },
+                    { id: 80015, name: '維他命提亮白皙', price: 480, image: 'https://drive.google.com/thumbnail?id=1dlHvdxs61LzRBSIRg-Dq3ACIW46ofEKP&sz=w1000', description: '維他命配方，提亮膚色' },
+                    { id: 80016, name: '植物酵素角質護理', price: 480, image: 'https://drive.google.com/thumbnail?id=1R7yFg8KD_WdH2jKsDYU1kVlSKGhHP0O5&sz=w1000', description: '植物酵素，溫和去角質' },
+                    { id: 80017, name: '視黃醇膠原蛋白', price: 480, image: 'https://drive.google.com/thumbnail?id=1Qzxq1GIf8hZuul5-RyOhVtheCv4-DUnl&sz=w1000', description: '視黃醇配方，抗老緊緻' }
+                ]
+            },
+            {
+                id: 8002,
+                name: 'Mediheal 精華面膜 10 片入',
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1q6yvsboBZWBwPNiVNq3h6e2_23lCReoq&sz=w1000',
+                brand: 'Mediheal',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Mediheal 精華面膜，每盒 10 片入，多種功效可選，深層滋養肌膚',
+                variants: [
+                    { id: 80021, name: '維他命C', price: 370, image: 'https://drive.google.com/thumbnail?id=1q6yvsboBZWBwPNiVNq3h6e2_23lCReoq&sz=w1000', description: '維他命C精華，提亮膚色' },
+                    { id: 80022, name: '神經酰安', price: 370, image: 'https://drive.google.com/thumbnail?id=1ln2aqzNgNh8bQudmxHDXIQV3bqCHyCaI&sz=w1000', description: '修護肌膚屏障' },
+                    { id: 80023, name: '膠原蛋白', price: 370, image: 'https://drive.google.com/thumbnail?id=17f5US_CvIIdFAYGwYxqS_g-vxgXiAg8T&sz=w1000', description: '補充膠原蛋白，緊緻肌膚' },
+                    { id: 80024, name: '玻尿酸', price: 370, image: 'https://drive.google.com/thumbnail?id=1h6-xZnzoNj-Mqg7HGyrE0bBHhh2nV8ZH&sz=w1000', description: '深層補水保濕' },
+                    { id: 80025, name: '積雪草苷', price: 370, image: 'https://drive.google.com/thumbnail?id=1KqMl2wb2siaHRjUmagHI666nRu3zes4c&sz=w1000', description: '鎮靜舒緩敏感肌' },
+                    { id: 80026, name: '玫瑰PDRN', price: 370, image: 'https://drive.google.com/thumbnail?id=1CG3wR8jTrH3CK2f0qDH9jityTO8VKMkc&sz=w1000', description: '深度修復肌膚' },
+                    { id: 80027, name: '茶樹控油', price: 370, image: 'https://drive.google.com/thumbnail?id=1a9-GMjM26IXQMcWsFbWv_pRiDQV4RatV&sz=w1000', description: '控油淨痘，平衡油脂' }
+                ]
+            },
+            { id: 8003, name: 'Numbuzin 1 號舒緩保濕SPA 海藻面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1kUlu5DnxMzkgXbvLfa4HOx0UWvWUICfS&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 1 號海藻面膜，舒緩保濕，如同 SPA 般的護膚體驗' },
+            { id: 8004, name: 'Numbuzin 2 號膠原蛋白珍珠淨白聚緻面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1hiZ_bWQ2B9ou9teZILGRcCV-TSPCpdoU&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 2 號面膜，膠原蛋白與珍珠精華，提亮淨白肌膚' },
+            { id: 8005, name: 'Numbuzin 3 號水光收毛孔面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1WzamIq1aYmRyqZ9QM7ozzpjASezmHXK1&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 3 號面膜，水光精華，有效收縮毛孔' },
+            { id: 8006, name: 'Numbuzin 4 號冰爽舒緩艾草祛紅面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1wyL6quKw8J6YzhtPx2-4SzJRo1ezP7pX&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 4 號面膜，艾草精華，冰爽舒緩祛紅' },
+            { id: 8007, name: 'Numbuzin 5 號穀胱甘肽維他命 C 藥丸亮白面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=13IECHSXqv5o-FdmxTIKeoc9Z-wsRhrcJ&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 5 號面膜，穀胱甘肽與維他命C，強效亮白' },
+            { id: 8008, name: 'Numbuzin 9 號 NAD+ 生物提拉全效面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=14LOIaBoN80R2h_nuafvGubG6tNGnspr4&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 9 號面膜，NAD+ 生物科技，全效提拉緊緻' },
+            { id: 8009, name: 'Fillimilli 燙睫毛夾', price: 620, description: '專業工具', image: 'https://drive.google.com/thumbnail?id=1baYeoTYjvVDsZfU88DJpMxJsJ_dXcrGp&sz=w1000', brand: 'Fillimilli', type: '其他', country: 'korea', detailedDescription: 'Fillimilli 專業燙睫毛夾，打造完美捲翹睫毛' },
+            { id: 8010, name: 'FIXX 定裝噴霧', price: 465, description: '120ml', image: 'https://drive.google.com/thumbnail?id=17de-lERtFLfyIAVsT8UfVAhJOpszbgC_&sz=w1000', brand: 'FIXX', type: '化妝品', country: 'korea', detailedDescription: 'FIXX 定裝噴霧，持久定妝，保持妝容完美一整天' },
+            {
+                id: 8011,
+                name: 'Dasique 布丁光澤唇釉',
+                description: '12色可選',
+                image: 'https://drive.google.com/thumbnail?id=1y2NQ3ShOGBmgaOtbzM5jCj8DKxezFtVa&sz=w1000',
+                brand: 'Dasique',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Dasique 布丁光澤唇釉，水潤光澤質地，打造飽滿雙唇',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1y2NQ3ShOGBmgaOtbzM5jCj8DKxezFtVa&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1icYa-YUobMQLbBKZV1JLwAsH7h82J52K&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1rgMRN3rpJpbdsbmLfFaYTAtBSHb1m-2j&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17p5JPgrNZEc5EpfYh_RS2LGsp6Lq8P4l&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1d4TDb0JE8SzuRGEi8ZW3tGJM-N6v2Aw9&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1XwjM843y8dwV7YvOiINEoUoRjXqEDyB6&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1L9HN5emAN6Ktgdkj953rTYO0oTdNA8E1&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Yim8Z-PTiC3fxMqdpyMEWM3KOBSFoALD&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1YnYdNZ_1z-45759-ilq5EVugEpK-kDZE&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1vvI5Uv1uhHnLbgZG48eqi5dwcRPdRYei&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1jezf_VbRPEMbIxxNONqsCmVxmnOIoYoK&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Nji6ov2dbmWiTW_HRWjYeAotCH7SJjNA&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1kValF8Tqd1WrhyCoFm2RNTM1Ys9AWo0i&sz=w1000'
+                ],
+                variants: [
+                    { id: 80111, name: '#01', price: 515, image: 'https://drive.google.com/thumbnail?id=1icYa-YUobMQLbBKZV1JLwAsH7h82J52K&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80112, name: '#02', price: 515, image: 'https://drive.google.com/thumbnail?id=1rgMRN3rpJpbdsbmLfFaYTAtBSHb1m-2j&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80113, name: '#03', price: 515, image: 'https://drive.google.com/thumbnail?id=17p5JPgrNZEc5EpfYh_RS2LGsp6Lq8P4l&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80114, name: '#04', price: 515, image: 'https://drive.google.com/thumbnail?id=1d4TDb0JE8SzuRGEi8ZW3tGJM-N6v2Aw9&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80115, name: '#05', price: 515, image: 'https://drive.google.com/thumbnail?id=1XwjM843y8dwV7YvOiINEoUoRjXqEDyB6&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80116, name: '#06', price: 515, image: 'https://drive.google.com/thumbnail?id=1L9HN5emAN6Ktgdkj953rTYO0oTdNA8E1&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80117, name: '#07', price: 515, image: 'https://drive.google.com/thumbnail?id=1Yim8Z-PTiC3fxMqdpyMEWM3KOBSFoALD&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80118, name: '#08', price: 515, image: 'https://drive.google.com/thumbnail?id=1YnYdNZ_1z-45759-ilq5EVugEpK-kDZE&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80119, name: '#09', price: 515, image: 'https://drive.google.com/thumbnail?id=1vvI5Uv1uhHnLbgZG48eqi5dwcRPdRYei&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80120, name: '#10', price: 515, image: 'https://drive.google.com/thumbnail?id=1jezf_VbRPEMbIxxNONqsCmVxmnOIoYoK&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80121, name: '#11', price: 515, image: 'https://drive.google.com/thumbnail?id=1Nji6ov2dbmWiTW_HRWjYeAotCH7SJjNA&sz=w1000', description: '水潤光澤質地' },
+                    { id: 80122, name: '#12', price: 515, image: 'https://drive.google.com/thumbnail?id=1kValF8Tqd1WrhyCoFm2RNTM1Ys9AWo0i&sz=w1000', description: '水潤光澤質地' }
+                ]
+            },
+            {
+                id: 8012,
+                name: 'Dasique 20 色眼影盤',
+                description: '7款配色可選',
+                image: 'https://drive.google.com/thumbnail?id=1dXkIzzbpFFUKsRPgaJsGjyWDs7rRh7-t&sz=w1000',
+                brand: 'Dasique',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Dasique 20色眼影盤，豐富配色選擇，打造多變眼妝',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1dXkIzzbpFFUKsRPgaJsGjyWDs7rRh7-t&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1465_Kfv-RExrXu8CfQv3Sv5Bi6erfbQ_&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1YIEyB8p7QA-oTq8vj9gc9Hr8-8iTWfEd&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1mrlRc_cDxXaMRAJWClqS8j4q0jE2cArY&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1aOCgO_8-lPaHJPQqIEWasC_1UgK1f_f-&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1wi5mWUaylwe1KaLI7_vVsDim4jeasKqI&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17Go7Q49WBbmvF8iTRMrmAPH6POa-h7Le&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1LO4zydBgvRr9ds055kkhoTkZDRpT-tvO&sz=w1000'
+                ],
+                variants: [
+                    { id: 80121, name: '#01', price: 960, image: 'https://drive.google.com/thumbnail?id=1465_Kfv-RExrXu8CfQv3Sv5Bi6erfbQ_&sz=w1000', description: '豐富配色選擇' },
+                    { id: 80122, name: '#02', price: 960, image: 'https://drive.google.com/thumbnail?id=1YIEyB8p7QA-oTq8vj9gc9Hr8-8iTWfEd&sz=w1000', description: '豐富配色選擇' },
+                    { id: 80123, name: '#03', price: 960, image: 'https://drive.google.com/thumbnail?id=1mrlRc_cDxXaMRAJWClqS8j4q0jE2cArY&sz=w1000', description: '豐富配色選擇' },
+                    { id: 80124, name: '#04', price: 960, image: 'https://drive.google.com/thumbnail?id=1aOCgO_8-lPaHJPQqIEWasC_1UgK1f_f-&sz=w1000', description: '豐富配色選擇' },
+                    { id: 80125, name: '#05', price: 960, image: 'https://drive.google.com/thumbnail?id=1wi5mWUaylwe1KaLI7_vVsDim4jeasKqI&sz=w1000', description: '豐富配色選擇' },
+                    { id: 80126, name: '#06', price: 960, image: 'https://drive.google.com/thumbnail?id=17Go7Q49WBbmvF8iTRMrmAPH6POa-h7Le&sz=w1000', description: '豐富配色選擇' },
+                    { id: 80127, name: '#07', price: 960, image: 'https://drive.google.com/thumbnail?id=1LO4zydBgvRr9ds055kkhoTkZDRpT-tvO&sz=w1000', description: '豐富配色選擇' }
+                ]
+            },
+            {
+                id: 8013,
+                name: 'Daisy Shine Glow 4 色高光碟 01 閃亮美人魚',
+                price: 650,
+                description: '4色高光',
+                image: 'https://drive.google.com/thumbnail?id=1yhCqb1QscWhs6wZkWdAHGZ5fp5iassol&sz=w1000',
+                brand: 'Dasique',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Dasique Shine Glow 4色高光碟，細膩珠光，打造立體光澤妝容',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1tEihmyi48WbKEBkLqnk4UL4Ip11R1XXN&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1yhCqb1QscWhs6wZkWdAHGZ5fp5iassol&sz=w1000'
+                ]
+            },
+            {
+                id: 8014,
+                name: 'Daisy Glow Shell 妝前乳',
+                price: 425,
+                description: '50ml',
+                image: 'https://drive.google.com/thumbnail?id=1H_5jFMQ-xBantSGPExekQws6IU44jE58&sz=w1000',
+                brand: 'Dasique',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Dasique Glow Shell 妝前乳，貝殼光澤妝前打底，提升妝容持久度',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1-q35oELBYhBLqGpkSIP5TLbJghccZKfs&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1H_5jFMQ-xBantSGPExekQws6IU44jE58&sz=w1000'
+                ]
+            },
+            {
+                id: 8015,
+                name: 'Dasique 水感貝殼防曬霜',
+                price: 550,
+                description: '50ml',
+                image: 'https://drive.google.com/thumbnail?id=1qokA3yupsDD7PD4SGKuCgpC3_dFgUN4o&sz=w1000',
+                brand: 'Dasique',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Dasique 水感貝殼防曬霜，高效防曬同時保濕，水感質地不黏膩',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1JE2roxVLAjzwQmq-L85xRR7GVw2jbrDb&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1qokA3yupsDD7PD4SGKuCgpC3_dFgUN4o&sz=w1000'
+                ]
+            },
+            { id: 8016, name: 'Dasique Twinkle Mermaid 貝殼眼影', price: 840, description: '珠光眼影', image: 'https://drive.google.com/thumbnail?id=1CZjz9Wjo2EQ2Z0fRo0sv6_CIoUr1-KV6&sz=w1000', brand: 'Dasique', type: '化妝品', country: 'korea', detailedDescription: 'Dasique Twinkle Mermaid 貝殼眼影，夢幻珠光，如人魚般閃耀' },
+            {
+                id: 8018,
+                name: 'Fwee 唇頰兩用膏單入',
+                description: '35色可選',
+                image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000',
+                brand: 'Fwee',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Fwee 唇頰兩用膏，豐富色彩選擇，一抹即可打造自然紅潤氣色',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1qqBUaEEv7RkjtUBJb2Nl8OeCXreDU_10&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000'
+                ],
+                variants: [
+                    { id: 80181, name: '#Cool', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80182, name: '#Into', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80183, name: '#Bubble', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80184, name: '#Breeze', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80185, name: '#Wavy', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80186, name: '#Oh!', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80187, name: '#Like', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80188, name: '#Without', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80189, name: '#My', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80190, name: '#Be', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80191, name: '#Dear', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80192, name: '#Boy', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80193, name: '#BFF', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80194, name: '#Seventeen', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80195, name: '#Girls', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80196, name: '#Baby', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80197, name: '#Skin', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80198, name: '#Cherry', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80215, name: '#Crush', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80199, name: '#Sth', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80200, name: '#D-Day', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80201, name: '#Mule', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80202, name: '#Ambitious', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80203, name: '#Fav', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80204, name: '#Greedy', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80205, name: "#Chill'n", price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80206, name: '#Hurt', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80207, name: '#Baddie', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80208, name: '#Slavvy', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80209, name: '#Boss', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80210, name: '#Feelin', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80211, name: '#Lyrics', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80212, name: '#Faded', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80213, name: '#Memories', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' },
+                    { id: 80214, name: '#Film', price: 580, image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000', description: '豐富色彩選擇' }
+                ]
+            },
+            {
+                id: 8019,
+                name: 'Fwee 3D 豐盈光澤唇蜜',
+                description: '12色可選',
+                image: 'https://drive.google.com/thumbnail?id=1nv3PNgjx9swBNWUZmPLe7h1Qigmf4H6S&sz=w1000',
+                brand: 'Fwee',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Fwee 3D 豐盈光澤唇蜜，水潤飽滿，打造立體豐唇效果',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1nv3PNgjx9swBNWUZmPLe7h1Qigmf4H6S&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1gfYNyJkyM3xRdTsykVzRniusLDaRjomL&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Oa0oSR3XJpRHM6RBMcbFg7etgzdvQnXt&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1XqKn_2fLrbl_p0vx_C6aPNWDsZr4BwAk&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=11i8CUOBkMM4HY6q4O8g2gPS3PUi3vwjr&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=12MDyinRggJtKB7SISd2qIhnTj9mWDxTZ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ZiQsQyZ072ZMzy2yUziIaHkOCtKb2X25&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1oMt4a2NoGZ8Ox5rRkoTBMj3z42STeFlz&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1sUJkhvdIiti3WdJu0wl4lzVbFAjsmg9I&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1NwjrxIMerjxF5NgoZOrV0gGUUXsG_x39&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1GwZ52dmiX0gPrqALtMxl5zDvmdd35OXm&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1aqmwJyGu9cd1k3ZAtiUPtzNa2prVDRa5&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=12RIMbgb2jCHEGybOkDBgOosccTKCBUAN&sz=w1000'
+                ],
+                variants: [
+                    { id: 80191, name: '#Vanilla 70%', price: 330, image: 'https://drive.google.com/thumbnail?id=1gfYNyJkyM3xRdTsykVzRniusLDaRjomL&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80192, name: '#Vanilla 30%', price: 330, image: 'https://drive.google.com/thumbnail?id=1Oa0oSR3XJpRHM6RBMcbFg7etgzdvQnXt&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80193, name: '#Sorbet 70%', price: 330, image: 'https://drive.google.com/thumbnail?id=1XqKn_2fLrbl_p0vx_C6aPNWDsZr4BwAk&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80194, name: '#Sorbet 30%', price: 330, image: 'https://drive.google.com/thumbnail?id=11i8CUOBkMM4HY6q4O8g2gPS3PUi3vwjr&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80195, name: '#Candy 70%', price: 330, image: 'https://drive.google.com/thumbnail?id=12MDyinRggJtKB7SISd2qIhnTj9mWDxTZ&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80196, name: '#Candy 30%', price: 330, image: 'https://drive.google.com/thumbnail?id=1ZiQsQyZ072ZMzy2yUziIaHkOCtKb2X25&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80197, name: '#Aengdu 70%', price: 330, image: 'https://drive.google.com/thumbnail?id=1oMt4a2NoGZ8Ox5rRkoTBMj3z42STeFlz&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80198, name: '#Aengdu 30%', price: 330, image: 'https://drive.google.com/thumbnail?id=1sUJkhvdIiti3WdJu0wl4lzVbFAjsmg9I&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80199, name: '#Currant 70%', price: 330, image: 'https://drive.google.com/thumbnail?id=1NwjrxIMerjxF5NgoZOrV0gGUUXsG_x39&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80200, name: '#Currant 30%', price: 330, image: 'https://drive.google.com/thumbnail?id=1GwZ52dmiX0gPrqALtMxl5zDvmdd35OXm&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80201, name: '#Scotch 70%', price: 330, image: 'https://drive.google.com/thumbnail?id=1aqmwJyGu9cd1k3ZAtiUPtzNa2prVDRa5&sz=w1000', description: '水潤飽滿質地' },
+                    { id: 80202, name: '#Scotch 30%', price: 330, image: 'https://drive.google.com/thumbnail?id=12RIMbgb2jCHEGybOkDBgOosccTKCBUAN&sz=w1000', description: '水潤飽滿質地' }
+                ]
+            },
+            {
+                id: 8020,
+                name: 'Fwee Pink Paradise 鎖色唇釉',
+                description: '12色可選',
+                image: 'https://drive.google.com/thumbnail?id=1UUwhBmZvhk7s70kKHr_Z5cFC2x4JEoZH&sz=w1000',
+                brand: 'Fwee',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Fwee Pink Paradise 鎖色唇釉，持久顯色，打造完美粉色天堂',
+                variants: [
+                    { id: 80201, name: '#Cream Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=1UUwhBmZvhk7s70kKHr_Z5cFC2x4JEoZH&sz=w1000', description: '持久顯色' },
+                    { id: 80202, name: '#Liliac Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=1ICnF91BfNygV7eqtYL1b9k0ezIIL4fen&sz=w1000', description: '持久顯色' },
+                    { id: 80203, name: '#Selfie Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=1_PLO2DPLsaGZb8mErpJOqm9HKGeqULYO&sz=w1000', description: '持久顯色' },
+                    { id: 80204, name: '#Need Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=1yy_KnBfjQvV6Tp-W851x5Z-O15IIm8Sg&sz=w1000', description: '持久顯色' },
+                    { id: 80205, name: '#Code Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=1XdoQiKgarXT0xVJF-o8-ruR4nxSDvD4V&sz=w1000', description: '持久顯色' },
+                    { id: 80206, name: '#Picky Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=1igANcMdG8iuMH90anxrD38ZnnIGYEmDp&sz=w1000', description: '持久顯色' },
+                    { id: 80207, name: '#Milk Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=10BuLYueBGDGZzsJVY6JfMG3CFLSuwW76&sz=w1000', description: '持久顯色' },
+                    { id: 80208, name: '#Tag Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=1DW5henkWLwPB-EOuqHFhLVNRepfji0Mh&sz=w1000', description: '持久顯色' },
+                    { id: 80209, name: '#Lychee Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=17EvmBDZRPcrrrpoX5zEYk3VNqsHylaDa&sz=w1000', description: '持久顯色' },
+                    { id: 80210, name: '#Bear Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=1Gn9qFaeyWtZ_ZPU7WeXt3u462qPA8JFi&sz=w1000', description: '持久顯色' },
+                    { id: 80211, name: '#Heart Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=15PJ6WdS_iarEKqf4GCqpzF-Mh0M5BFov&sz=w1000', description: '持久顯色' },
+                    { id: 80212, name: '#Fig Pink', price: 380, image: 'https://drive.google.com/thumbnail?id=1xF78CoqO2FYh47_esJd_eWKRUTWOO8f9&sz=w1000', description: '持久顯色' }
+                ]
+            },
+            {
+                id: 8021,
+                name: 'Fwee 玻璃光澤氣墊+2粉撲',
+                description: '5色可選',
+                image: 'https://drive.google.com/thumbnail?id=1iNC3LzRlKrJt7ephFjEZmwuuMHfgqAc6&sz=w1000',
+                brand: 'Fwee',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Fwee 玻璃光澤氣墊，水光透亮妝感，打造自然光澤美肌',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1iNC3LzRlKrJt7ephFjEZmwuuMHfgqAc6&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1U-p81KrYcjq12qUGNGs8q9kVRmEQ2xH4&sz=w1000'
+                ],
+                variants: [
+                    { id: 80211, name: '#Clear Glass', price: 633, image: 'https://drive.google.com/thumbnail?id=1U-p81KrYcjq12qUGNGs8q9kVRmEQ2xH4&sz=w1000', description: '水光透亮妝感' },
+                    { id: 80212, name: '#Fair Glass', price: 633, image: 'https://drive.google.com/thumbnail?id=1U-p81KrYcjq12qUGNGs8q9kVRmEQ2xH4&sz=w1000', description: '水光透亮妝感' },
+                    { id: 80213, name: '#Peach Glass', price: 633, image: 'https://drive.google.com/thumbnail?id=1U-p81KrYcjq12qUGNGs8q9kVRmEQ2xH4&sz=w1000', description: '水光透亮妝感' },
+                    { id: 80214, name: '#Nude Glass', price: 633, image: 'https://drive.google.com/thumbnail?id=1U-p81KrYcjq12qUGNGs8q9kVRmEQ2xH4&sz=w1000', description: '水光透亮妝感' },
+                    { id: 80215, name: '#Natural Glass', price: 633, image: 'https://drive.google.com/thumbnail?id=1U-p81KrYcjq12qUGNGs8q9kVRmEQ2xH4&sz=w1000', description: '水光透亮妝感' }
+                ]
+            },
+            {
+                id: 8022,
+                name: 'Fwee 調色盤兩色腮紅',
+                description: '12色組合可選',
+                image: 'https://drive.google.com/thumbnail?id=1REZqy9TMQnImpZOFLoJy3MDjS8KBNULr&sz=w1000',
+                brand: 'Fwee',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Fwee 調色盤兩色腮紅，雙色搭配，打造立體紅潤好氣色',
+                variants: [
+                    { id: 80221, name: '# Lazy Tempo', price: 450, image: 'https://drive.google.com/thumbnail?id=1REZqy9TMQnImpZOFLoJy3MDjS8KBNULr&sz=w1000', description: '雙色搭配' },
+                    { id: 80222, name: '# Down Tempo', price: 450, image: 'https://drive.google.com/thumbnail?id=1YO4MjXgYGXcwL5nGkbrBKgzKKCziS68N&sz=w1000', description: '雙色搭配' },
+                    { id: 80223, name: '# Juicy Smile', price: 450, image: 'https://drive.google.com/thumbnail?id=144wqZ7eAft0tF-7exyM29bijZpH3reus&sz=w1000', description: '雙色搭配' },
+                    { id: 80224, name: '# Baby Smile', price: 450, image: 'https://drive.google.com/thumbnail?id=1iE8lNjGA62uv47EsuveHhopnJ3MqgMRW&sz=w1000', description: '雙色搭配' },
+                    { id: 80225, name: '# Love me Highkey', price: 450, image: 'https://drive.google.com/thumbnail?id=1JrfD-sbf4J9YfHGn0B8Og_40yXZk8Ln4&sz=w1000', description: '雙色搭配' },
+                    { id: 80226, name: '# Fall in Highkey', price: 450, image: 'https://drive.google.com/thumbnail?id=1AFzPDdAFh5N68fyGbvLtGg2_N9EM7dTY&sz=w1000', description: '雙色搭配' },
+                    { id: 80227, name: '# Follow Me', price: 450, image: 'https://drive.google.com/thumbnail?id=1IAn52m9gnE9MHVZRi1xZxu8QuaawSzt-&sz=w1000', description: '雙色搭配' },
+                    { id: 80228, name: '# Another Me', price: 450, image: 'https://drive.google.com/thumbnail?id=15GDPf1aGalIqZ2Q-7Vt_oZOLAsIG1H9F&sz=w1000', description: '雙色搭配' },
+                    { id: 80229, name: '# No more Cupid', price: 450, image: 'https://drive.google.com/thumbnail?id=1rdTq-lxU0zcNclWSUbUrJH8H82Cpdx-o&sz=w1000', description: '雙色搭配' },
+                    { id: 80230, name: '# Icy Cupid', price: 450, image: 'https://drive.google.com/thumbnail?id=1gkUYyyhuNJAwu6EOFPI9-GXamNSPnhaX&sz=w1000', description: '雙色搭配' },
+                    { id: 80231, name: '# Rosy Talk', price: 450, image: 'https://drive.google.com/thumbnail?id=1LHM-GWRGaArBxW4Yf9R2Bq_eC6LMdjr1&sz=w1000', description: '雙色搭配' },
+                    { id: 80232, name: '# Humming Talk', price: 450, image: 'https://drive.google.com/thumbnail?id=1D2xOI8l2GBG-cuyd0l0kfhijpI-w5iO_&sz=w1000', description: '雙色搭配' }
+                ]
+            },
+            {
+                id: 8023,
+                name: 'Hince 水光棒',
+                description: '7色可選',
+                image: 'https://drive.google.com/thumbnail?id=1NOZBHQnJe3szOhaZf1ydYiLRBjuDTd_0&sz=w1000',
+                brand: 'Hince',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Hince 水光棒，打造自然水光肌膚質感',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1NOZBHQnJe3szOhaZf1ydYiLRBjuDTd_0&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1NgVM3ZaDhgBU3sCWael9TJZ5GXdyL5W-&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=12kU4iykYM7Guu8YN6AJ_c6wvmn7SZavO&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1CAh4Z8kZLRi7g5LP5rWEkEwUcw63U12L&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1D9hk-mO4zAL6SVY29WKW3_L_2LvN1QhV&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1RmGG01Ik3cgvBCPAJZv6Jd-ldsc7kBwK&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1kQoyoM8S4vM0HWT9gjcIT7xh2V5nsxwe&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1z7eINQSXmcHsG-2Agt3H_Rho59y_Pwxf&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1nwo8HGhx1qvr86PpuuxIRIwsCGOqudZd&sz=w1000'
+                ],
+                variants: [
+                    { id: 80301, name: '#Clear [熱銷款式]', price: 830, image: 'https://drive.google.com/thumbnail?id=12kU4iykYM7Guu8YN6AJ_c6wvmn7SZavO&sz=w1000', description: '透明自然光澤' },
+                    { id: 80302, name: '#Light [熱銷款式]', price: 830, image: 'https://drive.google.com/thumbnail?id=1CAh4Z8kZLRi7g5LP5rWEkEwUcw63U12L&sz=w1000', description: '明亮光感' },
+                    { id: 80303, name: '#Tender Room [熱銷款式]', price: 830, image: 'https://drive.google.com/thumbnail?id=1D9hk-mO4zAL6SVY29WKW3_L_2LvN1QhV&sz=w1000', description: '溫柔色調' },
+                    { id: 80304, name: '#Dawn Ray [熱銷款式]', price: 830, image: 'https://drive.google.com/thumbnail?id=1RmGG01Ik3cgvBCPAJZv6Jd-ldsc7kBwK&sz=w1000', description: '晨曦光芒' },
+                    { id: 80305, name: '#Gleaming [新品]', price: 830, image: 'https://drive.google.com/thumbnail?id=1kQoyoM8S4vM0HWT9gjcIT7xh2V5nsxwe&sz=w1000', description: '閃耀光澤' },
+                    { id: 80306, name: '#Shelly Pink [新品]', price: 830, image: 'https://drive.google.com/thumbnail?id=1z7eINQSXmcHsG-2Agt3H_Rho59y_Pwxf&sz=w1000', description: '貝殼粉色' },
+                    { id: 80307, name: '#Lil Mauve [新品]', price: 830, image: 'https://drive.google.com/thumbnail?id=1nwo8HGhx1qvr86PpuuxIRIwsCGOqudZd&sz=w1000', description: '淡紫色調' }
+                ]
+            },
+            {
+                id: 8024,
+                name: '[新品] Hince 水光妝前精華',
+                price: 540,
+                description: '水光妝前打底',
+                image: 'https://drive.google.com/thumbnail?id=1hs8BhKujySXVK2v2seCSpyq8Jtre9-fy&sz=w1000',
+                brand: 'Hince',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Hince 水光妝前精華，打造完美水光底妝',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1j0eNra9hawV20dTNYep2VocF58BPUQmA&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1hs8BhKujySXVK2v2seCSpyq8Jtre9-fy&sz=w1000'
+                ]
+            },
+            {
+                id: 8025,
+                name: 'Hince 柔光澤果凍唇釉',
+                description: '19色可選',
+                image: 'https://drive.google.com/thumbnail?id=1iSFeTC8B8uSegCJT_t1xYof2R1n4xh7g&sz=w1000',
+                brand: 'Hince',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Hince 柔光澤果凍唇釉，柔滑質地，持久顯色',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1G_sfPm5PhC6eO4lsGompBdfVsbsx-QpB&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1mejcn0R218RvzDApIS8UWl_o746Rnpor&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1iSFeTC8B8uSegCJT_t1xYof2R1n4xh7g&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Y9SJHT54K_e84fg9C3BuphbQXrwMb-OO&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1V4z8zdlMFDbNNQs_ygPX-jkgFWPtyKdn&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=12ZgJAihwJe5kGCnoxh5qwpSSWxNmXKQd&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1RafykYvzQXROaC15vT7HAsUCCfGsz2q_&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Wwx33ChT0YPjfkLaWgxzAlfdNvJzR1vy&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1yQOHpbnaMPSz1xkPtSuoCkhcuKUqeeUt&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1I_kYKo3VeE2o7y33cYc4HlupVftC0lZJ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1geP1BGtlB2VbLOYvcTBn3E9RdiuYlrFf&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1KFYcx8WT6U5UmjVNp8JOsBHbst4yEovr&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1195Lq0ia_arFEuY05SgY6_wME37e1Fdc&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17olVaWv8kNOicOs-MlB7YoBeLaTC2Hl3&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1irkAKssetxkgKF-xPh9GzKjRYz-qcsg5&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1gUZ5APwVtMRIJt3fcjdZw0KW_ZGJsq6z&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1GwCtfJnClayH_85mAWQD3rNuE_qyMedd&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1cXfqtUI2U2aGtFx4_amQp1s6nWXRhij3&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1vqNYXRpRKUrqUr3J30wkQBUu-MndHTvM&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1K3534fsUblsivkRUUUDPDg6RGknXrHTl&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=115hcNQpI4NIUROGdKiKiG1NuzFut6KCe&sz=w1000'
+                ],
+                variants: [
+                    { id: 80311, name: '#01 Bare', price: 496, image: 'https://drive.google.com/thumbnail?id=1iSFeTC8B8uSegCJT_t1xYof2R1n4xh7g&sz=w1000', description: '裸色自然' },
+                    { id: 80312, name: '#02 Raw Rose', price: 496, image: 'https://drive.google.com/thumbnail?id=1Y9SJHT54K_e84fg9C3BuphbQXrwMb-OO&sz=w1000', description: '原生玫瑰' },
+                    { id: 80313, name: '#03 Raw Pricot', price: 496, image: 'https://drive.google.com/thumbnail?id=1V4z8zdlMFDbNNQs_ygPX-jkgFWPtyKdn&sz=w1000', description: '原生杏色' },
+                    { id: 80314, name: '#04 Fever', price: 496, image: 'https://drive.google.com/thumbnail?id=12ZgJAihwJe5kGCnoxh5qwpSSWxNmXKQd&sz=w1000', description: '熱情紅' },
+                    { id: 80315, name: '#05 Hibiscus', price: 496, image: 'https://drive.google.com/thumbnail?id=1RafykYvzQXROaC15vT7HAsUCCfGsz2q_&sz=w1000', description: '芙蓉花色' },
+                    { id: 80316, name: '#06 Raw Grape', price: 496, image: 'https://drive.google.com/thumbnail?id=1Wwx33ChT0YPjfkLaWgxzAlfdNvJzR1vy&sz=w1000', description: '原生葡萄' },
+                    { id: 80317, name: '#07 Chill', price: 496, image: 'https://drive.google.com/thumbnail?id=1yQOHpbnaMPSz1xkPtSuoCkhcuKUqeeUt&sz=w1000', description: '冷靜色調' },
+                    { id: 80318, name: '#08 Rare [熱賣]', price: 496, image: 'https://drive.google.com/thumbnail?id=1I_kYKo3VeE2o7y33cYc4HlupVftC0lZJ&sz=w1000', description: '稀有色' },
+                    { id: 80319, name: '#09 Raw Lilac', price: 496, image: 'https://drive.google.com/thumbnail?id=1geP1BGtlB2VbLOYvcTBn3E9RdiuYlrFf&sz=w1000', description: '原生丁香' },
+                    { id: 80320, name: '#10 Raw Cherry', price: 496, image: 'https://drive.google.com/thumbnail?id=1KFYcx8WT6U5UmjVNp8JOsBHbst4yEovr&sz=w1000', description: '原生櫻桃' },
+                    { id: 80321, name: '#11 Chai', price: 496, image: 'https://drive.google.com/thumbnail?id=1195Lq0ia_arFEuY05SgY6_wME37e1Fdc&sz=w1000', description: '奶茶色' },
+                    { id: 80322, name: '#12 Raw Fig', price: 496, image: 'https://drive.google.com/thumbnail?id=17olVaWv8kNOicOs-MlB7YoBeLaTC2Hl3&sz=w1000', description: '原生無花果' },
+                    { id: 80323, name: '#13 Pink Pepper', price: 496, image: 'https://drive.google.com/thumbnail?id=1irkAKssetxkgKF-xPh9GzKjRYz-qcsg5&sz=w1000', description: '粉紅胡椒' },
+                    { id: 80324, name: '#14 Raw Coco', price: 496, image: 'https://drive.google.com/thumbnail?id=1gUZ5APwVtMRIJt3fcjdZw0KW_ZGJsq6z&sz=w1000', description: '原生可可' },
+                    { id: 80325, name: '#15 Bite', price: 496, image: 'https://drive.google.com/thumbnail?id=1GwCtfJnClayH_85mAWQD3rNuE_qyMedd&sz=w1000', description: '咬唇色' },
+                    { id: 80326, name: '#16 Raw Berry [熱賣]', price: 496, image: 'https://drive.google.com/thumbnail?id=1cXfqtUI2U2aGtFx4_amQp1s6nWXRhij3&sz=w1000', description: '原生莓果' },
+                    { id: 80327, name: '#17 Raw Peach [熱賣]', price: 496, image: 'https://drive.google.com/thumbnail?id=1vqNYXRpRKUrqUr3J30wkQBUu-MndHTvM&sz=w1000', description: '原生蜜桃' },
+                    { id: 80328, name: '#26 Rose Presso [新品]', price: 496, image: 'https://drive.google.com/thumbnail?id=1K3534fsUblsivkRUUUDPDg6RGknXrHTl&sz=w1000', description: '玫瑰濃縮' },
+                    { id: 80329, name: '#27 Allure Rose [新品]', price: 496, image: 'https://drive.google.com/thumbnail?id=115hcNQpI4NIUROGdKiKiG1NuzFut6KCe&sz=w1000', description: '魅惑玫瑰' }
+                ]
+            },
+            {
+                id: 8026,
+                name: 'Hince 冰透蜜糖唇頰膏',
+                description: '16色可選',
+                image: 'https://drive.google.com/thumbnail?id=1difbwkZAJWS3CTzeEEDcECaVMclF8Dlj&sz=w1000',
+                brand: 'Hince',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Hince 冰透蜜糖唇頰膏，多用途，唇頰兩用',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1difbwkZAJWS3CTzeEEDcECaVMclF8Dlj&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1XUKdkqd7a2ilauybtaVqMQQCoGZjq9sF&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1kzs7rFXzv0fbyOTcVhOVk1ctReR3Uugf&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1w49_aXbkktLKvd5NtBllxiA7ybq0kGnK&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=10L5qoOhzz69dBoK0m1kMLA2_zj6HUKTM&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1fb3LGyp-z8S0kQIGTbIpes8VLe1jk-40&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1gIds7VsVYMzTXuiqfk-MGl4Sb3T0DVox&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1DKoZA40QKqg15Aun1WZM8Rj8seIMql7F&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=14ewtvgGg_STiJKRNpfbsHgsKZgAkkDKB&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1kV_VegqXemc4FN8eVYNr4SrVxwf0sUvv&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1CDDLfTCSs8sS3vhbJCH80AHy-tQxD4eZ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1vUjm4oDn3NxAH8MRj4QkC7IjnDfzoPRD&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1FgXYah25R2k8stJKMlOrpte0-IB7jV92&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ZnIA_0e8j20KvH3FoVcY-F43KlriLp7o&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1slMWjX-X5zw-Q3CC0yAjlg-dyvXEitLh&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1NTXv-0rxnxwP9HexZY9_VlQ1HpphQ08Y&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1-r67s-e0xGXVcu6MoGlparqwLUf71p4N&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1xa8eNPVTWoHQrd-pazl8gABlgcQQGroR&sz=w1000'
+                ],
+                variants: [
+                    { id: 80331, name: '#Bare Dew', price: 400, image: 'https://drive.google.com/thumbnail?id=1kzs7rFXzv0fbyOTcVhOVk1ctReR3Uugf&sz=w1000', description: '裸色露珠' },
+                    { id: 80332, name: '#Raw Rose Dew', price: 400, image: 'https://drive.google.com/thumbnail?id=1w49_aXbkktLKvd5NtBllxiA7ybq0kGnK&sz=w1000', description: '原生玫瑰露' },
+                    { id: 80333, name: '#Honey Coral', price: 400, image: 'https://drive.google.com/thumbnail?id=10L5qoOhzz69dBoK0m1kMLA2_zj6HUKTM&sz=w1000', description: '蜜糖珊瑚' },
+                    { id: 80334, name: '#Bunny Pink', price: 400, image: 'https://drive.google.com/thumbnail?id=1fb3LGyp-z8S0kQIGTbIpes8VLe1jk-40&sz=w1000', description: '兔兔粉' },
+                    { id: 80335, name: '#Fever Dew', price: 400, image: 'https://drive.google.com/thumbnail?id=1gIds7VsVYMzTXuiqfk-MGl4Sb3T0DVox&sz=w1000', description: '熱情露珠' },
+                    { id: 80336, name: '#Hug Dew', price: 400, image: 'https://drive.google.com/thumbnail?id=1DKoZA40QKqg15Aun1WZM8Rj8seIMql7F&sz=w1000', description: '擁抱露珠' },
+                    { id: 80337, name: '#Ginger Peach', price: 400, image: 'https://drive.google.com/thumbnail?id=14ewtvgGg_STiJKRNpfbsHgsKZgAkkDKB&sz=w1000', description: '薑桃色' },
+                    { id: 80338, name: '#Carrot Jam', price: 400, image: 'https://drive.google.com/thumbnail?id=1kV_VegqXemc4FN8eVYNr4SrVxwf0sUvv&sz=w1000', description: '胡蘿蔔果醬' },
+                    { id: 80339, name: '#Fig Rain', price: 400, image: 'https://drive.google.com/thumbnail?id=1CDDLfTCSs8sS3vhbJCH80AHy-tQxD4eZ&sz=w1000', description: '無花果雨' },
+                    { id: 80340, name: '#Raw Grape Dew', price: 400, image: 'https://drive.google.com/thumbnail?id=1vUjm4oDn3NxAH8MRj4QkC7IjnDfzoPRD&sz=w1000', description: '原生葡萄露' },
+                    { id: 80341, name: '#Cool Rose Dew', price: 400, image: 'https://drive.google.com/thumbnail?id=1FgXYah25R2k8stJKMlOrpte0-IB7jV92&sz=w1000', description: '冷玫瑰露' },
+                    { id: 80342, name: '#Berry Coke', price: 400, image: 'https://drive.google.com/thumbnail?id=1ZnIA_0e8j20KvH3FoVcY-F43KlriLp7o&sz=w1000', description: '莓果可樂' },
+                    { id: 80343, name: '#Plummy', price: 400, image: 'https://drive.google.com/thumbnail?id=1slMWjX-X5zw-Q3CC0yAjlg-dyvXEitLh&sz=w1000', description: '李子色' },
+                    { id: 80344, name: '#Berry Dew', price: 400, image: 'https://drive.google.com/thumbnail?id=1NTXv-0rxnxwP9HexZY9_VlQ1HpphQ08Y&sz=w1000', description: '莓果露珠' },
+                    { id: 80345, name: '#Peach Dew', price: 400, image: 'https://drive.google.com/thumbnail?id=1-r67s-e0xGXVcu6MoGlparqwLUf71p4N&sz=w1000', description: '蜜桃露珠' },
+                    { id: 80346, name: '#Soda Dew', price: 400, image: 'https://drive.google.com/thumbnail?id=1xa8eNPVTWoHQrd-pazl8gABlgcQQGroR&sz=w1000', description: '蘇打露珠' }
+                ]
+            },
+            // Lilybyred 品牌
+            {
+                id: 8027,
+                name: 'Lilybyred 甜美新型腮紅膏',
+                description: '15色可選',
+                image: 'https://drive.google.com/thumbnail?id=1mdUSn8RwIbv7hvkPONkbhHnZPTdPcMCg&sz=w1000',
+                brand: 'Lilybyred',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Lilybyred 甜美新型腮紅膏，柔滑質地，自然顯色',
+                images: [
+                    'https://drive.google.com/thumbnail?id=16Skutd6UEbflpXySR8t0jvHkuuczrA3y&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1mdUSn8RwIbv7hvkPONkbhHnZPTdPcMCg&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1SWlIZBBSFAXXclvBtB9EhSDpbyHegmld&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=13BJiZWu6WBRHPPvdU7Aattgw39wF3bxK&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1MbDVZ29g3DS_Y7VmxKFSvOj55Xk1FClX&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=11gFysirynnEh5xa9chP7D0EG4W1tmHuE&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17NesYHfqKgjwcj0STejWM9dkrqzUOagQ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1FmZ1GuS1fx-5GXJ6ksHGmHBcsVfHz1qF&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1W-pvesGVJOURLdpRAHXUD3u6ezWzWn-w&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=11cv0qvLcXl-4bVA56mC3xF54s2G4XMcD&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1r7LlcnAdRtOoelrnZcLXm6DxQtmUAhck&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Z3NPT5X5pgl68hC2zdNlq-m-1LX9dmhE&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1SJSeAvn0VBzL5SOTyc8ojR35fPciUKH2&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ywXaAuDzREiUMw-kTh7qdadJ38qtGiKT&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1NjoUBjYJ0HTgF1DHdihgZ_MuhlW5VlyJ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ndPVwm2hf7QEmjPDUgeFn_RJuoVl2TAa&sz=w1000'
+                ],
+                variants: [
+                    { id: 80351, name: '#01 甜美光', price: 285, image: 'https://drive.google.com/thumbnail?id=1mdUSn8RwIbv7hvkPONkbhHnZPTdPcMCg&sz=w1000', description: '甜美光澤' },
+                    { id: 80352, name: '#02 清純光', price: 285, image: 'https://drive.google.com/thumbnail?id=1SWlIZBBSFAXXclvBtB9EhSDpbyHegmld&sz=w1000', description: '清純光澤' },
+                    { id: 80353, name: '#03 感性光', price: 285, image: 'https://drive.google.com/thumbnail?id=13BJiZWu6WBRHPPvdU7Aattgw39wF3bxK&sz=w1000', description: '感性光澤' },
+                    { id: 80354, name: '#04 心動光', price: 285, image: 'https://drive.google.com/thumbnail?id=1MbDVZ29g3DS_Y7VmxKFSvOj55Xk1FClX&sz=w1000', description: '心動光澤' },
+                    { id: 80355, name: '#05 心機光', price: 285, image: 'https://drive.google.com/thumbnail?id=11gFysirynnEh5xa9chP7D0EG4W1tmHuE&sz=w1000', description: '心機光澤' },
+                    { id: 80356, name: '#06 蜜桃光 [熱銷款式]', price: 285, image: 'https://drive.google.com/thumbnail?id=17NesYHfqKgjwcj0STejWM9dkrqzUOagQ&sz=w1000', description: '蜜桃光澤' },
+                    { id: 80357, name: '#07 紅潤光', price: 285, image: 'https://drive.google.com/thumbnail?id=1FmZ1GuS1fx-5GXJ6ksHGmHBcsVfHz1qF&sz=w1000', description: '紅潤光澤' },
+                    { id: 80358, name: '#08 悸動光', price: 285, image: 'https://drive.google.com/thumbnail?id=1W-pvesGVJOURLdpRAHXUD3u6ezWzWn-w&sz=w1000', description: '悸動光澤' },
+                    { id: 80359, name: '#09 狂熱光', price: 285, image: 'https://drive.google.com/thumbnail?id=11cv0qvLcXl-4bVA56mC3xF54s2G4XMcD&sz=w1000', description: '狂熱光澤' },
+                    { id: 80360, name: '#10 葡萄光', price: 285, image: 'https://drive.google.com/thumbnail?id=1r7LlcnAdRtOoelrnZcLXm6DxQtmUAhck&sz=w1000', description: '葡萄光澤' },
+                    { id: 80361, name: '#11 暖桃光', price: 285, image: 'https://drive.google.com/thumbnail?id=1Z3NPT5X5pgl68hC2zdNlq-m-1LX9dmhE&sz=w1000', description: '暖桃光澤' },
+                    { id: 80362, name: '#12 裸粉光', price: 285, image: 'https://drive.google.com/thumbnail?id=1SJSeAvn0VBzL5SOTyc8ojR35fPciUKH2&sz=w1000', description: '裸粉光澤' },
+                    { id: 80363, name: '#13 羞澀光', price: 285, image: 'https://drive.google.com/thumbnail?id=1ywXaAuDzREiUMw-kTh7qdadJ38qtGiKT&sz=w1000', description: '羞澀光澤' },
+                    { id: 80364, name: '#14 玫瑰光 [Oliveyoung 獨家新品]', price: 285, image: 'https://drive.google.com/thumbnail?id=1NjoUBjYJ0HTgF1DHdihgZ_MuhlW5VlyJ&sz=w1000', description: '玫瑰光澤' },
+                    { id: 80365, name: '#15 堅果光 [Oliveyoung 獨家新品]', price: 285, image: 'https://drive.google.com/thumbnail?id=1ndPVwm2hf7QEmjPDUgeFn_RJuoVl2TAa&sz=w1000', description: '堅果光澤' }
+                ]
+            },
+            {
+                id: 8028,
+                name: 'Lilybyred 銀盒甜心腮紅慕斯',
+                description: '6色可選',
+                image: 'https://drive.google.com/thumbnail?id=1Y2rpVvMbBDzo8OtI2I9CB4_gpdddqkmc&sz=w1000',
+                brand: 'Lilybyred',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Lilybyred 銀盒甜心腮紅慕斯，輕盈慕斯質地，自然服貼',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1j2ewmMEwKj4N3oiEp1S2f5IxNImDilbo&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1kQ_tUp9N0Eii2_IGHDU-_qhm7XyMfgo1&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Y2rpVvMbBDzo8OtI2I9CB4_gpdddqkmc&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=19C8FaJDHe8xZ0xwAxD5-gkBmDcc807Fw&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1UeeMzoBfBleesh_DZ51GvIXWDxO-ZqXq&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1hSxn-wIqaMt7GQDD2b69fSscarD45RhH&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=12Y6jrIxNX8c54P81ad2Kth_205mgDlfZ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1yQ-Uc6f3Duo0FueyVD3lQwNN8IOXc3QH&sz=w1000'
+                ],
+                variants: [
+                    { id: 80371, name: '#Apricot Mousse', price: 406, image: 'https://drive.google.com/thumbnail?id=1Y2rpVvMbBDzo8OtI2I9CB4_gpdddqkmc&sz=w1000', description: '杏桃慕斯' },
+                    { id: 80372, name: '#Cherry Mousse', price: 406, image: 'https://drive.google.com/thumbnail?id=19C8FaJDHe8xZ0xwAxD5-gkBmDcc807Fw&sz=w1000', description: '櫻桃慕斯' },
+                    { id: 80373, name: '#Pomelo Mousse', price: 406, image: 'https://drive.google.com/thumbnail?id=1UeeMzoBfBleesh_DZ51GvIXWDxO-ZqXq&sz=w1000', description: '柚子慕斯' },
+                    { id: 80374, name: '#Taro Mousse', price: 406, image: 'https://drive.google.com/thumbnail?id=1hSxn-wIqaMt7GQDD2b69fSscarD45RhH&sz=w1000', description: '芋頭慕斯' },
+                    { id: 80375, name: '#Fig Mousse', price: 406, image: 'https://drive.google.com/thumbnail?id=12Y6jrIxNX8c54P81ad2Kth_205mgDlfZ&sz=w1000', description: '無花果慕斯' },
+                    { id: 80376, name: '#Pomegranate Mousse', price: 406, image: 'https://drive.google.com/thumbnail?id=1yQ-Uc6f3Duo0FueyVD3lQwNN8IOXc3QH&sz=w1000', description: '石榴慕斯' }
+                ]
+            },
+            {
+                id: 8029,
+                name: 'Lilybyred 多用調色盤',
+                description: '5色可選',
+                image: 'https://drive.google.com/thumbnail?id=1sVP9GaTQ2frAWSwrOnE64IpdU9-wyrGs&sz=w1000',
+                brand: 'Lilybyred',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Lilybyred 多用調色盤，一盤多用，打造完美妝容',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1KB1Md3rWPCLFYsyl42HbRrZfso4b8p7_&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1sVP9GaTQ2frAWSwrOnE64IpdU9-wyrGs&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1LsWDsjQpda35Rmm-jq65N60lkzol7jYe&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1gNh6hJK601mU_hd4izwM6GMqRUT0elyr&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=10W3BQD7dE_uie62UtqxTP6_usGjt1P9q&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=11ADdDCadxf1Kpi2yIdOwSoxl0U2bZPgp&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1cwGgMaE23NT7kOpB3jlMjx5_ORWLzQpN&sz=w1000'
+                ],
+                variants: [
+                    { id: 80381, name: '#Peach Milk', price: 774, image: 'https://drive.google.com/thumbnail?id=1sVP9GaTQ2frAWSwrOnE64IpdU9-wyrGs&sz=w1000', description: '蜜桃牛奶' },
+                    { id: 80382, name: '#Strawberry Milk', price: 774, image: 'https://drive.google.com/thumbnail?id=1LsWDsjQpda35Rmm-jq65N60lkzol7jYe&sz=w1000', description: '草莓牛奶' },
+                    { id: 80383, name: '#Oat Milk', price: 774, image: 'https://drive.google.com/thumbnail?id=1gNh6hJK601mU_hd4izwM6GMqRUT0elyr&sz=w1000', description: '燕麥牛奶' },
+                    { id: 80384, name: '#Rose Cocoa [新品]', price: 774, image: 'https://drive.google.com/thumbnail?id=11ADdDCadxf1Kpi2yIdOwSoxl0U2bZPgp&sz=w1000', description: '玫瑰可可' },
+                    { id: 80385, name: '#Almond Milk [新品]', price: 774, image: 'https://drive.google.com/thumbnail?id=1cwGgMaE23NT7kOpB3jlMjx5_ORWLzQpN&sz=w1000', description: '杏仁牛奶' }
+                ]
+            },
+            {
+                id: 8030,
+                name: 'Lilybyred Love Call 10色眼影盤',
+                description: '12款可選',
+                image: 'https://drive.google.com/thumbnail?id=1OpikpEBkAZH9O3Tlx6LFu6dseYIymggJ&sz=w1000',
+                brand: 'Lilybyred',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Lilybyred Love Call 10色眼影盤，多色選擇，打造百變眼妝',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1OpikpEBkAZH9O3Tlx6LFu6dseYIymggJ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1UvApPIstushQb2vlP0gZfGkS-WsTCPF3&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1xUsNB0YugwvPyNo-2W361v5lISXwgkm-&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1_x75IX0XoW3CNVS3lz-nJ2MkOVrZHWGL&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1NGKxT7E0VLqekvQHOaErFr5_7-Oc0Cdz&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1qqW-Bu3tm0zpAEH55EQKUWcEG2m-VwJZ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1v523TQWny9zqJ3dqxgA7C-LGv5idBhmR&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1B_L92fhE_KIVRUaimDB2xNoeRqbCi2hA&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=101J9Sxl76m7-XC7rMSmECi_y7a4lwrxO&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1zpI29LMEDmyUg_WNZJANr4t1lALKXOQx&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1oLHy0JP7pQF8Fa9RhWqSvk5JO5e6WHUp&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1husX4yl6xDxoWCG4qkYKPbSOiZhvIyFX&sz=w1000'
+                ],
+                variants: [
+                    { id: 80391, name: '#00 Angel core look', price: 530, image: 'https://drive.google.com/thumbnail?id=1OpikpEBkAZH9O3Tlx6LFu6dseYIymggJ&sz=w1000', description: '天使核心' },
+                    { id: 80392, name: '#01 Cinnamon Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1UvApPIstushQb2vlP0gZfGkS-WsTCPF3&sz=w1000', description: '肉桂色調' },
+                    { id: 80393, name: '#02 Mauve Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1xUsNB0YugwvPyNo-2W361v5lISXwgkm-&sz=w1000', description: '紫紅色調' },
+                    { id: 80394, name: '#03 Ash Beige Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1_x75IX0XoW3CNVS3lz-nJ2MkOVrZHWGL&sz=w1000', description: '灰米色調' },
+                    { id: 80395, name: '#04 Lavender Pink Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1NGKxT7E0VLqekvQHOaErFr5_7-Oc0Cdz&sz=w1000', description: '薰衣草粉' },
+                    { id: 80396, name: '#05 Peach Pink Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1qqW-Bu3tm0zpAEH55EQKUWcEG2m-VwJZ&sz=w1000', description: '蜜桃粉' },
+                    { id: 80397, name: '#07 Rose Sparkle Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1v523TQWny9zqJ3dqxgA7C-LGv5idBhmR&sz=w1000', description: '玫瑰閃光' },
+                    { id: 80398, name: '#08 Lavender Sparkle Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1B_L92fhE_KIVRUaimDB2xNoeRqbCi2hA&sz=w1000', description: '薰衣草閃光' },
+                    { id: 80399, name: '#09 Milky Berry Look', price: 530, image: 'https://drive.google.com/thumbnail?id=101J9Sxl76m7-XC7rMSmECi_y7a4lwrxO&sz=w1000', description: '牛奶莓果' },
+                    { id: 80400, name: '#10 Milk Cherry Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1zpI29LMEDmyUg_WNZJANr4t1lALKXOQx&sz=w1000', description: '牛奶櫻桃' },
+                    { id: 80401, name: '#11 Soft Beige Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1oLHy0JP7pQF8Fa9RhWqSvk5JO5e6WHUp&sz=w1000', description: '柔和米色' },
+                    { id: 80402, name: '#12 Pink Beige Look', price: 530, image: 'https://drive.google.com/thumbnail?id=1husX4yl6xDxoWCG4qkYKPbSOiZhvIyFX&sz=w1000', description: '粉米色' }
+                ]
+            },
+            {
+                id: 8031,
+                name: 'Lilybyred 心境調色四宮格眼影盤',
+                description: '8款可選',
+                image: 'https://drive.google.com/thumbnail?id=1CAQ9X0rokXqJoYkFlmLFAovaRjaDmRSL&sz=w1000',
+                brand: 'Lilybyred',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Lilybyred 心境調色四宮格眼影盤，四色搭配，簡單上手',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1CAQ9X0rokXqJoYkFlmLFAovaRjaDmRSL&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17yqJ7nZG5kL-MrWn2G1UzIQG1tnq_xf_&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1dt9Qy2RcIES8Y9WpHgBsmsKWCwxaGMii&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1qm2beJ7NokVWdRrIi6WDvMYHGCrfxO6_&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=11nBc31tnFBxeEeYRh3zzavzxokg7NqnV&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Lrg0xE9f7h0QdXAIbgywkNNvh7qh4IKQ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1T5yuK9JYBXW8u-iPgXHYzIy_wXLqbdi5&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1iGmfzi5P0wGPEvMg_C7YCJqoz3JzOdlb&sz=w1000'
+                ],
+                variants: [
+                    { id: 80411, name: '#01 Fresh it', price: 450, image: 'https://drive.google.com/thumbnail?id=1CAQ9X0rokXqJoYkFlmLFAovaRjaDmRSL&sz=w1000', description: '清新色調' },
+                    { id: 80412, name: '#02 Like it', price: 450, image: 'https://drive.google.com/thumbnail?id=17yqJ7nZG5kL-MrWn2G1UzIQG1tnq_xf_&sz=w1000', description: '喜愛色調' },
+                    { id: 80413, name: '#03 Neautral it [熱銷款式]', price: 450, image: 'https://drive.google.com/thumbnail?id=1dt9Qy2RcIES8Y9WpHgBsmsKWCwxaGMii&sz=w1000', description: '中性色調' },
+                    { id: 80414, name: '#04 Attention it [熱銷款式]', price: 450, image: 'https://drive.google.com/thumbnail?id=1qm2beJ7NokVWdRrIi6WDvMYHGCrfxO6_&sz=w1000', description: '注目色調' },
+                    { id: 80415, name: '#05 Cherish it', price: 450, image: 'https://drive.google.com/thumbnail?id=11nBc31tnFBxeEeYRh3zzavzxokg7NqnV&sz=w1000', description: '珍愛色調' },
+                    { id: 80416, name: '#06 Soft it', price: 450, image: 'https://drive.google.com/thumbnail?id=1Lrg0xE9f7h0QdXAIbgywkNNvh7qh4IKQ&sz=w1000', description: '柔和色調' },
+                    { id: 80417, name: '#07 Romantic it', price: 450, image: 'https://drive.google.com/thumbnail?id=1T5yuK9JYBXW8u-iPgXHYzIy_wXLqbdi5&sz=w1000', description: '浪漫色調' },
+                    { id: 80418, name: '#08 Strange it [新品]', price: 450, image: 'https://drive.google.com/thumbnail?id=1iGmfzi5P0wGPEvMg_C7YCJqoz3JzOdlb&sz=w1000', description: '奇特色調' }
+                ]
+            },
+            // Peripera 品牌
+            {
+                id: 8032,
+                name: 'Peripera 鍵盤腮紅膏',
+                description: '10色可選',
+                image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000',
+                brand: 'Peripera',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Peripera 鍵盤腮紅膏，創意鍵盤設計，顯色持久',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1cK1HoP76gowecX5kYFvQDIRVpD93k_AN&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1YyeX0yovlOPT9btlSLdQ4Md96d9B3ANo&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000'
+                ],
+                variants: [
+                    { id: 80421, name: '#01 Queen\'s coral', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: '女王珊瑚' },
+                    { id: 80422, name: '#02 Whip petal', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: '鮮奶花瓣' },
+                    { id: 80423, name: '#04 Ready to', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: '準備好了' },
+                    { id: 80424, name: '#06 Y2K kiss', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: 'Y2K之吻' },
+                    { id: 80425, name: '#09 Orchid liliac', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: '蘭花紫丁香' },
+                    { id: 80426, name: '#13 Dolly rose', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: '娃娃玫瑰' },
+                    { id: 80427, name: '#14 Fall in mauve', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: '墜入紫紅' },
+                    { id: 80428, name: '#15 Go ahead', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: '前進吧' },
+                    { id: 80429, name: '#21 Xia rose', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: '夏日玫瑰' },
+                    { id: 80430, name: '#23 Very mellow', price: 295, image: 'https://drive.google.com/thumbnail?id=1x-qbwFKv5nqcn5dwaDDMtYHgvaFXcwHa&sz=w1000', description: '非常柔和' }
+                ]
+            },
+            {
+                id: 8033,
+                name: 'Peripera 染眉膏',
+                description: '8色可選',
+                image: 'https://drive.google.com/thumbnail?id=1hJSp4oUzfq1lKjK4YypoOaDJKFE6dIzR&sz=w1000',
+                brand: 'Peripera',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Peripera 染眉膏，自然塑型，持久定型',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1BfN_xFBE7gz_Zvae__YUwndepYneevcj&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1hJSp4oUzfq1lKjK4YypoOaDJKFE6dIzR&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1KqQAG74tF2yPRoJ18PBxCeoYIpH_hlfi&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1s47D0vCn5qeX8myqclxuQzTGz6t6FvZ_&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1p_Si7WHfsYhJCK_msY-96_DEwUPGu4bz&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1-mfqDneEl5XaSrkI0wG70mihd67XNEuY&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1qBfVT2rMZI-df4dMX4XsDUvR9Nt-pTSP&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1MT0fSu5pcQ_x5i4fqqBIkQs7KKVcJyNt&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=16m95NzCIBP670Dv0sO7QfJHQzCbRemfU&sz=w1000'
+                ],
+                variants: [
+                    { id: 80431, name: '#01', price: 269, image: 'https://drive.google.com/thumbnail?id=1hJSp4oUzfq1lKjK4YypoOaDJKFE6dIzR&sz=w1000', description: '色號01' },
+                    { id: 80432, name: '#02', price: 269, image: 'https://drive.google.com/thumbnail?id=1KqQAG74tF2yPRoJ18PBxCeoYIpH_hlfi&sz=w1000', description: '色號02' },
+                    { id: 80433, name: '#03', price: 269, image: 'https://drive.google.com/thumbnail?id=1s47D0vCn5qeX8myqclxuQzTGz6t6FvZ_&sz=w1000', description: '色號03' },
+                    { id: 80434, name: '#04', price: 269, image: 'https://drive.google.com/thumbnail?id=1p_Si7WHfsYhJCK_msY-96_DEwUPGu4bz&sz=w1000', description: '色號04' },
+                    { id: 80435, name: '#05', price: 269, image: 'https://drive.google.com/thumbnail?id=1-mfqDneEl5XaSrkI0wG70mihd67XNEuY&sz=w1000', description: '色號05' },
+                    { id: 80436, name: '#06', price: 269, image: 'https://drive.google.com/thumbnail?id=1qBfVT2rMZI-df4dMX4XsDUvR9Nt-pTSP&sz=w1000', description: '色號06' },
+                    { id: 80437, name: '#07', price: 269, image: 'https://drive.google.com/thumbnail?id=1MT0fSu5pcQ_x5i4fqqBIkQs7KKVcJyNt&sz=w1000', description: '色號07' },
+                    { id: 80438, name: '#08', price: 269, image: 'https://drive.google.com/thumbnail?id=16m95NzCIBP670Dv0sO7QfJHQzCbRemfU&sz=w1000', description: '色號08' }
+                ]
+            },
+            // Rom&nd 品牌
+            {
+                id: 8034,
+                name: 'Rom&nd 水光腮紅球',
+                description: '6色可選 [新品]',
+                image: 'https://drive.google.com/thumbnail?id=1Py4v2M6Afx_Cl6CbH0vt5CpVOBhFm2QR&sz=w1000',
+                brand: 'Rom&nd',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Rom&nd 水光腮紅球，水潤質地，打造自然水光肌',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1N-5URA8o6m0JuiZJJjbCZYDM4T_OPC7M&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1hYP_3jc34nh6FUMcGXGr8zA9Ujp7_kyw&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Py4v2M6Afx_Cl6CbH0vt5CpVOBhFm2QR&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1bePQjwrSPtmaaSrlxcDqB5rSJ1Ydsz8R&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=197FZ3mm9RR_CRmDoXmQ7FSJWsCkmqwGT&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1k02e2sVgVG2U8AgzCAob_e-1Ax3MXw3o&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=18XQ1jHz535F5HBoO40qLdfzcKGYVA5f2&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=18N4DJnTRwBfebW6947hAxKSLS4CR53q4&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1pi63iKXkMH64AUEW51ox9yZMb15CIpml&sz=w1000'
+                ],
+                variants: [
+                    { id: 80441, name: '#01 Rare apple', price: 350, image: 'https://drive.google.com/thumbnail?id=1Py4v2M6Afx_Cl6CbH0vt5CpVOBhFm2QR&sz=w1000', description: '稀有蘋果' },
+                    { id: 80442, name: '#02 Dragon Berry', price: 350, image: 'https://drive.google.com/thumbnail?id=1bePQjwrSPtmaaSrlxcDqB5rSJ1Ydsz8R&sz=w1000', description: '龍果莓' },
+                    { id: 80443, name: '#03 White peach', price: 350, image: 'https://drive.google.com/thumbnail?id=197FZ3mm9RR_CRmDoXmQ7FSJWsCkmqwGT&sz=w1000', description: '白桃' },
+                    { id: 80444, name: '#04 Appricot Beige', price: 350, image: 'https://drive.google.com/thumbnail?id=18XQ1jHz535F5HBoO40qLdfzcKGYVA5f2&sz=w1000', description: '杏米色' },
+                    { id: 80445, name: '#05 Mougat Coco', price: 350, image: 'https://drive.google.com/thumbnail?id=18N4DJnTRwBfebW6947hAxKSLS4CR53q4&sz=w1000', description: '牛軋椰子' },
+                    { id: 80446, name: '#06 Bare grape', price: 350, image: 'https://drive.google.com/thumbnail?id=1pi63iKXkMH64AUEW51ox9yZMb15CIpml&sz=w1000', description: '裸葡萄' }
+                ]
+            },
+            {
+                id: 8035,
+                name: 'Rom&nd 持久果汁唇釉 [Zo&Friends 聯名]',
+                description: '5色可選',
+                image: 'https://drive.google.com/thumbnail?id=1RZzJf0j5N4JkGuOTQS8-nrQoi7wczcUY&sz=w1000',
+                brand: 'Rom&nd',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Rom&nd x Zo&Friends 聯名持久果汁唇釉，水潤顯色，持久不脫色',
+                images: [
+                    'https://drive.google.com/thumbnail?id=194CJpGA66XW49O2jz3hAuUzuz-kF5T22&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1RZzJf0j5N4JkGuOTQS8-nrQoi7wczcUY&sz=w1000'
+                ],
+                variants: [
+                    { id: 80451, name: '#03 Bare grape', price: 325, image: 'https://drive.google.com/thumbnail?id=1RZzJf0j5N4JkGuOTQS8-nrQoi7wczcUY&sz=w1000', description: '裸葡萄' },
+                    { id: 80452, name: '#29 joseon FiG', price: 325, image: 'https://drive.google.com/thumbnail?id=1RZzJf0j5N4JkGuOTQS8-nrQoi7wczcUY&sz=w1000', description: '朝鮮無花果' },
+                    { id: 80453, name: '#36 Kitten lychee', price: 325, image: 'https://drive.google.com/thumbnail?id=1RZzJf0j5N4JkGuOTQS8-nrQoi7wczcUY&sz=w1000', description: '小貓荔枝' },
+                    { id: 80454, name: '#37 Quaya Daisy', price: 325, image: 'https://drive.google.com/thumbnail?id=1RZzJf0j5N4JkGuOTQS8-nrQoi7wczcUY&sz=w1000', description: '番石榴雛菊' },
+                    { id: 80455, name: '#38 Cloudy berry', price: 325, image: 'https://drive.google.com/thumbnail?id=1RZzJf0j5N4JkGuOTQS8-nrQoi7wczcUY&sz=w1000', description: '雲莓' }
+                ]
+            },
+            {
+                id: 8036,
+                name: 'Rom&nd 持久果汁唇釉',
+                description: '13色可選',
+                image: 'https://drive.google.com/thumbnail?id=14Wx5Nul28S50tEu1W0d4DKQxRrdUdQ3u&sz=w1000',
+                brand: 'Rom&nd',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Rom&nd 持久果汁唇釉，水潤顯色，持久不脫色',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1nMHkNdtmQcK_t9XqVf5M25ty6nWWFUms&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=14Wx5Nul28S50tEu1W0d4DKQxRrdUdQ3u&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1pKrQvNm0Q-f8enU9UsbZZSGG0SDMWM1i&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1DPcQl6ljK4O4N4Hl9E2bL3opGagmEPxZ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1El3E0lrHLcsA-69XZUT9cfbDOCcUDpt7&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Okt_HZ041AmcMaI_Pts24urA4n43nq9i&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1mPT4nlQM9mE486xS2kNBvgsrAlz6HLYz&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1YqJkPnTQ1cWDISva7EYsowKQ1elQ8tYU&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1_zybyOj4wVlLcAgc1KmFt2Qo9KfMOxBH&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1qQR5KB-2F1M74EjFOhjdMcKCU0SKbPx_&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1vCQRz27H0qykvKgmT1cvyRudrZxBCxV5&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1EN0pXDLOS5zlPCmrStU1pe_yvC0f9tX0&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1xL8enAxbRiGdZv5OQsqkK9vSE7OXDU0e&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1VTfDzOC834dRkYSB6P4rOqN9xMDFfYrh&sz=w1000'
+                ],
+                variants: [
+                    { id: 80461, name: '#01', price: 279, image: 'https://drive.google.com/thumbnail?id=14Wx5Nul28S50tEu1W0d4DKQxRrdUdQ3u&sz=w1000', description: '色號01' },
+                    { id: 80462, name: '#02', price: 279, image: 'https://drive.google.com/thumbnail?id=1pKrQvNm0Q-f8enU9UsbZZSGG0SDMWM1i&sz=w1000', description: '色號02' },
+                    { id: 80463, name: '#03 [熱賣]', price: 279, image: 'https://drive.google.com/thumbnail?id=1DPcQl6ljK4O4N4Hl9E2bL3opGagmEPxZ&sz=w1000', description: '色號03' },
+                    { id: 80464, name: '#04 [熱賣]', price: 279, image: 'https://drive.google.com/thumbnail?id=1El3E0lrHLcsA-69XZUT9cfbDOCcUDpt7&sz=w1000', description: '色號04' },
+                    { id: 80465, name: '#05 [熱賣]', price: 279, image: 'https://drive.google.com/thumbnail?id=1Okt_HZ041AmcMaI_Pts24urA4n43nq9i&sz=w1000', description: '色號05' },
+                    { id: 80466, name: '#08', price: 279, image: 'https://drive.google.com/thumbnail?id=1mPT4nlQM9mE486xS2kNBvgsrAlz6HLYz&sz=w1000', description: '色號08' },
+                    { id: 80467, name: '#09', price: 279, image: 'https://drive.google.com/thumbnail?id=1YqJkPnTQ1cWDISva7EYsowKQ1elQ8tYU&sz=w1000', description: '色號09' },
+                    { id: 80468, name: '#10', price: 279, image: 'https://drive.google.com/thumbnail?id=1_zybyOj4wVlLcAgc1KmFt2Qo9KfMOxBH&sz=w1000', description: '色號10' },
+                    { id: 80469, name: '#20', price: 279, image: 'https://drive.google.com/thumbnail?id=1qQR5KB-2F1M74EjFOhjdMcKCU0SKbPx_&sz=w1000', description: '色號20' },
+                    { id: 80470, name: '#23', price: 279, image: 'https://drive.google.com/thumbnail?id=1vCQRz27H0qykvKgmT1cvyRudrZxBCxV5&sz=w1000', description: '色號23' },
+                    { id: 80471, name: '#26', price: 279, image: 'https://drive.google.com/thumbnail?id=1EN0pXDLOS5zlPCmrStU1pe_yvC0f9tX0&sz=w1000', description: '色號26' },
+                    { id: 80472, name: '#28', price: 279, image: 'https://drive.google.com/thumbnail?id=1xL8enAxbRiGdZv5OQsqkK9vSE7OXDU0e&sz=w1000', description: '色號28' },
+                    { id: 80473, name: '#29', price: 279, image: 'https://drive.google.com/thumbnail?id=1VTfDzOC834dRkYSB6P4rOqN9xMDFfYrh&sz=w1000', description: '色號29' }
+                ]
+            },
+            // The Seam 品牌
+            {
+                id: 8037,
+                name: 'The Seam 三色遮瑕盤',
+                description: '5色可選',
+                image: 'https://drive.google.com/thumbnail?id=1BZ33NYyD5AgFu1Xb3nIF_tSFBDtLS3ry&sz=w1000',
+                brand: 'The Seam',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'The Seam 三色遮瑕盤，三色調配，完美遮瑕',
+                images: [
+                    'https://drive.google.com/thumbnail?id=15UIig7V2Qh7azaVZNWGE6j5tdEwgTVOf&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1BZ33NYyD5AgFu1Xb3nIF_tSFBDtLS3ry&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1zB06XBrk_IvRzHkLTZY2s1Xlk7Qk8Yjn&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1MxnuELbzahpApj5MCcmpKKx6yqXgBnxH&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1xbnmrZefWTQFi_9WOTY3E-iYlufN6P0S&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1qRm0HOUTDIeL2vItpgViw0CcMMSl2Ofc&sz=w1000'
+                ],
+                variants: [
+                    { id: 80481, name: '#01', price: 320, image: 'https://drive.google.com/thumbnail?id=1BZ33NYyD5AgFu1Xb3nIF_tSFBDtLS3ry&sz=w1000', description: '色號01' },
+                    { id: 80482, name: '#02', price: 320, image: 'https://drive.google.com/thumbnail?id=1zB06XBrk_IvRzHkLTZY2s1Xlk7Qk8Yjn&sz=w1000', description: '色號02' },
+                    { id: 80483, name: '#03', price: 320, image: 'https://drive.google.com/thumbnail?id=1MxnuELbzahpApj5MCcmpKKx6yqXgBnxH&sz=w1000', description: '色號03' },
+                    { id: 80484, name: '#04', price: 320, image: 'https://drive.google.com/thumbnail?id=1xbnmrZefWTQFi_9WOTY3E-iYlufN6P0S&sz=w1000', description: '色號04' },
+                    { id: 80485, name: '#05', price: 320, image: 'https://drive.google.com/thumbnail?id=1qRm0HOUTDIeL2vItpgViw0CcMMSl2Ofc&sz=w1000', description: '色號05' }
+                ]
+            },
+            // Too Cool For School 品牌
+            {
+                id: 8038,
+                name: 'Too Cool For School 立體輪廓臥蠶筆',
+                description: '7色可選',
+                image: 'https://drive.google.com/thumbnail?id=1rgCcjGU6KluWH7y8E_KlkXE95na0UjEy&sz=w1000',
+                brand: 'Too Cool For School',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Too Cool For School 立體輪廓臥蠶筆，輕鬆打造立體眼妝',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1MgGEpXVVMyVdqc8URh1HxxsgLJaUg8x9&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1rgCcjGU6KluWH7y8E_KlkXE95na0UjEy&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1z88W1j9sM8sc-F9WyyxnNA0sc7NIwml_&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1qN8SuiA7kF6weeBa0_WgoJX3S1UR9soQ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1JWfGH_9cjkmgG3iKbPo080SUgxtOz0mp&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Jpa0eBpkbKq_Fi5BLi_rWZ4MvPnSAhQ-&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Tt5rDLeJvv5leO5pmTf_i3Vv4SBBZB2u&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1fXF2aAAhDowV_dwVWBqcBkps91HoYazL&sz=w1000'
+                ],
+                variants: [
+                    { id: 80491, name: '#01', price: 285, image: 'https://drive.google.com/thumbnail?id=1rgCcjGU6KluWH7y8E_KlkXE95na0UjEy&sz=w1000', description: '色號01' },
+                    { id: 80492, name: '#07', price: 285, image: 'https://drive.google.com/thumbnail?id=1z88W1j9sM8sc-F9WyyxnNA0sc7NIwml_&sz=w1000', description: '色號07' },
+                    { id: 80493, name: '#09', price: 285, image: 'https://drive.google.com/thumbnail?id=1qN8SuiA7kF6weeBa0_WgoJX3S1UR9soQ&sz=w1000', description: '色號09' },
+                    { id: 80494, name: '#11', price: 285, image: 'https://drive.google.com/thumbnail?id=1JWfGH_9cjkmgG3iKbPo080SUgxtOz0mp&sz=w1000', description: '色號11' },
+                    { id: 80495, name: '#13', price: 285, image: 'https://drive.google.com/thumbnail?id=1Jpa0eBpkbKq_Fi5BLi_rWZ4MvPnSAhQ-&sz=w1000', description: '色號13' },
+                    { id: 80496, name: '#14', price: 285, image: 'https://drive.google.com/thumbnail?id=1Tt5rDLeJvv5leO5pmTf_i3Vv4SBBZB2u&sz=w1000', description: '色號14' },
+                    { id: 80497, name: '#16', price: 285, image: 'https://drive.google.com/thumbnail?id=1fXF2aAAhDowV_dwVWBqcBkps91HoYazL&sz=w1000', description: '色號16' }
+                ]
+            },
+            // Wakemake 品牌
+            {
+                id: 8039,
+                name: 'Wakemake 16色眼影盤',
+                description: '9款可選',
+                image: 'https://drive.google.com/thumbnail?id=14nHJAa1dH6oru8dbUnXx7PQwgaaHOExM&sz=w1000',
+                brand: 'Wakemake',
+                type: '化妝品',
+                country: 'korea',
+                detailedDescription: 'Wakemake 16色眼影盤，豐富色彩，打造多變眼妝',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1TJZwlKQ5M0PPMK-zYOvP-ZuEONJ8zZzR&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=14nHJAa1dH6oru8dbUnXx7PQwgaaHOExM&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1QMrDBJtG1pJyioP8OZr_UvIpO37sC6DS&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=10P5oSx-W25Ou77Ml9KkV8luSLE68CILg&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=186BfNzl17iWqCivGobK5Ozq3JLF07-Rt&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=10ubdn5o5NSomwDOZo1GPN-Vs0Wpdj8lX&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1brQYiEsnZn0oqwF-xIKMszcDGZUQ5gGr&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=16y5E212zi3JBioiz4athcUhLswfF53gO&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1GJAHhUKghFW_xpcOZpmqVlHHDNbh2lud&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1zDbB0OVzHMsmt7tks5e74sVOKJM66QXY&sz=w1000'
+                ],
+                variants: [
+                    { id: 80501, name: '#02 柔霧粉紫', price: 840, image: 'https://drive.google.com/thumbnail?id=14nHJAa1dH6oru8dbUnXx7PQwgaaHOExM&sz=w1000', description: '柔霧粉紫色調' },
+                    { id: 80502, name: '#03 珊瑚裸粉', price: 840, image: 'https://drive.google.com/thumbnail?id=1QMrDBJtG1pJyioP8OZr_UvIpO37sC6DS&sz=w1000', description: '珊瑚裸粉色調' },
+                    { id: 80503, name: '#05 裸棕玫瑰', price: 840, image: 'https://drive.google.com/thumbnail?id=10P5oSx-W25Ou77Ml9KkV8luSLE68CILg&sz=w1000', description: '裸棕玫瑰色調' },
+                    { id: 80504, name: '#07 蘇打腮紅柔霧', price: 840, image: 'https://drive.google.com/thumbnail?id=186BfNzl17iWqCivGobK5Ozq3JLF07-Rt&sz=w1000', description: '蘇打腮紅柔霧' },
+                    { id: 80505, name: '#08 糖果腮紅柔霧', price: 840, image: 'https://drive.google.com/thumbnail?id=10ubdn5o5NSomwDOZo1GPN-Vs0Wpdj8lX&sz=w1000', description: '糖果腮紅柔霧' },
+                    { id: 80506, name: '#10 慵懶粉紅', price: 840, image: 'https://drive.google.com/thumbnail?id=1brQYiEsnZn0oqwF-xIKMszcDGZUQ5gGr&sz=w1000', description: '慵懶粉紅色調' },
+                    { id: 80507, name: '#11 柔焦倫敦棕', price: 840, image: 'https://drive.google.com/thumbnail?id=16y5E212zi3JBioiz4athcUhLswfF53gO&sz=w1000', description: '柔焦倫敦棕色調' },
+                    { id: 80508, name: '#14 焦糖棕', price: 840, image: 'https://drive.google.com/thumbnail?id=1GJAHhUKghFW_xpcOZpmqVlHHDNbh2lud&sz=w1000', description: '焦糖棕色調' },
+                    { id: 80509, name: '#23 神秘薰衣草', price: 840, image: 'https://drive.google.com/thumbnail?id=1zDbB0OVzHMsmt7tks5e74sVOKJM66QXY&sz=w1000', description: '神秘薰衣草色調' }
+                ]
+            },
+            // AESTURA 品牌
+            {
+                id: 8040,
+                name: 'AESTURA 每日保濕柔護屏障修護潤膚霜',
+                description: '250ml',
+                image: 'https://drive.google.com/thumbnail?id=1ipzPu4fYAa3Lci9deD8DpEO5UYaPOpsf&sz=w1000',
+                brand: 'AESTURA',
+                type: '保養品',
+                country: 'korea',
+                price: 645,
+                detailedDescription: '專為敏弱肌設計的高保濕修護霜，添加神經醯胺複合成分，能有效強化肌膚屏障、長效鎖水並舒緩乾燥不適。質地滋潤但不厚重，適合日夜使用，全年維持穩定膚況。',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1EypS3Co8Zi2-FcOlw6I6WwIRzE-2jGqc&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ipzPu4fYAa3Lci9deD8DpEO5UYaPOpsf&sz=w1000'
+                ]
+            },
+            {
+                id: 8041,
+                name: 'AESTURA 每日保濕柔護細噴霧',
+                description: '120ml',
+                image: 'https://drive.google.com/thumbnail?id=1TcufvcuYCjo4vHNMjvCG_JS2ciAD8xou&sz=w1000',
+                brand: 'AESTURA',
+                type: '保養品',
+                country: 'korea',
+                price: 550,
+                detailedDescription: '結合乳霜級保濕力的細緻噴霧，為肌膚補水並修護屏障。噴霧均勻細緻不黏膩，適合妝前、妝後或乾燥時即時使用，讓肌膚持續保持水潤舒適。',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1jypMvu6F263oGAlm86g9eZPbnz39KRjx&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1TcufvcuYCjo4vHNMjvCG_JS2ciAD8xou&sz=w1000'
+                ]
+            },
+            // Arencia 品牌
+            {
+                id: 8042,
+                name: 'Arencia 年糕潔面乳',
+                description: '120g，6款可選',
+                image: 'https://drive.google.com/thumbnail?id=1hKnnKZNXIh-B5iWFKEAEm-TjUgFFr2rR&sz=w1000',
+                brand: 'Arencia',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Arencia 年糕潔面乳，溫和清潔，保濕不緊繃',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1o5RakFlJCH5FtqXI1944F53TwWXBbhIH&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1OtURPnmgXevp_oQS5dkK_O7Gs1dwCOaQ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1hKnnKZNXIh-B5iWFKEAEm-TjUgFFr2rR&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1d7S4eXkUNfK9OSxdq58Bp6CU0E3-W1Me&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1hHd0IE-k4jl3toFDnOdHNGfFAonqFClE&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ndmi4sZ9NoklumFJNVQVAQk1yKyPV_PX&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1GeLav31GENvKLOQXE8e116aDg5seS8OZ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1vX0L97NVxJIahBmN5j5eaXc_IcE-PLJg&sz=w1000'
+                ],
+                variants: [
+                    { id: 80511, name: '綠意清新', price: 499, image: 'https://drive.google.com/thumbnail?id=1hKnnKZNXIh-B5iWFKEAEm-TjUgFFr2rR&sz=w1000', description: '綠意清新配方' },
+                    { id: 80512, name: '皇家玫瑰果', price: 499, image: 'https://drive.google.com/thumbnail?id=1d7S4eXkUNfK9OSxdq58Bp6CU0E3-W1Me&sz=w1000', description: '皇家玫瑰果配方' },
+                    { id: 80513, name: '皇家藍牛膝草', price: 499, image: 'https://drive.google.com/thumbnail?id=1hHd0IE-k4jl3toFDnOdHNGfFAonqFClE&sz=w1000', description: '皇家藍牛膝草配方' },
+                    { id: 80514, name: '紅茶柚子高嶺土', price: 499, image: 'https://drive.google.com/thumbnail?id=1ndmi4sZ9NoklumFJNVQVAQk1yKyPV_PX&sz=w1000', description: '紅茶柚子高嶺土配方' },
+                    { id: 80515, name: '芳香金盞花', price: 499, image: 'https://drive.google.com/thumbnail?id=1GeLav31GENvKLOQXE8e116aDg5seS8OZ&sz=w1000', description: '芳香金盞花配方' },
+                    { id: 80516, name: '米粹珍珠亮彩', price: 499, image: 'https://drive.google.com/thumbnail?id=1vX0L97NVxJIahBmN5j5eaXc_IcE-PLJg&sz=w1000', description: '米粹珍珠亮彩配方' }
+                ]
+            },
+            {
+                id: 8043,
+                name: 'Arencia 凝膠精華',
+                description: '50g，4款可選',
+                image: 'https://drive.google.com/thumbnail?id=1Wae12YyKl8mx3-0sxylsPyYm6sf9hu_R&sz=w1000',
+                brand: 'Arencia',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Arencia 凝膠精華，輕盈質地，深層滋養',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1Wae12YyKl8mx3-0sxylsPyYm6sf9hu_R&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ijyJ1DedJOdb0kmeEYDr0PcN5zUNe41H&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Hv2RDnTwBFoxnKUfFfFB4edYyzG-MRuR&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=161Ifl8AAsQFzacZMmLxOJ6MNZ9iUOL4w&sz=w1000'
+                ],
+                variants: [
+                    { id: 80521, name: '聖牛膝草', price: 720, image: 'https://drive.google.com/thumbnail?id=1Wae12YyKl8mx3-0sxylsPyYm6sf9hu_R&sz=w1000', description: '聖牛膝草配方' },
+                    { id: 80522, name: '皇家玫瑰果', price: 720, image: 'https://drive.google.com/thumbnail?id=1ijyJ1DedJOdb0kmeEYDr0PcN5zUNe41H&sz=w1000', description: '皇家玫瑰果配方' },
+                    { id: 80523, name: '深層水潤', price: 720, image: 'https://drive.google.com/thumbnail?id=1Hv2RDnTwBFoxnKUfFfFB4edYyzG-MRuR&sz=w1000', description: '深層水潤配方' },
+                    { id: 80524, name: '米粹珍珠亮彩', price: 720, image: 'https://drive.google.com/thumbnail?id=161Ifl8AAsQFzacZMmLxOJ6MNZ9iUOL4w&sz=w1000', description: '米粹珍珠亮彩配方' }
+                ]
+            },
+            // Bioheal BOH 品牌
+            {
+                id: 8044,
+                name: 'BOH 積雪草妝前噴霧',
+                description: '120ml',
+                image: 'https://drive.google.com/thumbnail?id=1Kf0bn-INTGoP4S_5TXD-KfY5JzGkt5dw&sz=w1000',
+                brand: 'Bioheal BOH',
+                type: '化妝品',
+                country: 'korea',
+                price: 359,
+                detailedDescription: 'BOH 積雪草妝前噴霧，舒緩保濕，妝前打底'
+            },
+            // Beplain 品牌
+            {
+                id: 8045,
+                name: 'Beplain 綠豆洗面乳2入套組',
+                description: '160ml，附贈潔面油20ml+潤膚乳6ml',
+                image: 'https://drive.google.com/thumbnail?id=1XJR3o6j8JLPqLWscDF1gkqllNNn9vspD&sz=w1000',
+                brand: 'Beplain',
+                type: '保養品',
+                country: 'korea',
+                price: 650,
+                detailedDescription: 'Beplain 綠豆洗面乳2入套組，溫和清潔，附贈好禮',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1vVt4jslO44Zmg8W3_mZylFMQ3oUQLUAi&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1XJR3o6j8JLPqLWscDF1gkqllNNn9vspD&sz=w1000'
+                ]
+            },
+            {
+                id: 8046,
+                name: 'Beplain 綠豆酵素清潔透亮泥膜',
+                description: '120ml，附贈 12ml 樣品*4',
+                image: 'https://drive.google.com/thumbnail?id=1sXeDuDJREc7yPtb9Oh6peDTLmP-3lzLP&sz=w1000',
+                brand: 'Beplain',
+                type: '保養品',
+                country: 'korea',
+                price: 630,
+                detailedDescription: 'Beplain 綠豆酵素清潔透亮泥膜，深層清潔，提亮膚色',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1cOyXVmjlbfqFEGe3NRLs57YoHjEmU5Mb&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1sXeDuDJREc7yPtb9Oh6peDTLmP-3lzLP&sz=w1000'
+                ]
+            },
+            // Celimax 品牌
+            {
+                id: 8047,
+                name: 'Celimax 安瓶美容面膜',
+                description: '1片 諾麗果',
+                image: 'https://drive.google.com/thumbnail?id=1-5VzH5cdKwyUr7kjtwyUkthJRl70Hft9&sz=w1000',
+                brand: 'Celimax',
+                type: '保養品',
+                country: 'korea',
+                price: 59,
+                detailedDescription: 'Celimax 安瓶美容面膜，諾麗果精華，深層滋養'
+            },
+            {
+                id: 8048,
+                name: 'Celimax 諾麗果能量安瓶套組',
+                description: '共90ml',
+                image: 'https://drive.google.com/thumbnail?id=1sZbCS6IHqZfhCXu0l5ikYa2h4RnXYLZB&sz=w1000',
+                brand: 'Celimax',
+                type: '保養品',
+                country: 'korea',
+                price: 890,
+                detailedDescription: 'Celimax 諾麗果能量安瓶套組，高濃度精華，提亮膚色'
+            },
+            {
+                id: 8049,
+                name: 'Celimax 視黃醇微針精華',
+                description: '15ml',
+                image: 'https://drive.google.com/thumbnail?id=1T2pKLVXxYkFLqi1I1FDfSjn2GvGWbj-o&sz=w1000',
+                brand: 'Celimax',
+                type: '保養品',
+                country: 'korea',
+                price: 629,
+                detailedDescription: 'Celimax 視黃醇微針精華，抗老修護，改善細紋',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1gTOGhi-vL0uzo0XmeHEkk8AjUmzxYSaG&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1gJM7_91VYLtpU_1DhwNZm1U0cmyCh_1N&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1T2pKLVXxYkFLqi1I1FDfSjn2GvGWbj-o&sz=w1000'
+                ]
+            },
+            {
+                id: 8050,
+                name: 'Celimax 毛孔亮白面膜',
+                description: '5入',
+                image: 'https://drive.google.com/thumbnail?id=1Xaqe_fdu2kv5igSDinxZGpN7RDrJZjuN&sz=w1000',
+                brand: 'Celimax',
+                type: '保養品',
+                country: 'korea',
+                price: 639,
+                detailedDescription: 'Celimax 毛孔亮白面膜，收斂毛孔，提亮膚色'
+            },
+            // Centellian 品牌
+            {
+                id: 8051,
+                name: 'Centellian24 醫美護理積雪草全效修護面霜',
+                description: '50ml*2 + 15ml 小包裝*2',
+                image: 'https://drive.google.com/thumbnail?id=1kO3MLyrCyW5D8tXIrtUTmweA9HTZg4d2&sz=w1000',
+                brand: 'Centellian',
+                type: '保養品',
+                country: 'korea',
+                price: 820,
+                detailedDescription: 'Centellian24 醫美護理積雪草全效修護面霜，舒緩修護，強化屏障',
+                images: [
+                    'https://drive.google.com/thumbnail?id=11dS89a0qYQzSkNkIYQFqo6S9aKDoSRON&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1kO3MLyrCyW5D8tXIrtUTmweA9HTZg4d2&sz=w1000'
+                ]
+            },
+            // Dr.Althea 品牌
+            {
+                id: 8052,
+                name: 'Dr Althea 345 抗氧面霜',
+                description: '50ml',
+                image: 'https://drive.google.com/thumbnail?id=1_HDFud85v6udt52cvnP0fpJ_Pwx7O-Nm&sz=w1000',
+                brand: 'Dr.Althea',
+                type: '保養品',
+                country: 'korea',
+                price: 620,
+                detailedDescription: '專為日常防護與肌膚活力打造的抗氧化面霜，富含強效抗氧成分，有助於抵禦環境壓力與自由基傷害，同時維持肌膚柔潤與彈性。質地柔滑不厚重，適合早晚保養使用，使肌膚看起來更健康、明亮。'
+            },
+            {
+                id: 8053,
+                name: 'Dr Althea 345 抗氧噴霧',
+                description: '100ml',
+                image: 'https://drive.google.com/thumbnail?id=1Z9zxgOn4obwRZND1zYp-c9C3O6KBYJkM&sz=w1000',
+                brand: 'Dr.Althea',
+                type: '保養品',
+                country: 'korea',
+                price: 650,
+                detailedDescription: '聚焦抗氧化修護的滋潤面霜，添加高濃度抗氧成分與保濕因子，幫助改善乾燥、暗沉與初老徵兆。豐盈質地深入滋養肌膚，支持全天候屏障防護，使肌膚保持柔滑、有彈性與透亮感。',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1YbjIp6ZvBGafzMTewksn9NyJgPFP_vfW&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Z9zxgOn4obwRZND1zYp-c9C3O6KBYJkM&sz=w1000'
+                ]
+            },
+            {
+                id: 8054,
+                name: 'Dr Althea 147 抗氧面霜',
+                description: '50ml',
+                image: 'https://drive.google.com/thumbnail?id=1-QAGRKqKZxEgyydQS338oj_eq_CQePFk&sz=w1000',
+                brand: 'Dr.Althea',
+                type: '保養品',
+                country: 'korea',
+                price: 620,
+                detailedDescription: '聚焦抗氧化修護的滋潤面霜，添加高濃度抗氧成分與保濕因子，幫助改善乾燥、暗沉與初老徵兆。豐盈質地深入滋養肌膚，支持全天候屏障防護，使肌膚保持柔滑、有彈性與透亮感。'
+            },
+            {
+                id: 8055,
+                name: 'Dr Althea 毛孔清新研磨潔面膏套組',
+                description: '50ml+旅行小顆套組*12',
+                image: 'https://drive.google.com/thumbnail?id=1mC45eya_klMMBDotFQQ6mT2M_hr7finW&sz=w1000',
+                brand: 'Dr.Althea',
+                type: '保養品',
+                country: 'korea',
+                price: 640,
+                detailedDescription: '專為改善毛孔髒污與肌膚粗糙設計的潔面套組，結合溫和研磨顆粒＋深層潔淨配方，能有效清除毛孔內的油脂、老廢角質與殘妝殘垢，讓肌膚潔淨透亮。套組中的潔面膏質地柔滑、起泡豐富，在按摩同時帶走髒污不刺激，洗後肌膚清爽不緊繃。此套組特別適合油肌、混合肌及有毛孔堵塞困擾的人使用，也能作為每週深層清潔步驟的一部分，改善毛孔粗大與膚質不平整問題，讓後續保養滲透更佳、妝感更服貼自然。'
             }
         ];
 
         let currentCategory = 'all';
-        let currentBrand = 'all';  // 韓國商品品牌篩選
+        let currentBrand = [];  // 韓國商品品牌篩選（多選）
         let currentType = 'all';   // 韓國商品種類篩選
 
         let cart = [];
@@ -2347,15 +3490,40 @@
 
         // 韓國商品品牌篩選
         function filterByBrand(brand) {
-            currentBrand = brand;
-            renderProducts();
+            if (brand === 'all') {
+                // 點擊「全部品牌」時，清空所有選擇
+                currentBrand = [];
+                renderProducts();
 
-            // Update active button - 只更新品牌篩選器的按鈕
-            const brandButtons = document.querySelectorAll('#korea-categories .korea-filter-grid:first-of-type button');
-            brandButtons.forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
+                // 更新按鈕狀態
+                const brandButtons = document.querySelectorAll('#korea-categories .korea-filter-grid:first-of-type button');
+                brandButtons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+            } else {
+                // 點擊特定品牌時，切換選取狀態
+                const index = currentBrand.indexOf(brand);
+                if (index > -1) {
+                    // 已選中，取消選取
+                    currentBrand.splice(index, 1);
+                    event.target.classList.remove('active');
+                } else {
+                    // 未選中，加入選取
+                    currentBrand.push(brand);
+                    event.target.classList.add('active');
+                }
+
+                // 如果沒有任何品牌被選中，自動激活「全部品牌」
+                if (currentBrand.length === 0) {
+                    const allButton = document.querySelector('#korea-categories .korea-filter-grid:first-of-type button:first-child');
+                    if (allButton) allButton.classList.add('active');
+                } else {
+                    // 有品牌被選中時，取消「全部品牌」的激活狀態
+                    const allButton = document.querySelector('#korea-categories .korea-filter-grid:first-of-type button:first-child');
+                    if (allButton) allButton.classList.remove('active');
+                }
+
+                renderProducts();
+            }
         }
 
         // 韓國商品種類篩選
@@ -2395,11 +3563,18 @@
             const hasDetailedDescriptions = hasDetailedVariantDescriptions(product);
 
             // 準備圖片列表
-            if (hasVariants) {
-                productImages = product.variants.map(v => v.image);
+            // 優先使用 product.images 陣列（如果存在），這樣可以顯示所有相關圖片
+            let allImages = [];
+            if (product.images && product.images.length > 0) {
+                allImages = product.images;
+            } else if (hasVariants) {
+                allImages = product.variants.map(v => v.image);
             } else {
-                productImages = [product.image];
+                allImages = [product.image];
             }
+
+            // 去除重複的圖片，確保每張圖片只出現一次
+            productImages = [...new Set(allImages)];
             currentImageIndex = 0;
 
             // 顯示第一張圖片
@@ -2452,9 +3627,9 @@
                 document.getElementById('productSimpleSection').style.display = 'none';
                 renderVariantsList(product.variants);
 
-                // 如果是新加坡商品，禁用加入購物車按鈕
+                // 如果是新加坡或日本商品，禁用加入購物車按鈕
                 const variantBtn = document.getElementById('variantAddToCartBtn');
-                if (product.country === 'singapore') {
+                if (product.country === 'singapore' || product.country === 'japan') {
                     variantBtn.disabled = true;
                     variantBtn.style.background = '#ccc';
                     variantBtn.style.cursor = 'not-allowed';
@@ -2470,9 +3645,9 @@
                 document.getElementById('productSimpleSection').style.display = 'block';
                 document.getElementById('simpleProductQty').value = 1;
 
-                // 如果是新加坡商品，禁用加入購物車按鈕
+                // 如果是新加坡或日本商品，禁用加入購物車按鈕
                 const simpleBtn = document.getElementById('simpleAddToCartBtn');
-                if (product.country === 'singapore') {
+                if (product.country === 'singapore' || product.country === 'japan') {
                     simpleBtn.disabled = true;
                     simpleBtn.style.background = '#ccc';
                     simpleBtn.style.cursor = 'not-allowed';
@@ -2597,9 +3772,9 @@
 
         // 將單一商品加入購物車
         function addSimpleProductToCart() {
-            // 檢查是否為新加坡商品
-            if (currentProduct.country === 'singapore') {
-                alert('新加坡商品目前暫不開放購買，僅供瀏覽。');
+            // 檢查是否為新加坡或日本商品
+            if (currentProduct.country === 'singapore' || currentProduct.country === 'japan') {
+                alert('此區域商品目前暫不開放購買，僅供瀏覽。');
                 return;
             }
 
@@ -2724,9 +3899,9 @@
         function addVariantsToCart() {
             if (!currentProduct || !currentProduct.variants) return;
 
-            // 檢查是否為新加坡商品
-            if (currentProduct.country === 'singapore') {
-                alert('新加坡商品目前暫不開放購買，僅供瀏覽。');
+            // 檢查是否為新加坡或日本商品
+            if (currentProduct.country === 'singapore' || currentProduct.country === 'japan') {
+                alert('此區域商品目前暫不開放購買，僅供瀏覽。');
                 return;
             }
 
@@ -2792,9 +3967,9 @@
             if (currentCountry === 'korea') {
                 filteredProducts = countryProducts;
 
-                // 品牌篩選
-                if (currentBrand !== 'all') {
-                    filteredProducts = filteredProducts.filter(p => p.brand === currentBrand);
+                // 品牌篩選（多選）
+                if (currentBrand.length > 0) {
+                    filteredProducts = filteredProducts.filter(p => currentBrand.includes(p.brand));
                 }
 
                 // 商品種類篩選
@@ -2817,11 +3992,12 @@
                     const minPrice = Math.min(...product.variants.map(v => v.price));
                     const maxPrice = Math.max(...product.variants.map(v => v.price));
                     const priceDisplay = minPrice === maxPrice ? `NT$ ${minPrice}` : `NT$ ${minPrice}~${maxPrice}`;
+                    const coverImage = product.images && product.images.length > 0 ? product.images[0] : product.image;
 
                     return `
                         <div class="product-card" onclick="showProductDetail(${product.id})" style="cursor: pointer;">
                             <div class="product-image-wrapper">
-                                <img src="${product.image}" alt="${product.name}">
+                                <img src="${coverImage}" alt="${product.name}">
                                 <div class="product-image-overlay">
                                     <div class="product-image-overlay-text">🔍 點擊查看詳情</div>
                                 </div>
@@ -2833,10 +4009,12 @@
                     `;
                 } else {
                     // 一般商品：整個卡片可點擊，需進入詳情頁才能加入購物車
+                    const coverImage = product.images && product.images.length > 0 ? product.images[0] : product.image;
+
                     return `
                         <div class="product-card" onclick="showProductDetail(${product.id})" style="cursor: pointer;">
                             <div class="product-image-wrapper">
-                                <img src="${product.image}" alt="${product.name}">
+                                <img src="${coverImage}" alt="${product.name}">
                                 <div class="product-image-overlay">
                                     <div class="product-image-overlay-text">🔍 點擊查看詳情</div>
                                 </div>
@@ -2865,9 +4043,9 @@
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
 
-            // 檢查是否為新加坡商品
-            if (product.country === 'singapore') {
-                alert('新加坡商品目前暫不開放購買，僅供瀏覽。');
+            // 檢查是否為新加坡或日本商品
+            if (product.country === 'singapore' || product.country === 'japan') {
+                alert('此區域商品目前暫不開放購買，僅供瀏覽。');
                 return;
             }
 
@@ -3290,12 +4468,12 @@
         // 頁面載入和視窗大小改變時更新路徑
         window.addEventListener('load', initAirplaneAnimation);
         window.addEventListener('load', function() {
-            selectCountry('japan');
+            selectCountry('korea');
         });
         window.addEventListener('resize', initAirplaneAnimation);
 
         // 當前選擇的國家
-        let currentCountry = 'japan';
+        let currentCountry = 'korea';
 
         // 國家選擇功能
         function selectCountry(country) {
@@ -3333,7 +4511,7 @@
             // 重置篩選器
             if (country === 'korea') {
                 // 韓國：重置品牌和商品種類篩選器
-                currentBrand = 'all';
+                currentBrand = [];
                 currentType = 'all';
 
                 // 重置品牌和種類篩選器的active狀態
@@ -3674,39 +4852,39 @@
         // Hot Products modal functions
         const hotProducts = [
             {
-                id: 1,
+                id: 8002,
                 rank: 1,
-                name: 'TWG 奶韻烏龍茶包',
-                description: '台灣烏龍茶為基底，牛奶香氣濃郁，茶韻飽滿豐富，回甘香甜',
-                image: 'https://drive.google.com/thumbnail?id=14l7l-41wt5heKdPW4UFH8QcV9qBvptZf&sz=w1000'
+                name: 'Mediheal 精華面膜 10 片入',
+                description: '熱賣NO.1韓國面膜！多種功效可選，深層滋養肌膚，補水保濕一次到位',
+                image: 'https://drive.google.com/thumbnail?id=1q6yvsboBZWBwPNiVNq3h6e2_23lCReoq&sz=w1000'
             },
             {
-                id: 20,
+                id: 8011,
                 rank: 2,
-                name: 'IRVINS 魚皮（大包 230g）',
-                description: '新加坡國民零食！鹹蛋黃口味，酥脆爽口，一吃就停不下來',
-                image: 'https://drive.google.com/thumbnail?id=19_kPfhQxPzzgK6l_IDyjTJm8eVib8PG2&sz=w1000'
+                name: 'Dasique 布丁光澤唇釉',
+                description: '超人氣唇釉！水潤光澤質地，打造飽滿雙唇，12色可選',
+                image: 'https://drive.google.com/thumbnail?id=1y2NQ3ShOGBmgaOtbzM5jCj8DKxezFtVa&sz=w1000'
             },
             {
-                id: 15,
+                id: 8018,
                 rank: 3,
-                name: '百勝廚叻沙泡麵',
-                description: '新加坡最經典的叻沙風味泡麵，椰香濃郁，香辣開胃',
-                image: 'https://drive.google.com/thumbnail?id=1wPMFdpAdLtA-hJu1kYT5-jA42B3dUBby&sz=w1000'
+                name: 'Fwee 唇頰兩用膏單入',
+                description: '多功能唇頰兩用！豐富色彩選擇，一抹打造自然紅潤氣色',
+                image: 'https://drive.google.com/thumbnail?id=1dLfJeU0IHxZ0IHwsI5E34hPSd8Q49CfR&sz=w1000'
             },
             {
-                id: 7,
+                id: 8005,
                 rank: 4,
-                name: 'TWG 小熊茶香軟糖 - 草莓茶',
-                description: 'TWG獨家小熊造型軟糖，結合草莓與茶香，甜而不膩',
-                image: 'https://drive.google.com/thumbnail?id=1vtkI5z162RazTMe81O8PGxP6GMbHEVn4&sz=w1000'
+                name: 'Numbuzin 3 號水光收毛孔面膜',
+                description: '超強補水面膜！水光精華配方，有效收縮毛孔，敏感肌也適用',
+                image: 'https://drive.google.com/thumbnail?id=1WzamIq1aYmRyqZ9QM7ozzpjASezmHXK1&sz=w1000'
             },
             {
-                id: 2,
+                id: 8012,
                 rank: 5,
-                name: 'TWG 獅城早餐茶包',
-                description: '口感偏濃厚的紅茶，適合搭配早餐或下午茶，茶香醇厚',
-                image: 'https://drive.google.com/thumbnail?id=1frkWsCOy8QHd20-7Psjtd7Ji3kRpAvjd&sz=w1000'
+                name: 'Dasique 20 色眼影盤',
+                description: '超值眼影盤！豐富配色選擇，打造多變眼妝，7款可選',
+                image: 'https://drive.google.com/thumbnail?id=1dXkIzzbpFFUKsRPgaJsGjyWDs7rRh7-t&sz=w1000'
             }
         ];
 
@@ -3729,10 +4907,11 @@
                 const fullProduct = products.find(p => p.id === product.id);
                 const price = fullProduct ? fullProduct.price : 0;
                 const spec = fullProduct ? fullProduct.description : '';
-                const isSingapore = fullProduct && fullProduct.country === 'singapore';
+                const isViewOnly = fullProduct && (fullProduct.country === 'singapore' || fullProduct.country === 'japan');
+                const hasVariants = fullProduct && fullProduct.variants && fullProduct.variants.length > 0;
 
                 return `
-                    <div class="hot-product-item">
+                    <div class="hot-product-item" onclick="openHotProductDetail(${product.id})" style="cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
                         <div class="hot-product-rank ${rankClass}">
                             ${rankEmoji}${product.rank}
                         </div>
@@ -3741,72 +4920,26 @@
                             <div class="hot-product-name">${product.name}</div>
                             <div class="hot-product-description">${product.description}</div>
                             <div style="color: #000000; font-weight: bold; font-size: 1.3em; margin-bottom: 15px;">
-                                NT$ ${price}
+                                ${hasVariants ? `NT$ ${price} 起` : `NT$ ${price}`}
                             </div>
-                            ${isSingapore ? `
+                            ${isViewOnly ? `
                                 <div style="padding: 10px; background: #fff3e0; border: 1px solid #ff9800; border-radius: 5px; color: #f57c00; font-size: 0.9em; margin-bottom: 10px;">
                                     ⚠️ 暫不開放購買（僅供瀏覽）
                                 </div>
-                            ` : `
-                                <div class="quantity-control">
-                                    <button onclick="updateHotProductQuantity(${product.id}, -1)">-</button>
-                                    <input type="number" id="hot-qty-${product.id}" value="1" min="1" readonly>
-                                    <button onclick="updateHotProductQuantity(${product.id}, 1)">+</button>
-                                </div>
-                                <button class="add-to-cart" onclick="addHotProductToCart(${product.id})">加入購物車</button>
-                            `}
+                            ` : ''}
+                            <button class="add-to-cart" onclick="event.stopPropagation(); openHotProductDetail(${product.id})" style="background: #333; color: white;">
+                                ${hasVariants ? '選擇規格' : '查看詳情'}
+                            </button>
                         </div>
                     </div>
                 `;
             }).join('');
         }
 
-        // 更新熱賣商品數量
-        function updateHotProductQuantity(productId, change) {
-            const input = document.getElementById(`hot-qty-${productId}`);
-            let currentValue = parseInt(input.value) || 1;
-            currentValue += change;
-            if (currentValue < 1) currentValue = 1;
-            input.value = currentValue;
-        }
-
-        // 從熱賣商品添加到購物車
-        function addHotProductToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            if (!product) return;
-
-            // 檢查是否為新加坡商品
-            if (product.country === 'singapore') {
-                alert('新加坡商品目前暫不開放購買，僅供瀏覽。');
-                return;
-            }
-
-            const quantityInput = document.getElementById(`hot-qty-${productId}`);
-            const quantity = parseInt(quantityInput.value) || 1;
-
-            // 檢查購物車中是否已有此商品
-            const existingItem = cart.find(item => item.id === productId);
-
-            if (existingItem) {
-                existingItem.quantity += quantity;
-            } else {
-                cart.push({
-                    id: product.id,
-                    name: product.name,
-                    price: product.price,
-                    description: product.description,
-                    image: product.image,
-                    quantity: quantity
-                });
-            }
-
-            updateCartBadge();
-
-            // 顯示成功提示
-            alert(`已將 ${quantity} 個「${product.name}」加入購物車！`);
-
-            // 重置數量為1
-            quantityInput.value = 1;
+        // 從熱賣商品打開商品詳情
+        function openHotProductDetail(productId) {
+            closeHotProductsModal();
+            showProductDetail(productId);
         }
 
         // Close modal when clicking outside
