@@ -1648,6 +1648,7 @@
                     <button onclick="filterByBrand('Wakemake')">Wakemake</button>
                     <button onclick="filterByBrand('AESTURA')">AESTURA</button>
                     <button onclick="filterByBrand('Arencia')">Arencia</button>
+                    <button onclick="filterByBrand('Ariul')">Ariul</button>
                     <button onclick="filterByBrand('Bioheal BOH')">Bioheal BOH - Panthecell</button>
                     <button onclick="filterByBrand('Beplain')">Beplain</button>
                     <button onclick="filterByBrand('Celimax')">Celimax</button>
@@ -1656,9 +1657,15 @@
                     <button onclick="filterByBrand('Dr.G')">Dr.G</button>
                     <button onclick="filterByBrand('Fully 綠番茄')">Fully 綠番茄</button>
                     <button onclick="filterByBrand('ilso')">ilso</button>
-                    <button onclick="filterByBrand('Laneige')">Laneige 蘭芝</button>
-                    <button onclick="filterByBrand('Medicube')">medicube</button>
+                    <button onclick="filterByBrand('Laneige 蘭芝')">Laneige 蘭芝</button>
+                    <button onclick="filterByBrand('Labo-H')">Labo-H</button>
+                    <button onclick="filterByBrand('medicube')">medicube</button>
+                    <button onclick="filterByBrand('MLB')">MLB</button>
                     <button onclick="filterByBrand('Ongredients')">Ongredients</button>
+                    <button onclick="filterByBrand('Round Lab')">Round Lab</button>
+                    <button onclick="filterByBrand('S. NATURE')">S. NATURE</button>
+                    <button onclick="filterByBrand('The Tool Lab')">The Tool Lab</button>
+                    <button onclick="filterByBrand('Torriden')">Torriden</button>
                 </div>
             </div>
             <!-- 商品種類篩選器 -->
@@ -1668,6 +1675,7 @@
                     <button class="active" onclick="filterByType('all')">全部種類</button>
                     <button onclick="filterByType('化妝品')">化妝品</button>
                     <button onclick="filterByType('保養品')">保養品</button>
+                    <button onclick="filterByType('服飾')">服飾</button>
                     <button onclick="filterByType('其他')">其他</button>
                 </div>
             </div>
@@ -3272,6 +3280,7 @@
                     'https://drive.google.com/thumbnail?id=1hKnnKZNXIh-B5iWFKEAEm-TjUgFFr2rR&sz=w1000',
                     'https://drive.google.com/thumbnail?id=1d7S4eXkUNfK9OSxdq58Bp6CU0E3-W1Me&sz=w1000',
                     'https://drive.google.com/thumbnail?id=1hHd0IE-k4jl3toFDnOdHNGfFAonqFClE&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=10KX4AwNfMeV1zASxroBXJCp9RGzlZYT4&sz=w1000',
                     'https://drive.google.com/thumbnail?id=1ndmi4sZ9NoklumFJNVQVAQk1yKyPV_PX&sz=w1000',
                     'https://drive.google.com/thumbnail?id=1GeLav31GENvKLOQXE8e116aDg5seS8OZ&sz=w1000',
                     'https://drive.google.com/thumbnail?id=1vX0L97NVxJIahBmN5j5eaXc_IcE-PLJg&sz=w1000'
@@ -3464,6 +3473,671 @@
                 country: 'korea',
                 price: 640,
                 detailedDescription: '專為改善毛孔髒污與肌膚粗糙設計的潔面套組，結合溫和研磨顆粒＋深層潔淨配方，能有效清除毛孔內的油脂、老廢角質與殘妝殘垢，讓肌膚潔淨透亮。套組中的潔面膏質地柔滑、起泡豐富，在按摩同時帶走髒污不刺激，洗後肌膚清爽不緊繃。此套組特別適合油肌、混合肌及有毛孔堵塞困擾的人使用，也能作為每週深層清潔步驟的一部分，改善毛孔粗大與膚質不平整問題，讓後續保養滲透更佳、妝感更服貼自然。'
+            },
+            // Dr.G 品牌
+            {
+                id: 8071,
+                name: 'Dr.G 積雪草玻尿酸精華',
+                description: '50ml + 20ml*2',
+                image: 'https://drive.google.com/thumbnail?id=16TPekMEiPtQIDVPXpp4b0il5I9ea2YB5&sz=w1000',
+                brand: 'Dr.G',
+                type: '保養品',
+                country: 'korea',
+                price: 530,
+                detailedDescription: '高保濕舒緩型精華，結合玻尿酸與積雪草複合配方，水感質地、吸收迅速，能改善乾燥與泛紅問題，是日常保養與妝前打底的理想選擇'
+            },
+            // Fully 綠番茄 品牌
+            {
+                id: 8056,
+                name: 'Fully 綠番茄洗面乳套組',
+                description: '120ml + 小包裝 30ml，3款可選',
+                image: 'https://drive.google.com/thumbnail?id=1FalfE0bhVHnGXN6rdIwM4x0TaG7EezCC&sz=w1000',
+                brand: 'Fully 綠番茄',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Fully 綠番茄洗面乳套組，溫和清潔，保濕不緊繃',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1FalfE0bhVHnGXN6rdIwM4x0TaG7EezCC&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1DXk2T3enqh1vG25-4oWdOhfEO6qVJU7N&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Fc6ii7OmSF0BcGmKEJY1wxHycKgVKBh3&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1rpSRJdQ9Q_4dQKgx3ceTyR_kc-GykHkR&sz=w1000'
+                ],
+                variants: [
+                    { id: 80561, name: '綠番茄口味', price: 530, image: 'https://drive.google.com/thumbnail?id=1FalfE0bhVHnGXN6rdIwM4x0TaG7EezCC&sz=w1000', description: '綠番茄口味' },
+                    { id: 80562, name: '紅番茄口味', price: 530, image: 'https://drive.google.com/thumbnail?id=1Fc6ii7OmSF0BcGmKEJY1wxHycKgVKBh3&sz=w1000', description: '紅番茄口味' },
+                    { id: 80563, name: '稻米口味', price: 530, image: 'https://drive.google.com/thumbnail?id=1rpSRJdQ9Q_4dQKgx3ceTyR_kc-GykHkR&sz=w1000', description: '稻米口味' }
+                ]
+            },
+            // ilso 品牌
+            {
+                id: 8057,
+                name: 'ilso 去黑頭套組',
+                description: '溶解水 + 鏟子 + 化妝棉',
+                image: 'https://drive.google.com/thumbnail?id=16c6ToAPFF6zAFdmG8LZkyzH6SX3bMGKD&sz=w1000',
+                brand: 'ilso',
+                type: '保養品',
+                country: 'korea',
+                price: 790,
+                detailedDescription: 'ilso人體工學去黑頭鏟+ ilso 超級溶解控油柔膚露 150ml 特裝（+ 40片化妝棉）',
+                images: [
+                    'https://drive.google.com/thumbnail?id=16c6ToAPFF6zAFdmG8LZkyzH6SX3bMGKD&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=13OxB4aB51PBgBGC8uknhXBE21e1BV9-q&sz=w1000'
+                ]
+            },
+            {
+                id: 8058,
+                name: 'ilso 超級溶解控油柔膚露',
+                description: '150ml 特裝（+ 40片化妝棉）',
+                image: 'https://drive.google.com/thumbnail?id=1tmfJF8WzY7ufg63aWAWjPnrxAnxX_yqU&sz=w1000',
+                brand: 'ilso',
+                type: '保養品',
+                country: 'korea',
+                price: 540,
+                detailedDescription: 'ilso 超級溶解控油柔膚露，深層清潔，控油保濕'
+            },
+            {
+                id: 8059,
+                name: 'ilso人體工學去黑頭鏟',
+                description: '人體工學設計',
+                image: 'https://drive.google.com/thumbnail?id=1WABKbRniDX7UVBZRDmS_kbu-TuFxBmV9&sz=w1000',
+                brand: 'ilso',
+                type: '保養品',
+                country: 'korea',
+                price: 300,
+                detailedDescription: 'ilso人體工學去黑頭鏟，專業去黑頭工具'
+            },
+            // Laneige 蘭芝 品牌
+            {
+                id: 8060,
+                name: 'Laneige 蘭芝 睡美人極萃滋養晚安唇膜',
+                description: '20g/16g，13款可選',
+                image: 'https://drive.google.com/thumbnail?id=1vYwujfbDw4ruBLresAuKIbmcgzOQglTc&sz=w1000',
+                brand: 'Laneige 蘭芝',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Laneige 蘭芝 睡美人極萃滋養晚安唇膜，滋養修護，打造水潤雙唇',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1vYwujfbDw4ruBLresAuKIbmcgzOQglTc&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1IcLYF5kWIKbVKSbhKYAYNfgySMaIhNdC&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1jgpx1BrEQYG5QyEplacmwOT8q340C6bP&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=156pIEYYWQzJqPGPqhen_SaPu_c8iM9tB&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1v8dgqWpCNVElbk-QBuTR6acwo8539PIE&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1nUELuVcqrP42tEsDzAmzIgJdQttQZQ0x&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1c2JP1-nC0jU0HQul0j0vMO895tsoZz8B&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=13WkoRUSr7VjJaUZ0U1BJgOKQ87xvszCE&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1csPbwj7xPRkGgv5Gc_HFb2gLr1yZafds&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Fp4HG5yHRoTzoka23zonk2OWJdcFU0pM&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1fjYnPJNIKG5diqQPsPU5SWERSSL_JCF6&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1rnTyxycofF8Lf2Xu6mElZmABLPArig2Q&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1jGCusNAGkWKDsULk86F0QozZaVXtSX1e&sz=w1000'
+                ],
+                variants: [
+                    { id: 80601, name: '草莓奶油蛋糕 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1vYwujfbDw4ruBLresAuKIbmcgzOQglTc&sz=w1000', description: '草莓奶油蛋糕口味' },
+                    { id: 80602, name: '抹茶歐雷 [當地限量] 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1IcLYF5kWIKbVKSbhKYAYNfgySMaIhNdC&sz=w1000', description: '抹茶歐雷口味' },
+                    { id: 80603, name: '芋頭奶茶 [當地限量] 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1jgpx1BrEQYG5QyEplacmwOT8q340C6bP&sz=w1000', description: '芋頭奶茶口味' },
+                    { id: 80604, name: '莓果 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=156pIEYYWQzJqPGPqhen_SaPu_c8iM9tB&sz=w1000', description: '莓果口味' },
+                    { id: 80605, name: '薄荷巧克力 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1v8dgqWpCNVElbk-QBuTR6acwo8539PIE&sz=w1000', description: '薄荷巧克力口味' },
+                    { id: 80606, name: '蘋果萊姆 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1nUELuVcqrP42tEsDzAmzIgJdQttQZQ0x&sz=w1000', description: '蘋果萊姆口味' },
+                    { id: 80607, name: '葡萄柚 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1c2JP1-nC0jU0HQul0j0vMO895tsoZz8B&sz=w1000', description: '葡萄柚口味' },
+                    { id: 80608, name: '香草 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=13WkoRUSr7VjJaUZ0U1BJgOKQ87xvszCE&sz=w1000', description: '香草口味' },
+                    { id: 80609, name: '芒果 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1csPbwj7xPRkGgv5Gc_HFb2gLr1yZafds&sz=w1000', description: '芒果口味' },
+                    { id: 80610, name: '小熊軟糖 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1Fp4HG5yHRoTzoka23zonk2OWJdcFU0pM&sz=w1000', description: '小熊軟糖口味' },
+                    { id: 80611, name: '芭比粉 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1fjYnPJNIKG5diqQPsPU5SWERSSL_JCF6&sz=w1000', description: '芭比粉口味' },
+                    { id: 80612, name: '蜜桃冰茶 20g', price: 600, image: 'https://drive.google.com/thumbnail?id=1rnTyxycofF8Lf2Xu6mElZmABLPArig2Q&sz=w1000', description: '蜜桃冰茶口味' },
+                    { id: 80613, name: '莓果 8g + 巧克力 8g (共16g)', price: 550, image: 'https://drive.google.com/thumbnail?id=1jGCusNAGkWKDsULk86F0QozZaVXtSX1e&sz=w1000', description: '莓果巧克力組合' }
+                ]
+            },
+            {
+                id: 8061,
+                name: 'Laneige 蘭芝 粉澎潤5D潤唇精萃',
+                description: '12g',
+                image: 'https://drive.google.com/thumbnail?id=1KRI4yWk8t41tn_cUx1FlSucltkO1-G2o&sz=w1000',
+                brand: 'Laneige 蘭芝',
+                type: '保養品',
+                country: 'korea',
+                price: 720,
+                detailedDescription: 'Laneige 蘭芝 粉澎潤5D潤唇精萃，5D立體豐潤，打造澎潤雙唇'
+            },
+            // medicube 品牌
+            {
+                id: 8070,
+                name: 'Medicube PDRN 外泌體精華套組',
+                description: '30ml+ 50ml 補充包*5+隨身包',
+                image: 'https://drive.google.com/thumbnail?id=14q2Yzj6tIjEM8bLubvCb_hfFkX8Wk9z0&sz=w1000',
+                brand: 'medicube',
+                type: '保養品',
+                country: 'korea',
+                price: 650,
+                detailedDescription: '結合 PDRN 與外泌體修護科技的高機能精華，專注強化肌膚修復與屏障重建。質地微黏高效保濕，幫助改善泛紅、提升彈力與亮澤，使肌膚看起來更穩定、光滑且富有活力。',
+                images: [
+                    'https://drive.google.com/thumbnail?id=14q2Yzj6tIjEM8bLubvCb_hfFkX8Wk9z0&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1XE7rf1Rk6bh0hgZprhaydk48BM6MtvN0&sz=w1000'
+                ]
+            },
+            {
+                id: 8062,
+                name: 'Medicube PDRN 凝膠棉片',
+                description: '70片',
+                image: 'https://drive.google.com/thumbnail?id=1ZTR8zQsT320ZRyxT5apEHBA2fnMWnWts&sz=w1000',
+                brand: 'medicube',
+                type: '保養品',
+                country: 'korea',
+                price: 550,
+                detailedDescription: '添加 PDRN 修護成分的凝膠型棉片，主打溫和修復、補水與穩定膚況，可作為日常保養或濕敷使用，幫助舒緩乾燥、提升肌膚細緻度。'
+            },
+            {
+                id: 8063,
+                name: 'Medicube PDRN 晶球凝露',
+                description: '55g',
+                image: 'https://drive.google.com/thumbnail?id=1-UKh8nZVGVtbfKE6tevMXWV6vpA0U_Pk&sz=w1000',
+                brand: 'medicube',
+                type: '保養品',
+                country: 'korea',
+                price: 650,
+                detailedDescription: '高濃度 PDRN 凝露配方，清爽水凝質地中包覆晶球精華，塗抹時釋放修護成分，幫助改善肌膚疲勞、提升光澤與彈潤感，適合日夜使用',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1-UKh8nZVGVtbfKE6tevMXWV6vpA0U_Pk&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1E5El4XUu3-mpWDBiiCNZwdOtUmL8Gu_o&sz=w1000'
+                ]
+            },
+            {
+                id: 8064,
+                name: 'Medicube ZERO毛孔爽膚棉2.0套組',
+                description: '正裝+補充包170片',
+                image: 'https://drive.google.com/thumbnail?id=19NdyrydAEgiMgCi-1USq_OKAfg6fmjJJ&sz=w1000',
+                brand: 'medicube',
+                type: '保養品',
+                country: 'korea',
+                price: 730,
+                detailedDescription: '經典雙面設計，一面溫和去除老廢角質，另一面調理肌膚紋理與皮脂分泌，幫助改善毛孔粗大與膚觸不平整問題，適合每日洗臉後使用。',
+                images: [
+                    'https://drive.google.com/thumbnail?id=19NdyrydAEgiMgCi-1USq_OKAfg6fmjJJ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1bUulV9yBlw2F7AU0kL782eIqLbnH_TWi&sz=w1000'
+                ]
+            },
+            {
+                id: 8065,
+                name: 'Medicube booster Pro mini plus 潔面頭 [無主機]',
+                description: '2色可選',
+                image: 'https://drive.google.com/thumbnail?id=190_qSJdqCjlIBqP1f9WUBKhqCi9cGVnP&sz=w1000',
+                brand: 'medicube',
+                type: '其他',
+                country: 'korea',
+                detailedDescription: '專為 Booster Pro mini plus 美容儀 設計的替換潔面頭，採用柔軟細緻刷毛與適中彈性，能夠溫和但更徹底地清除毛孔內的髒污、殘妝與老廢角質。搭配儀器振動使用時能提升清潔效果，同時不刺激肌膚。',
+                images: [
+                    'https://drive.google.com/thumbnail?id=190_qSJdqCjlIBqP1f9WUBKhqCi9cGVnP&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ShrRG7K0KBX-pvt8XSzciy0plRMY1-2j&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1dIiUC_J6uUs2HkVyvY5aNCB5y7nOfjW6&sz=w1000'
+                ],
+                variants: [
+                    { id: 80651, name: '純色 - 粉', price: 1650, image: 'https://drive.google.com/thumbnail?id=190_qSJdqCjlIBqP1f9WUBKhqCi9cGVnP&sz=w1000', description: '純色粉色' },
+                    { id: 80652, name: '純色 - 米', price: 1650, image: 'https://drive.google.com/thumbnail?id=1dIiUC_J6uUs2HkVyvY5aNCB5y7nOfjW6&sz=w1000', description: '純色米色' }
+                ]
+            },
+            {
+                id: 8066,
+                name: 'Medicube booster Pro mini puls 美容儀',
+                description: '4款可選',
+                image: 'https://drive.google.com/thumbnail?id=1UiXCyZ9Rqk12tVf10e1i1X78BFuZRS00&sz=w1000',
+                brand: 'medicube',
+                type: '其他',
+                country: 'korea',
+                detailedDescription: '張員瑛代言的導入美容儀便攜版，透過微振能量促進保養成分吸收，有助提升精華與乳霜的滲透效率。簡單操作、適合日常使用，讓保養更有效率，肌膚吸收更飽滿透亮。',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1UiXCyZ9Rqk12tVf10e1i1X78BFuZRS00&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1YIF2E0dlt-2T7NsOjS9I94IhBAA-pjqn&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1S2F4HLRX0eM30imFbgnQDwO6Tgor-Mww&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17MI9fhUAugvLEzLxU1a28SMrqBQWGBPh&sz=w1000'
+                ],
+                variants: [
+                    { id: 80661, name: '蠟筆小新', price: 3500, image: 'https://drive.google.com/thumbnail?id=1UiXCyZ9Rqk12tVf10e1i1X78BFuZRS00&sz=w1000', description: '蠟筆小新聯名款' },
+                    { id: 80662, name: '美樂蒂', price: 3500, image: 'https://drive.google.com/thumbnail?id=1YIF2E0dlt-2T7NsOjS9I94IhBAA-pjqn&sz=w1000', description: '美樂蒂聯名款' },
+                    { id: 80663, name: '純色 - 粉', price: 3500, image: 'https://drive.google.com/thumbnail?id=1S2F4HLRX0eM30imFbgnQDwO6Tgor-Mww&sz=w1000', description: '純色粉色' },
+                    { id: 80664, name: '純色 - 米', price: 3500, image: 'https://drive.google.com/thumbnail?id=17MI9fhUAugvLEzLxU1a28SMrqBQWGBPh&sz=w1000', description: '純色米色' }
+                ]
+            },
+            {
+                id: 8067,
+                name: 'Medicube booster Pro mini puls 美容儀 + 潔面頭',
+                description: '2色可選',
+                image: 'https://drive.google.com/thumbnail?id=1WwCDhPuDdjIYnq0dkI3eGfHWR8EU4ZT9&sz=w1000',
+                brand: 'medicube',
+                type: '其他',
+                country: 'korea',
+                detailedDescription: '張員瑛代言的導入美容儀便攜版，透過微振能量促進保養成分吸收，有助提升精華與乳霜的滲透效率。簡單操作、適合日常使用，讓保養更有效率，肌膚吸收更飽滿透亮。',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1WwCDhPuDdjIYnq0dkI3eGfHWR8EU4ZT9&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=19zqEYN4oGUkaZyMhWiKQMDeNvcbPAaMx&sz=w1000'
+                ],
+                variants: [
+                    { id: 80671, name: '純色 - 粉', price: 5000, image: 'https://drive.google.com/thumbnail?id=1WwCDhPuDdjIYnq0dkI3eGfHWR8EU4ZT9&sz=w1000', description: '純色粉色含潔面頭' },
+                    { id: 80672, name: '純色 - 米', price: 5000, image: 'https://drive.google.com/thumbnail?id=19zqEYN4oGUkaZyMhWiKQMDeNvcbPAaMx&sz=w1000', description: '純色米色含潔面頭' }
+                ]
+            },
+            {
+                id: 8068,
+                name: 'Medicube booster Pro 美容儀',
+                description: '4款可選',
+                image: 'https://drive.google.com/thumbnail?id=1pXfmXReC38exmh5sU0E-ZBZYfc_nNG_h&sz=w1000',
+                brand: 'medicube',
+                type: '其他',
+                country: 'korea',
+                detailedDescription: '專為提升日常保養效果而設計的便攜型導入美容儀，透過微振動能量＋導入技術，促進精華、乳霜等保養成分的吸收，使肌膚更飽滿、更易達到理想保濕與修護效果。質地輕巧、操作簡單，適合忙碌的早晚保養流程。',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1pXfmXReC38exmh5sU0E-ZBZYfc_nNG_h&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1zNckB-0JCqZJ4OpPCUzDEdIFYYWCv1fu&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1WrfFEcz_kC0pCcAo9kwsRoWsWKoi1_s6&sz=w1000'
+                ],
+                variants: [
+                    { id: 80681, name: '純色 - 粉', price: 8200, image: 'https://drive.google.com/thumbnail?id=1pXfmXReC38exmh5sU0E-ZBZYfc_nNG_h&sz=w1000', description: '純色粉色' },
+                    { id: 80682, name: '純色 - 黑', price: 8200, image: 'https://drive.google.com/thumbnail?id=1pXfmXReC38exmh5sU0E-ZBZYfc_nNG_h&sz=w1000', description: '純色黑色' },
+                    { id: 80683, name: '蠟筆小新', price: 8200, image: 'https://drive.google.com/thumbnail?id=1zNckB-0JCqZJ4OpPCUzDEdIFYYWCv1fu&sz=w1000', description: '蠟筆小新聯名款' },
+                    { id: 80684, name: '美樂蒂', price: 8200, image: 'https://drive.google.com/thumbnail?id=1WrfFEcz_kC0pCcAo9kwsRoWsWKoi1_s6&sz=w1000', description: '美樂蒂聯名款' }
+                ]
+            },
+            // Ongredients 品牌
+            {
+                id: 8069,
+                name: 'Ongredients 肌膚屏障舒緩乳液',
+                description: '共 300ml，附贈品牌洗面乳 50ml',
+                image: 'https://drive.google.com/thumbnail?id=1vpseuUdurwzeF-lQu7D5nIk9M-7RHQSu&sz=w1000',
+                brand: 'Ongredients',
+                type: '保養品',
+                country: 'korea',
+                price: 750,
+                detailedDescription: 'Ongredients 肌膚屏障舒緩乳液，修護肌膚屏障，舒緩敏感肌膚'
+            },
+            // MLB 品牌
+            {
+                id: 9001,
+                name: 'MLB 貓耳綁帶毛帽',
+                description: '4款可選',
+                image: 'https://drive.google.com/thumbnail?id=1SpD_SvnUBx9bPrbDVYWlNzFfB-G1jdwe&sz=w1000',
+                brand: 'MLB',
+                type: '服飾',
+                category: 'apparel',
+                country: 'korea',
+                detailedDescription: 'MLB 貓耳綁帶毛帽，可愛貓耳設計，保暖又時尚',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1SpD_SvnUBx9bPrbDVYWlNzFfB-G1jdwe&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Uka3--4jZ9No0T2ZjPyvOnJl4-DumuFA&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17T8KDDrPVoqJgInO4TSVZLHa7IWeQT1c&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=11tZZcGJK1oR-cqppzKa6h9W7hzs_RSHe&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1cdl5E0F-BUqZB-5BscvTdgw_6W7WshzN&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1-fJ1UfQwBoyD3otb46ZxbK2bNAruxmy9&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Du0tQg7urWaOJwiIKH0YbYlJh4FHdqpv&sz=w1000'
+                ],
+                variants: [
+                    { id: 90011, name: '白 (NY)', price: 1500, image: 'https://drive.google.com/thumbnail?id=1SpD_SvnUBx9bPrbDVYWlNzFfB-G1jdwe&sz=w1000', description: '白色NY款' },
+                    { id: 90012, name: '咖 (BOS)', price: 1500, image: 'https://drive.google.com/thumbnail?id=17T8KDDrPVoqJgInO4TSVZLHa7IWeQT1c&sz=w1000', description: '咖啡色BOS款' },
+                    { id: 90013, name: '粉 (LA)', price: 1500, image: 'https://drive.google.com/thumbnail?id=11tZZcGJK1oR-cqppzKa6h9W7hzs_RSHe&sz=w1000', description: '粉色LA款' },
+                    { id: 90014, name: '黑 (NY)', price: 1500, image: 'https://drive.google.com/thumbnail?id=1-fJ1UfQwBoyD3otb46ZxbK2bNAruxmy9&sz=w1000', description: '黑色NY款' }
+                ]
+            },
+            {
+                id: 9002,
+                name: 'MLB 捲邊毛帽',
+                description: '8款可選',
+                image: 'https://drive.google.com/thumbnail?id=1FzkY1YAE-9xPjottDzw-MjRITU-795vX&sz=w1000',
+                brand: 'MLB',
+                type: '服飾',
+                category: 'apparel',
+                country: 'korea',
+                detailedDescription: 'MLB 捲邊毛帽，經典棒球隊徽設計，保暖舒適',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1FzkY1YAE-9xPjottDzw-MjRITU-795vX&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1vts7pUBbvxvoceT1PXcrlbew0WYv5kRZ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1JtooSlcmiEHRxTOl-zTEz9JsZJnIh2mY&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1TFI3xxkaxd4iorwhEG8dwWeFxwgu8fzN&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=14vS8ub5Uu1U3TKUwQHm5Frah3qH6RFRq&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1dC-Q28mLDfQee3GJcauNWRpqSDhmPE4-&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1aIuvY-1Hyghksj5vFTZ91DCd4uaNhVvg&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1-8xoo34un6v7ggHpHHvQMQAIFZEdfhpC&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1rxiV3VhqF0xJXryelDscgipEu2MUuSKt&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1BAuQnxBydF7Jim2lOgjyIah6ZPuSbsS2&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1WQIGw9P1do8MWDlVbpIZFzhWqXWKhMK-&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1dHOfkxz9LX9fClxdeo5MyQ6MVARy00re&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=10RUIZEmViASA47zrVBBN1yiggasYIW69&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1lNi0olW8UoFf4g8hBKUlR_R8I8qu7Tip&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1-pM2o3wHJrrSgtonWiJgb3zZlvjLZ8hW&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1szFy7ZN1i5MygRLZHzeTSwbNXJP8PygC&sz=w1000'
+                ],
+                variants: [
+                    { id: 90021, name: '黑底白LOGO (NY)', price: 1300, image: 'https://drive.google.com/thumbnail?id=1FzkY1YAE-9xPjottDzw-MjRITU-795vX&sz=w1000', description: '黑底白LOGO NY款' },
+                    { id: 90022, name: '咖啡底金LOGO (Guardians)', price: 1300, image: 'https://drive.google.com/thumbnail?id=1JtooSlcmiEHRxTOl-zTEz9JsZJnIh2mY&sz=w1000', description: '咖啡底金LOGO Guardians款' },
+                    { id: 90023, name: '淺藍底白LOGO (NY)', price: 1300, image: 'https://drive.google.com/thumbnail?id=14vS8ub5Uu1U3TKUwQHm5Frah3qH6RFRq&sz=w1000', description: '淺藍底白LOGO NY款' },
+                    { id: 90024, name: '灰底黑LOGO (LA)', price: 1300, image: 'https://drive.google.com/thumbnail?id=1aIuvY-1Hyghksj5vFTZ91DCd4uaNhVvg&sz=w1000', description: '灰底黑LOGO LA款' },
+                    { id: 90025, name: '籃底白LOGO (SOX)', price: 1300, image: 'https://drive.google.com/thumbnail?id=1rxiV3VhqF0xJXryelDscgipEu2MUuSKt&sz=w1000', description: '籃底白LOGO SOX款' },
+                    { id: 90026, name: '黑底粉LOGO (LA)', price: 1300, image: 'https://drive.google.com/thumbnail?id=1WQIGw9P1do8MWDlVbpIZFzhWqXWKhMK-&sz=w1000', description: '黑底粉LOGO LA款' },
+                    { id: 90027, name: '白底金LOGO (NY)', price: 1300, image: 'https://drive.google.com/thumbnail?id=10RUIZEmViASA47zrVBBN1yiggasYIW69&sz=w1000', description: '白底金LOGO NY款' },
+                    { id: 90028, name: '黑底白LOGO (LA)', price: 1300, image: 'https://drive.google.com/thumbnail?id=1-pM2o3wHJrrSgtonWiJgb3zZlvjLZ8hW&sz=w1000', description: '黑底白LOGO LA款' }
+                ]
+            },
+            {
+                id: 9003,
+                name: 'MLB 棒球帽 NY',
+                description: '4款可選',
+                image: 'https://drive.google.com/thumbnail?id=1v0ac4Q2kzkM-rjvvq0KyQn3gNw_4ww-0&sz=w1000',
+                brand: 'MLB',
+                type: '服飾',
+                category: 'apparel',
+                country: 'korea',
+                detailedDescription: 'MLB 棒球帽 NY，經典紐約洋基隊徽設計，時尚百搭',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1v0ac4Q2kzkM-rjvvq0KyQn3gNw_4ww-0&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1pniADZQEyRwOoRjAsXc3L09aPEqSAOrJ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1tWG4C0YnMy-Wy9RShfMyf1KeD0l4yToB&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=16K8qQvkwBKObQAYPy65cTfPvXjCS_v9p&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1TZ_oIPxC6Ig2vfoxWZBZI_aJyqUXzOkx&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Dgknazc9g9gK0Nw0Yk8g_6ZNNYdoROF3&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1k0UziIImzm5xH7mZQTOhf2rbYMZPVC8s&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1LY58vYZM5OfI5WGzueqc9EdPlKF6ozlM&sz=w1000'
+                ],
+                variants: [
+                    { id: 90031, name: '海軍藍底白LOGO', price: 1080, image: 'https://drive.google.com/thumbnail?id=1v0ac4Q2kzkM-rjvvq0KyQn3gNw_4ww-0&sz=w1000', description: '海軍藍底白LOGO' },
+                    { id: 90032, name: '黑底白LOGO', price: 1080, image: 'https://drive.google.com/thumbnail?id=1tWG4C0YnMy-Wy9RShfMyf1KeD0l4yToB&sz=w1000', description: '黑底白LOGO' },
+                    { id: 90033, name: '灰底藍LOGO', price: 1080, image: 'https://drive.google.com/thumbnail?id=1TZ_oIPxC6Ig2vfoxWZBZI_aJyqUXzOkx&sz=w1000', description: '灰底藍LOGO' },
+                    { id: 90034, name: '咖啡底白LOGO', price: 1080, image: 'https://drive.google.com/thumbnail?id=1k0UziIImzm5xH7mZQTOhf2rbYMZPVC8s&sz=w1000', description: '咖啡底白LOGO' }
+                ]
+            },
+            {
+                id: 9004,
+                name: 'MLB 棒球帽 LA',
+                description: '3款可選',
+                image: 'https://drive.google.com/thumbnail?id=1DGkKbpt--UgAJ4ymxOlH_WMKxvQtv2O3&sz=w1000',
+                brand: 'MLB',
+                type: '服飾',
+                category: 'apparel',
+                country: 'korea',
+                detailedDescription: 'MLB 棒球帽 LA，經典洛杉磯道奇隊徽設計，時尚百搭',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1DGkKbpt--UgAJ4ymxOlH_WMKxvQtv2O3&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Mq3-fgqScXmiE8LBJvweHt9ZFj7_I4ZL&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1-F_oisK0N_KlQC33ML-COc_jUjGj7LHM&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=12DTZk7aXo3dTeKoAJZ1N_aaBR3Zzr-vb&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1mnaeDRzbS7Q1j7-768PT-hmaG09rWrwP&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Xul15f6_dBp0wPMDoRMWd6qUIPbd7hgr&sz=w1000'
+                ],
+                variants: [
+                    { id: 90041, name: '藍底白LOGO', price: 1080, image: 'https://drive.google.com/thumbnail?id=1DGkKbpt--UgAJ4ymxOlH_WMKxvQtv2O3&sz=w1000', description: '藍底白LOGO' },
+                    { id: 90042, name: '黑底白LOGO', price: 1080, image: 'https://drive.google.com/thumbnail?id=1-F_oisK0N_KlQC33ML-COc_jUjGj7LHM&sz=w1000', description: '黑底白LOGO' },
+                    { id: 90043, name: '綠底白LOGO', price: 1080, image: 'https://drive.google.com/thumbnail?id=1mnaeDRzbS7Q1j7-768PT-hmaG09rWrwP&sz=w1000', description: '綠底白LOGO' }
+                ]
+            },
+            // Round Lab 品牌
+            {
+                id: 9005,
+                name: 'Round Lab 樹保濕亮膚防曬乳',
+                description: '2款可選',
+                image: 'https://drive.google.com/thumbnail?id=1zR6HDOGszrnoP-5qIQmvrEppdZfTFCAj&sz=w1000',
+                brand: 'Round Lab',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Round Lab 樹保濕亮膚防曬乳，提供肌膚保濕與防曬雙重保護',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1zR6HDOGszrnoP-5qIQmvrEppdZfTFCAj&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1j0tFKbB6v-ov9AM8ogfnxF92NXY7P7nj&sz=w1000'
+                ],
+                variants: [
+                    { id: 90051, name: '50ml 一入', price: 450, image: 'https://drive.google.com/thumbnail?id=1zR6HDOGszrnoP-5qIQmvrEppdZfTFCAj&sz=w1000', description: '50ml 一入' },
+                    { id: 90052, name: '50ml 套組 (附贈25ml)', price: 850, image: 'https://drive.google.com/thumbnail?id=1j0tFKbB6v-ov9AM8ogfnxF92NXY7P7nj&sz=w1000', description: '50ml 套組 (附贈25ml)' }
+                ]
+            },
+            {
+                id: 9006,
+                name: 'Round Lab 1025 獨島潔膚水',
+                description: '2款可選',
+                image: 'https://drive.google.com/thumbnail?id=15ixRKpfYPdsQoTi6GcFzh7BarqV1ah4p&sz=w1000',
+                brand: 'Round Lab',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Round Lab 1025 獨島潔膚水，溫和清潔肌膚，維持肌膚水油平衡',
+                images: [
+                    'https://drive.google.com/thumbnail?id=15ixRKpfYPdsQoTi6GcFzh7BarqV1ah4p&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17gWMQLdgAasoSIng_edz7KVVlie3joE7&sz=w1000'
+                ],
+                variants: [
+                    { id: 90061, name: '400ml 一入', price: 350, image: 'https://drive.google.com/thumbnail?id=15ixRKpfYPdsQoTi6GcFzh7BarqV1ah4p&sz=w1000', description: '400ml 一入' },
+                    { id: 90062, name: '400ml 套組 (附贈400ml)', price: 650, image: 'https://drive.google.com/thumbnail?id=17gWMQLdgAasoSIng_edz7KVVlie3joE7&sz=w1000', description: '400ml 套組 (附贈400ml)' }
+                ]
+            },
+            {
+                id: 9007,
+                name: 'Round Lab 1025 獨島潔膚水綿片',
+                description: '2款可選',
+                image: 'https://drive.google.com/thumbnail?id=1zL3EpGfaMaEBDrAnY3AtdZUOl7hHoX9y&sz=w1000',
+                brand: 'Round Lab',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Round Lab 1025 獨島潔膚水綿片，方便使用的潔膚水綿片，隨時隨地清潔保濕',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1zL3EpGfaMaEBDrAnY3AtdZUOl7hHoX9y&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1yxAsahaQIPlAu4dSYhA-YOkKa2YKTrmC&sz=w1000'
+                ],
+                variants: [
+                    { id: 90071, name: '400ml (80pads) 一入', price: 470, image: 'https://drive.google.com/thumbnail?id=1zL3EpGfaMaEBDrAnY3AtdZUOl7hHoX9y&sz=w1000', description: '400ml (80pads) 一入' },
+                    { id: 90072, name: '400ml (80pads) 套組 (附贈80 pads)', price: 900, image: 'https://drive.google.com/thumbnail?id=1yxAsahaQIPlAu4dSYhA-YOkKa2YKTrmC&sz=w1000', description: '400ml (80pads) 套組 (附贈80 pads)' }
+                ]
+            },
+            // S. NATURE 品牌
+            {
+                id: 9008,
+                name: 'S. NATURE 角鯊烷保濕霜',
+                description: '1入',
+                image: 'https://drive.google.com/thumbnail?id=1OQcWMKfzdQX21JgH0fisDoXHJlT28ror&sz=w1000',
+                brand: 'S. NATURE',
+                type: '保養品',
+                country: 'korea',
+                price: 700,
+                detailedDescription: 'S. NATURE 角鯊烷保濕霜，深層滋潤肌膚，強化肌膚屏障'
+            },
+            // Torriden 品牌
+            {
+                id: 9009,
+                name: 'Torriden 低分子玻尿酸面膜',
+                description: '2款可選',
+                image: 'https://drive.google.com/thumbnail?id=1c4BcbZ9Bb3rqUYY-mUdKf_InYZZcP21O&sz=w1000',
+                brand: 'Torriden',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Torriden 低分子玻尿酸面膜，深層補水保濕，改善肌膚乾燥',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1c4BcbZ9Bb3rqUYY-mUdKf_InYZZcP21O&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1js2e5Cp9uc1mcMEtuWyxqNsOS3syMLy9&sz=w1000'
+                ],
+                variants: [
+                    { id: 90091, name: '10 入裝', price: 450, image: 'https://drive.google.com/thumbnail?id=1c4BcbZ9Bb3rqUYY-mUdKf_InYZZcP21O&sz=w1000', description: '10 入裝' },
+                    { id: 90092, name: '1 入裝', price: 45, image: 'https://drive.google.com/thumbnail?id=1js2e5Cp9uc1mcMEtuWyxqNsOS3syMLy9&sz=w1000', description: '1 入裝' }
+                ]
+            },
+            {
+                id: 9010,
+                name: 'Torriden 積雪草面膜',
+                description: '2款可選',
+                image: 'https://drive.google.com/thumbnail?id=1jgUR7kH2AeOyzQ_q4oEiJdZcVr2USv77&sz=w1000',
+                brand: 'Torriden',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Torriden 積雪草面膜，舒緩修護敏感肌膚，強化肌膚屏障',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1jgUR7kH2AeOyzQ_q4oEiJdZcVr2USv77&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=10CJcRvbGiPyMhZszl1yG5B1pDckFszU5&sz=w1000'
+                ],
+                variants: [
+                    { id: 90101, name: '10 入裝', price: 450, image: 'https://drive.google.com/thumbnail?id=1jgUR7kH2AeOyzQ_q4oEiJdZcVr2USv77&sz=w1000', description: '10 入裝' },
+                    { id: 90102, name: '1 入裝', price: 45, image: 'https://drive.google.com/thumbnail?id=10CJcRvbGiPyMhZszl1yG5B1pDckFszU5&sz=w1000', description: '1 入裝' }
+                ]
+            },
+            {
+                id: 9011,
+                name: 'Torriden 維他命 C 面膜',
+                description: '2款可選',
+                image: 'https://drive.google.com/thumbnail?id=1FghGH9Wgv3nu9gK9Vic3ABx-vHqgTOd5&sz=w1000',
+                brand: 'Torriden',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Torriden 維他命 C 面膜，提亮膚色，改善暗沉，增添肌膚光澤',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1FghGH9Wgv3nu9gK9Vic3ABx-vHqgTOd5&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1hTrH24ucF1eDeEXWPcfmS90RP9MAfnr6&sz=w1000'
+                ],
+                variants: [
+                    { id: 90111, name: '10 入裝', price: 450, image: 'https://drive.google.com/thumbnail?id=1FghGH9Wgv3nu9gK9Vic3ABx-vHqgTOd5&sz=w1000', description: '10 入裝' },
+                    { id: 90112, name: '1 入裝', price: 45, image: 'https://drive.google.com/thumbnail?id=1hTrH24ucF1eDeEXWPcfmS90RP9MAfnr6&sz=w1000', description: '1 入裝' }
+                ]
+            },
+            {
+                id: 9012,
+                name: 'Torriden 膠原緊緻果凍面膜',
+                description: '1 入裝',
+                image: 'https://drive.google.com/thumbnail?id=14HAwKA_lri5kDGkb9lUmq91bAYjfNVdI&sz=w1000',
+                brand: 'Torriden',
+                type: '保養品',
+                country: 'korea',
+                price: 45,
+                detailedDescription: 'Torriden 膠原緊緻果凍面膜，補充膠原蛋白，提升肌膚彈性與緊緻度'
+            },
+            {
+                id: 9013,
+                name: 'Torriden DIVE-IN 5D 玻尿酸精華',
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1P9VqneGxs8atDBlXc7HpYztQeMENz-oV&sz=w1000',
+                brand: 'Torriden',
+                type: '保養品',
+                country: 'korea',
+                price: 400,
+                detailedDescription: 'Torriden DIVE-IN 5D 玻尿酸精華，5D玻尿酸複合配方，深層補水鎖水'
+            },
+            {
+                id: 9014,
+                name: 'Torriden DIVE-IN 5D微分子玻尿酸保濕棉片',
+                description: '160 片 (80片入 *2)',
+                image: 'https://drive.google.com/thumbnail?id=1Nabpio1pJ-chPWhPfPsDo82xoilqZLRb&sz=w1000',
+                brand: 'Torriden',
+                type: '化妝品',
+                country: 'korea',
+                price: 780,
+                detailedDescription: 'Torriden DIVE-IN 5D微分子玻尿酸保濕棉片，方便使用的保濕棉片，隨時補充肌膚水分'
+            },
+            {
+                id: 9015,
+                name: 'Torriden DIVE-IN 5D微分子積雪草舒緩急救棉片',
+                description: '120 片 (60片入 *2)',
+                image: 'https://drive.google.com/thumbnail?id=1s0-v7oQiyWvTnzobPMicTXvXiLFpdMfU&sz=w1000',
+                brand: 'Torriden',
+                type: '化妝品',
+                country: 'korea',
+                price: 780,
+                detailedDescription: 'Torriden DIVE-IN 5D微分子積雪草舒緩急救棉片，舒緩鎮定敏感肌膚，快速補水修護'
+            },
+            // Labon 品牌
+            {
+                id: 9016,
+                name: 'Labo-H 生髮滾珠',
+                description: '2款可選',
+                image: 'https://drive.google.com/thumbnail?id=1045lqdddEeNsTDHUk1DR_Ze6eSZ65cjI&sz=w1000',
+                brand: 'Labo-H',
+                type: '保養品',
+                country: 'korea',
+                detailedDescription: 'Labo-H 生髮滾珠，促進頭髮生長，改善脫髮問題',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1045lqdddEeNsTDHUk1DR_Ze6eSZ65cjI&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ZiHoFMxrEyUmrBB3C0-PWaPBqV98L0mB&sz=w1000'
+                ],
+                variants: [
+                    { id: 90161, name: '15ml', price: 550, image: 'https://drive.google.com/thumbnail?id=1045lqdddEeNsTDHUk1DR_Ze6eSZ65cjI&sz=w1000', description: '15ml' },
+                    { id: 90162, name: '15ml*2 (贈送 50ml 防脫洗髮精)', price: 1100, image: 'https://drive.google.com/thumbnail?id=1ZiHoFMxrEyUmrBB3C0-PWaPBqV98L0mB&sz=w1000', description: '15ml*2 (贈送 50ml 防脫洗髮精)' }
+                ]
+            },
+            {
+                id: 9017,
+                name: 'Labo-H 防脫髮安瓶精華液',
+                description: '100ML',
+                image: 'https://drive.google.com/thumbnail?id=1p7VEH8iEQbsg-RzjBHV_c5jKjlOA2_mp&sz=w1000',
+                brand: 'Labo-H',
+                type: '保養品',
+                country: 'korea',
+                price: 650,
+                detailedDescription: 'Labo-H 防脫髮安瓶精華液，強化髮根，預防脫髮，促進頭髮健康生長'
+            },
+            // Ariul 品牌
+            {
+                id: 9018,
+                name: 'Ariul 唇眼卸妝棉',
+                description: '30張/包',
+                image: 'https://drive.google.com/thumbnail?id=1FUKG6F7tzYtAEGUuWpW3I2DJdr621S0_&sz=w1000',
+                brand: 'Ariul',
+                type: '保養品',
+                country: 'korea',
+                price: 85,
+                detailedDescription: 'Ariul 唇眼卸妝棉，溫和卸除唇部和眼部彩妝，方便快速'
+            },
+            // The Tool Lab 品牌
+            {
+                id: 9019,
+                name: 'The Tool Lab 4 色粉撲 set + 清潔皂組',
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=12z89zXk6JL-DtAmlwUWG3RucrBaIUH6O&sz=w1000',
+                brand: 'The Tool Lab',
+                type: '化妝品',
+                country: 'korea',
+                price: 650,
+                detailedDescription: 'The Tool Lab 4 色粉撲 set + 清潔皂組，多色粉撲組合，附專用清潔皂，方便清洗'
+            },
+            {
+                id: 9020,
+                name: 'The Tool Lab 濕用水光粉撲*2',
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1bEV1IPMWwmkp3BEi4Qc3e-QWQdzU8D23&sz=w1000',
+                brand: 'The Tool Lab',
+                type: '化妝品',
+                country: 'korea',
+                price: 370,
+                detailedDescription: 'The Tool Lab 濕用水光粉撲，打造水光透亮妝感，2個裝'
+            },
+            {
+                id: 9021,
+                name: 'The Tool Lab 光澤粉撲*2',
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1ciCr3H069GrDpsPAE4McbjfuC42nblcM&sz=w1000',
+                brand: 'The Tool Lab',
+                type: '化妝品',
+                country: 'korea',
+                price: 370,
+                detailedDescription: 'The Tool Lab 光澤粉撲，打造自然光澤妝感，2個裝'
+            },
+            {
+                id: 9022,
+                name: 'The Tool Lab 遮瑕粉撲*2',
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1XfIL8J4-XPqgp8cT_FLh1dxyR8Dl3UDf&sz=w1000',
+                brand: 'The Tool Lab',
+                type: '化妝品',
+                country: 'korea',
+                price: 370,
+                detailedDescription: 'The Tool Lab 遮瑕粉撲，專為遮瑕設計，提升遮瑕效果，2個裝'
+            },
+            {
+                id: 9023,
+                name: 'The Tool Lab 輕盈粉撲*2',
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=19ELJbXiWA8Kdj218G4hk_aJX2vNT4vwJ&sz=w1000',
+                brand: 'The Tool Lab',
+                type: '化妝品',
+                country: 'korea',
+                price: 370,
+                detailedDescription: 'The Tool Lab 輕盈粉撲，打造輕盈透氣妝感，2個裝'
+            },
+            {
+                id: 9024,
+                name: 'The Tool Lab 柔霧粉撲*2',
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1XxFvs_q7jFpAPJ-jg7yoFOI4BPN7QV4_&sz=w1000',
+                brand: 'The Tool Lab',
+                type: '化妝品',
+                country: 'korea',
+                price: 370,
+                detailedDescription: 'The Tool Lab 柔霧粉撲，打造柔霧妝感，2個裝'
             }
         ];
 
