@@ -1584,6 +1584,13 @@
                     <div class="country-deadline">預計2/24出貨</div>
                 </div>
 
+                <!-- 美國 - 開放中 -->
+                <div id="usa-card" class="country-card" onclick="selectCountry('usa')">
+                    <div class="country-name">美國 🇺🇸</div>
+                    <div class="country-deadline">截止：2025/2/24</div>
+                    <div class="country-deadline">預計3/7出貨</div>
+                </div>
+
                 <!-- 韓國 - 暫不開放購買 -->
                 <div class="country-card" id="korea-card" onclick="selectCountry('korea')" style="opacity: 0.85;">
                     <span class="coming-soon-badge" style="background: #ff9800;">暫不開放</span>
@@ -1597,20 +1604,6 @@
                     <div class="country-name">日本 🇯🇵</div>
                     <div class="country-status" style="color: #666;">僅供瀏覽</div>
                 </div>
-
-                <!-- 馬來西亞 - 即將推出 -->
-                <div class="country-card coming-soon">
-                    <span class="coming-soon-badge">即將推出</span>
-                    <div class="country-name">馬來西亞 🇲🇾</div>
-                    <div class="country-status">預計2/1開放</div>
-                </div>
-
-                <!-- 美國 - 即將推出 -->
-                <div class="country-card coming-soon">
-                    <span class="coming-soon-badge">即將推出</span>
-                    <div class="country-name">美國 🇺🇸</div>
-                    <div class="country-status">預計2/18開放</div>
-                </div>
             </div>
         </div>
 
@@ -1623,6 +1616,7 @@
                 <button onclick="filterByCategory('snacks')">零食系列</button>
                 <button onclick="filterByCategory('condiments')">亞坤醬 & 松發肉骨茶包</button>
                 <button onclick="filterByCategory('coffee')">Kims Duet咖啡</button>
+                <button onclick="filterByCategory('tiger-balm')">虎標</button>
             </div>
         </div>
 
@@ -1693,6 +1687,15 @@
                 <button onclick="filterByCategory('japan-cosmetics')">藥妝類</button>
                 <button onclick="filterByCategory('japan-food')">飲食類</button>
                 <button onclick="filterByCategory('japan-electronics')">電器類</button>
+            </div>
+        </div>
+
+        <!-- 美國分類導航 -->
+        <div class="category-nav" id="usa-categories" style="display: none;">
+            <div>
+                <button class="active" onclick="filterByCategory('all')">全部商品</button>
+                <button onclick="filterByCategory('nba-warriors-apparel')">NBA 勇士隊 紀念衣</button>
+                <button onclick="filterByCategory('nba-warriors')">NBA 勇士隊 周邊商品</button>
             </div>
         </div>
 
@@ -2013,6 +2016,100 @@
                         price: 299,
                         image: 'https://drive.google.com/thumbnail?id=1Yaa4KOBWPtYOcJkqgqNB92ni1ELBRa0G&sz=w1000',
                         description: '102g - 薯片香脆，搭配濃郁的鹹蛋黃醬，一吃就停不下來的美味！'
+                    },
+                    {
+                        id: 3205,
+                        name: '麻辣火鍋(微辣)',
+                        price: 299,
+                        image: 'https://drive.google.com/thumbnail?id=1taMbpgwThwhDoAm9nD0-pkoiwH2AlJUD&sz=w1000',
+                        description: '102g - 麻辣火鍋微辣風味，香辣適中，讓你一口接一口停不下來！'
+                    },
+                    {
+                        id: 3206,
+                        name: '麻辣火鍋(大辣)',
+                        price: 299,
+                        image: 'https://drive.google.com/thumbnail?id=12bZZwcj09P7WQeitdyvzI2JibuUJU3i_&sz=w1000',
+                        description: '102g - 麻辣火鍋大辣風味，超級過癮，挑戰你的辣度極限！'
+                    }
+                ]
+            },
+            {
+                id: 33,
+                name: '金鴨新年禮盒',
+                price: 800,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=17SIKj1UHKxGhjFvPWXUcLYkTDX6S1taJ&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=17SIKj1UHKxGhjFvPWXUcLYkTDX6S1taJ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1CcA0fDsLS8xpwVHjluNm0PQOl034tijn&sz=w1000'
+                ],
+                category: 'snacks',
+                country: 'singapore',
+                detailedDescription: '禮盒裡面有包含\n👉🏻麻辣鍋口味洋芋片一包\n👉🏻鹹蛋口味洋芋片一包\n👉🏻酸奶油口味洋芋片一罐\n👉🏻切達起司口味洋芋片一罐\n👉🏻金鴨圖案撲克牌一副'
+            },
+            {
+                id: 34,
+                name: '金鴨 罐裝洋芋片',
+                price: 160,
+                description: '多款口味可選',
+                image: 'https://drive.google.com/thumbnail?id=16l4vmXLYKarU9nNEZ69_hAoN4dAvbKuF&sz=w1000',
+                category: 'snacks',
+                country: 'singapore',
+                detailedDescription: '金鴨罐裝洋芋片，多種口味選擇，每罐都是酥脆美味的享受！',
+                variants: [
+                    {
+                        id: 3401,
+                        name: '酸奶油',
+                        price: 160,
+                        image: 'https://drive.google.com/thumbnail?id=16l4vmXLYKarU9nNEZ69_hAoN4dAvbKuF&sz=w1000',
+                        description: '酸奶油口味，酸香濃郁'
+                    },
+                    {
+                        id: 3402,
+                        name: '海藻奶油',
+                        price: 160,
+                        image: 'https://drive.google.com/thumbnail?id=1C1r2Dniq99y1lVyBY8lRXqCse6nUMz0M&sz=w1000',
+                        description: '海藻奶油口味，鮮香獨特'
+                    },
+                    {
+                        id: 3403,
+                        name: '松露',
+                        price: 160,
+                        image: 'https://drive.google.com/thumbnail?id=1ZuHVHeCk0GyyT5fadvrnqx3TiXaci1mS&sz=w1000',
+                        description: '松露口味，高級美味'
+                    },
+                    {
+                        id: 3404,
+                        name: '切達起司',
+                        price: 160,
+                        image: 'https://drive.google.com/thumbnail?id=1HCfRP7SvXYwMFemfXEfeDLfGqbKPrNLq&sz=w1000',
+                        description: '切達起司口味，濃郁起司香'
+                    }
+                ]
+            },
+            {
+                id: 35,
+                name: '虎標痠痛貼布',
+                price: 330,
+                description: '多款式可選',
+                image: 'https://drive.google.com/thumbnail?id=1uIIEyiCJy2rT1wbUQTxmWecnmy5gDRIa&sz=w1000',
+                category: 'tiger-balm',
+                country: 'singapore',
+                detailedDescription: '虎標痠痛貼布，緩解肌肉痠痛的好幫手，清涼型和溫感型可選。',
+                variants: [
+                    {
+                        id: 3501,
+                        name: '清涼型 5片入',
+                        price: 330,
+                        image: 'https://drive.google.com/thumbnail?id=1uIIEyiCJy2rT1wbUQTxmWecnmy5gDRIa&sz=w1000',
+                        description: '清涼型，舒緩痠痛'
+                    },
+                    {
+                        id: 3502,
+                        name: '溫感貼 5片入',
+                        price: 360,
+                        image: 'https://drive.google.com/thumbnail?id=10aHGxUkwxdsUZuecUpPFQDotvsetwpbT&sz=w1000',
+                        description: '溫感型，溫熱舒緩'
                     }
                 ]
             },
@@ -2026,9 +2123,9 @@
                 country: 'japan',
                 detailedDescription: '【夜間修復冠軍】 這款是專為忙碌現代人設計的「睡前舒緩錠」，利用夜間黃金修復時間，幫助身體深度放鬆，一覺醒來精力滿點！適合生活壓力大、追求高效休息的您！',
                 variants: [
-                    { id: 50011, name: '30 粒', price: 350, image: 'https://drive.google.com/thumbnail?id=1KEKbtjRLmdu3wAAKxRp43zJrO3ckHoBa&sz=w1000', description: '30日份' },
-                    { id: 50012, name: '60 粒', price: 550, image: 'https://drive.google.com/thumbnail?id=167t0zShwsBfrNAiVMU_zX5XNSyTn8eko&sz=w1000', description: '60日份' },
-                    { id: 50013, name: '120 粒', price: 750, image: 'https://drive.google.com/thumbnail?id=1iJMX_wuIuAtP7cvcqevJwMNrsECWxyoQ&sz=w1000', description: '120日份' }
+                    { id: 80011, name: '30 粒', price: 350, image: 'https://drive.google.com/thumbnail?id=1KEKbtjRLmdu3wAAKxRp43zJrO3ckHoBa&sz=w1000', description: '30日份' },
+                    { id: 80012, name: '60 粒', price: 550, image: 'https://drive.google.com/thumbnail?id=167t0zShwsBfrNAiVMU_zX5XNSyTn8eko&sz=w1000', description: '60日份' },
+                    { id: 80013, name: '120 粒', price: 750, image: 'https://drive.google.com/thumbnail?id=1iJMX_wuIuAtP7cvcqevJwMNrsECWxyoQ&sz=w1000', description: '120日份' }
                 ]
             },
             {
@@ -2090,9 +2187,9 @@
                 country: 'japan',
                 detailedDescription: '熱賣NO.1經典款！一擦養成飽滿彈潤肌，超強防曬力同時注入膠原修護因子，是「上妝前的素顏神器」。',
                 variants: [
-                    { id: 50071, name: '小金管 彈潤多效美肌乳SP+', price: 700, image: 'https://drive.google.com/thumbnail?id=1GfLs00Tcbaugz-_6aF5_OoagzM4jOqNK&sz=w1000', description: '熱賣NO.1經典款！一擦養成飽滿彈潤肌，超強防曬力同時注入膠原修護因子，是「上妝前的素顏神器」。核心功效：保濕、彈潤、高防曬 (SPF50+ PA++++)。適合族群：適合所有膚質，特別是注重保濕和抗老的族群。' },
-                    { id: 50072, name: '小銀管 淨白多效美肌乳WT+', price: 760, image: 'https://drive.google.com/thumbnail?id=1xANC1Umm2uLHw5mjG5eu4Hwjivau5Edm&sz=w1000', description: '清爽版抗老！添加傳明酸美白成分，質地更輕盈不黏膩，在防曬同時抑制黑色素生成，維持肌膚明亮透潤感。核心功效：美白淨斑、清爽控油 (SPF50+ PA++++)。適合族群：適合油性、混合性肌膚，或有美白需求者。' },
-                    { id: 50073, name: '潤色小金管 膠原亮妍多效美肌乳PK', price: 800, image: 'https://drive.google.com/thumbnail?id=1OaMgrqFNpw_zZKj2MQ-x7brPSac2_mT9&sz=w1000', description: '懶人速成好氣色！在經典保濕防曬基礎上增加潤色功能，一瓶完成所有步驟，自然校正膚色，讓您輕鬆擁有彷彿剛上完底妝般的紅潤透亮。核心功效：潤色提亮、自然好氣色 (SPF50+ PA++++)。適合族群：適合想節省底妝時間，或追求自然紅潤好氣色者。' }
+                    { id: 80071, name: '小金管 彈潤多效美肌乳SP+', price: 700, image: 'https://drive.google.com/thumbnail?id=1GfLs00Tcbaugz-_6aF5_OoagzM4jOqNK&sz=w1000', description: '熱賣NO.1經典款！一擦養成飽滿彈潤肌，超強防曬力同時注入膠原修護因子，是「上妝前的素顏神器」。核心功效：保濕、彈潤、高防曬 (SPF50+ PA++++)。適合族群：適合所有膚質，特別是注重保濕和抗老的族群。' },
+                    { id: 80072, name: '小銀管 淨白多效美肌乳WT+', price: 760, image: 'https://drive.google.com/thumbnail?id=1xANC1Umm2uLHw5mjG5eu4Hwjivau5Edm&sz=w1000', description: '清爽版抗老！添加傳明酸美白成分，質地更輕盈不黏膩，在防曬同時抑制黑色素生成，維持肌膚明亮透潤感。核心功效：美白淨斑、清爽控油 (SPF50+ PA++++)。適合族群：適合油性、混合性肌膚，或有美白需求者。' },
+                    { id: 80073, name: '潤色小金管 膠原亮妍多效美肌乳PK', price: 800, image: 'https://drive.google.com/thumbnail?id=1OaMgrqFNpw_zZKj2MQ-x7brPSac2_mT9&sz=w1000', description: '懶人速成好氣色！在經典保濕防曬基礎上增加潤色功能，一瓶完成所有步驟，自然校正膚色，讓您輕鬆擁有彷彿剛上完底妝般的紅潤透亮。核心功效：潤色提亮、自然好氣色 (SPF50+ PA++++)。適合族群：適合想節省底妝時間，或追求自然紅潤好氣色者。' }
                 ]
             },
             {
@@ -2104,8 +2201,8 @@
                 country: 'japan',
                 detailedDescription: '【溫和角質拋光術】 傳說中的「角質道」精華！它不是去角質產品，而是溫和代謝老廢角質的肌膚調理液。天天使用，能幫助肌膚回到最佳健康狀態，讓後續所有昂貴保養品都能「吃」進去，吸收力瞬間翻倍！',
                 variants: [
-                    { id: 50081, name: '30ml', price: 1400, image: 'https://drive.google.com/thumbnail?id=149QEXUUW_AhI9G-G8LJXeDB9Ib3E43__&sz=w1000', description: '標準容量' },
-                    { id: 50082, name: '60ml', price: 2200, image: 'https://drive.google.com/thumbnail?id=14vTeLCRZr5_e2XU9QwvUyeTxKhEiuhM1&sz=w1000', description: '加大容量' }
+                    { id: 80081, name: '30ml', price: 1400, image: 'https://drive.google.com/thumbnail?id=149QEXUUW_AhI9G-G8LJXeDB9Ib3E43__&sz=w1000', description: '標準容量' },
+                    { id: 80082, name: '60ml', price: 2200, image: 'https://drive.google.com/thumbnail?id=14vTeLCRZr5_e2XU9QwvUyeTxKhEiuhM1&sz=w1000', description: '加大容量' }
                 ]
             },
             {
@@ -2137,9 +2234,9 @@
                 country: 'japan',
                 detailedDescription: '這是許多人開始內服美白的第一站！它採用日本厚生勞動省規範內的最大 L-半胱胺酸劑量，搭配1000mg 維他命C和多種B群。定位為溫和、持續、高CP值的日常保養。推薦族群：適合初次嘗試美白錠、膚色暗沉不均、或想長期維持肌膚健康光澤的人。',
                 variants: [
-                    { id: 50111, name: '60錠 15日份', price: 599, image: 'https://drive.google.com/thumbnail?id=1Co5L6EKQrK1ydE4gpgZ7xoRGEFe5xDW_&sz=w1000', description: '15日份' },
-                    { id: 50112, name: '120錠 30日份', price: 999, image: 'https://drive.google.com/thumbnail?id=1ingFXfD8bmB8ADu0hBa9i_JMm-pCc871&sz=w1000', description: '30日份' },
-                    { id: 50113, name: '240錠 60日份', price: 1699, image: 'https://drive.google.com/thumbnail?id=1bgSZsi2tTOZCIEFkdmXGc3XHi9BopeRs&sz=w1000', description: '60日份' }
+                    { id: 80111, name: '60錠 15日份', price: 599, image: 'https://drive.google.com/thumbnail?id=1Co5L6EKQrK1ydE4gpgZ7xoRGEFe5xDW_&sz=w1000', description: '15日份' },
+                    { id: 80112, name: '120錠 30日份', price: 999, image: 'https://drive.google.com/thumbnail?id=1ingFXfD8bmB8ADu0hBa9i_JMm-pCc871&sz=w1000', description: '30日份' },
+                    { id: 80113, name: '240錠 60日份', price: 1699, image: 'https://drive.google.com/thumbnail?id=1bgSZsi2tTOZCIEFkdmXGc3XHi9BopeRs&sz=w1000', description: '60日份' }
                 ]
             },
             {
@@ -2151,9 +2248,9 @@
                 country: 'japan',
                 detailedDescription: '專為追求極致速效的人士打造。在同樣高劑量的 L-半胱胺酸基礎上，將維他命C提升至驚人的 2000mg (日本最高上限)。高濃度的活性成分猶如美白火箭，能夠集中火力對抗明顯斑點和色素沉澱。推薦族群：適合臉上有明顯斑點困擾、曾服用 Clear 想升級加強、或希望在短期內（如夏季後）迅速亮白的人。',
                 variants: [
-                    { id: 50121, name: '90錠 15日份', price: 699, image: 'https://drive.google.com/thumbnail?id=1wpUsqU5njvtc_eGtemvvgaVggOOj0mqP&sz=w1000', description: '15日份' },
-                    { id: 50122, name: '180錠 30日份', price: 1299, image: 'https://drive.google.com/thumbnail?id=1xCv4C1P06Fd9EvWCCeQofU1a40b2hemj&sz=w1000', description: '30日份' },
-                    { id: 50123, name: '270錠 45日份', price: 1799, image: 'https://drive.google.com/thumbnail?id=1zobZ4QF-kP0LNAIqalqVuw0zJwAZPcgT&sz=w1000', description: '45日份' }
+                    { id: 80121, name: '90錠 15日份', price: 699, image: 'https://drive.google.com/thumbnail?id=1wpUsqU5njvtc_eGtemvvgaVggOOj0mqP&sz=w1000', description: '15日份' },
+                    { id: 80122, name: '180錠 30日份', price: 1299, image: 'https://drive.google.com/thumbnail?id=1xCv4C1P06Fd9EvWCCeQofU1a40b2hemj&sz=w1000', description: '30日份' },
+                    { id: 80123, name: '270錠 45日份', price: 1799, image: 'https://drive.google.com/thumbnail?id=1zobZ4QF-kP0LNAIqalqVuw0zJwAZPcgT&sz=w1000', description: '45日份' }
                 ]
             },
             {
@@ -2401,14 +2498,14 @@
                     { id: 80027, name: '茶樹控油', price: 370, image: 'https://drive.google.com/thumbnail?id=1a9-GMjM26IXQMcWsFbWv_pRiDQV4RatV&sz=w1000', description: '控油淨痘，平衡油脂' }
                 ]
             },
-            { id: 8003, name: 'Numbuzin 1 號舒緩保濕SPA 海藻面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1kUlu5DnxMzkgXbvLfa4HOx0UWvWUICfS&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 1 號海藻面膜，舒緩保濕，如同 SPA 般的護膚體驗' },
-            { id: 8004, name: 'Numbuzin 2 號膠原蛋白珍珠淨白聚緻面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1hiZ_bWQ2B9ou9teZILGRcCV-TSPCpdoU&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 2 號面膜，膠原蛋白與珍珠精華，提亮淨白肌膚' },
-            { id: 8005, name: 'Numbuzin 3 號水光收毛孔面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1WzamIq1aYmRyqZ9QM7ozzpjASezmHXK1&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 3 號面膜，水光精華，有效收縮毛孔' },
-            { id: 8006, name: 'Numbuzin 4 號冰爽舒緩艾草祛紅面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1wyL6quKw8J6YzhtPx2-4SzJRo1ezP7pX&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 4 號面膜，艾草精華，冰爽舒緩祛紅' },
-            { id: 8007, name: 'Numbuzin 5 號穀胱甘肽維他命 C 藥丸亮白面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=13IECHSXqv5o-FdmxTIKeoc9Z-wsRhrcJ&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 5 號面膜，穀胱甘肽與維他命C，強效亮白' },
-            { id: 8008, name: 'Numbuzin 9 號 NAD+ 生物提拉全效面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=14LOIaBoN80R2h_nuafvGubG6tNGnspr4&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 9 號面膜，NAD+ 生物科技，全效提拉緊緻' },
-            { id: 8009, name: 'Fillimilli 燙睫毛夾', price: 620, description: '專業工具', image: 'https://drive.google.com/thumbnail?id=1baYeoTYjvVDsZfU88DJpMxJsJ_dXcrGp&sz=w1000', brand: 'Fillimilli', type: '其他', country: 'korea', detailedDescription: 'Fillimilli 專業燙睫毛夾，打造完美捲翹睫毛' },
-            { id: 8010, name: 'FIXX 定裝噴霧', price: 465, description: '120ml', image: 'https://drive.google.com/thumbnail?id=17de-lERtFLfyIAVsT8UfVAhJOpszbgC_&sz=w1000', brand: 'FIXX', type: '化妝品', country: 'korea', detailedDescription: 'FIXX 定裝噴霧，持久定妝，保持妝容完美一整天' },
+            { id: 10003, name: 'Numbuzin 1 號舒緩保濕SPA 海藻面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1kUlu5DnxMzkgXbvLfa4HOx0UWvWUICfS&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 1 號海藻面膜，舒緩保濕，如同 SPA 般的護膚體驗' },
+            { id: 10004, name: 'Numbuzin 2 號膠原蛋白珍珠淨白聚緻面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1hiZ_bWQ2B9ou9teZILGRcCV-TSPCpdoU&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 2 號面膜，膠原蛋白與珍珠精華，提亮淨白肌膚' },
+            { id: 10005, name: 'Numbuzin 3 號水光收毛孔面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1WzamIq1aYmRyqZ9QM7ozzpjASezmHXK1&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 3 號面膜，水光精華，有效收縮毛孔' },
+            { id: 10006, name: 'Numbuzin 4 號冰爽舒緩艾草祛紅面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=1wyL6quKw8J6YzhtPx2-4SzJRo1ezP7pX&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 4 號面膜，艾草精華，冰爽舒緩祛紅' },
+            { id: 10007, name: 'Numbuzin 5 號穀胱甘肽維他命 C 藥丸亮白面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=13IECHSXqv5o-FdmxTIKeoc9Z-wsRhrcJ&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 5 號面膜，穀胱甘肽與維他命C，強效亮白' },
+            { id: 10008, name: 'Numbuzin 9 號 NAD+ 生物提拉全效面膜', price: 920, description: '10 片入', image: 'https://drive.google.com/thumbnail?id=14LOIaBoN80R2h_nuafvGubG6tNGnspr4&sz=w1000', brand: 'numbuzin', type: '保養品', country: 'korea', detailedDescription: 'Numbuzin 9 號面膜，NAD+ 生物科技，全效提拉緊緻' },
+            { id: 10009, name: 'Fillimilli 燙睫毛夾', price: 620, description: '專業工具', image: 'https://drive.google.com/thumbnail?id=1baYeoTYjvVDsZfU88DJpMxJsJ_dXcrGp&sz=w1000', brand: 'Fillimilli', type: '其他', country: 'korea', detailedDescription: 'Fillimilli 專業燙睫毛夾，打造完美捲翹睫毛' },
+            { id: 10010, name: 'FIXX 定裝噴霧', price: 465, description: '120ml', image: 'https://drive.google.com/thumbnail?id=17de-lERtFLfyIAVsT8UfVAhJOpszbgC_&sz=w1000', brand: 'FIXX', type: '化妝品', country: 'korea', detailedDescription: 'FIXX 定裝噴霧，持久定妝，保持妝容完美一整天' },
             {
                 id: 8011,
                 name: 'Dasique 布丁光澤唇釉',
@@ -4402,6 +4499,534 @@
                 country: 'korea',
                 price: 1450,
                 detailedDescription: 'Starbucks X Friends 聯名商品，城市夜光杯，夜光效果獨特設計'
+            },
+            // ========== 美國商品 - NBA 勇士隊紀念衣 ==========
+            {
+                id: 10001,
+                name: '勇士隊 藍色經典款帽T',
+                price: 3300,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=1k_i6ImETtk49nCiegzDQNT9cP31PVQAb&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1k_i6ImETtk49nCiegzDQNT9cP31PVQAb&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1exr3E8ZzGUCI-2JPh36dtivGLpya9iqQ&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權藍色經典款帽T，舒適材質，展現球隊精神。',
+                variants: [
+                    { id: 80011, name: 'XS', price: 3300, image: 'https://drive.google.com/thumbnail?id=1k_i6ImETtk49nCiegzDQNT9cP31PVQAb&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80012, name: 'S', price: 3300, image: 'https://drive.google.com/thumbnail?id=1k_i6ImETtk49nCiegzDQNT9cP31PVQAb&sz=w1000', description: 'S 尺寸' },
+                    { id: 80013, name: 'M', price: 3300, image: 'https://drive.google.com/thumbnail?id=1k_i6ImETtk49nCiegzDQNT9cP31PVQAb&sz=w1000', description: 'M 尺寸' },
+                    { id: 80014, name: 'L', price: 3300, image: 'https://drive.google.com/thumbnail?id=1k_i6ImETtk49nCiegzDQNT9cP31PVQAb&sz=w1000', description: 'L 尺寸' },
+                    { id: 80015, name: 'XL', price: 3300, image: 'https://drive.google.com/thumbnail?id=1k_i6ImETtk49nCiegzDQNT9cP31PVQAb&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10002,
+                name: '勇士隊 黃色經典款帽T',
+                price: 3300,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=15iqOTAj83nXnJHTYhe8t_-nw4As8qzAb&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=15iqOTAj83nXnJHTYhe8t_-nw4As8qzAb&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17Gp-GpqTd8Lkbdgf0mPyRJDXW0nxzfZd&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權黃色經典款帽T，舒適材質，展現球隊精神。',
+                variants: [
+                    { id: 80021, name: 'XS', price: 3300, image: 'https://drive.google.com/thumbnail?id=15iqOTAj83nXnJHTYhe8t_-nw4As8qzAb&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80022, name: 'S', price: 3300, image: 'https://drive.google.com/thumbnail?id=15iqOTAj83nXnJHTYhe8t_-nw4As8qzAb&sz=w1000', description: 'S 尺寸' },
+                    { id: 80023, name: 'M', price: 3300, image: 'https://drive.google.com/thumbnail?id=15iqOTAj83nXnJHTYhe8t_-nw4As8qzAb&sz=w1000', description: 'M 尺寸' },
+                    { id: 80024, name: 'L', price: 3300, image: 'https://drive.google.com/thumbnail?id=15iqOTAj83nXnJHTYhe8t_-nw4As8qzAb&sz=w1000', description: 'L 尺寸' },
+                    { id: 80025, name: 'XL', price: 3300, image: 'https://drive.google.com/thumbnail?id=15iqOTAj83nXnJHTYhe8t_-nw4As8qzAb&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10003,
+                name: '勇士隊 黑色 大學T',
+                price: 3000,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=1edY0EHGIsBG7P-jKXsC8acVgC1_L5B5Z&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1edY0EHGIsBG7P-jKXsC8acVgC1_L5B5Z&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=13EI4QDmmb1J9qkUr_5QPFBk42mganKRN&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權黑色大學T，經典設計。',
+                variants: [
+                    { id: 80031, name: 'XS', price: 3000, image: 'https://drive.google.com/thumbnail?id=1edY0EHGIsBG7P-jKXsC8acVgC1_L5B5Z&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80032, name: 'S', price: 3000, image: 'https://drive.google.com/thumbnail?id=1edY0EHGIsBG7P-jKXsC8acVgC1_L5B5Z&sz=w1000', description: 'S 尺寸' },
+                    { id: 80033, name: 'M', price: 3000, image: 'https://drive.google.com/thumbnail?id=1edY0EHGIsBG7P-jKXsC8acVgC1_L5B5Z&sz=w1000', description: 'M 尺寸' },
+                    { id: 80034, name: 'L', price: 3000, image: 'https://drive.google.com/thumbnail?id=1edY0EHGIsBG7P-jKXsC8acVgC1_L5B5Z&sz=w1000', description: 'L 尺寸' },
+                    { id: 80035, name: 'XL', price: 3000, image: 'https://drive.google.com/thumbnail?id=1edY0EHGIsBG7P-jKXsC8acVgC1_L5B5Z&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10004,
+                name: '勇士隊 黑色帽T',
+                price: 2800,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=1-WehXnfoWvKG6VRuq3FGND6t0jdrzbN2&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1-WehXnfoWvKG6VRuq3FGND6t0jdrzbN2&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=11y1amzhdb01Fa2-7YqWOqSQYwppd5vYc&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權黑色帽T，經典設計。',
+                variants: [
+                    { id: 80041, name: 'XS', price: 2800, image: 'https://drive.google.com/thumbnail?id=1-WehXnfoWvKG6VRuq3FGND6t0jdrzbN2&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80042, name: 'S', price: 2800, image: 'https://drive.google.com/thumbnail?id=1-WehXnfoWvKG6VRuq3FGND6t0jdrzbN2&sz=w1000', description: 'S 尺寸' },
+                    { id: 80043, name: 'M', price: 2800, image: 'https://drive.google.com/thumbnail?id=1-WehXnfoWvKG6VRuq3FGND6t0jdrzbN2&sz=w1000', description: 'M 尺寸' },
+                    { id: 80044, name: 'L', price: 2800, image: 'https://drive.google.com/thumbnail?id=1-WehXnfoWvKG6VRuq3FGND6t0jdrzbN2&sz=w1000', description: 'L 尺寸' },
+                    { id: 80045, name: 'XL', price: 2800, image: 'https://drive.google.com/thumbnail?id=1-WehXnfoWvKG6VRuq3FGND6t0jdrzbN2&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10005,
+                name: '勇士隊 黑色帽T(金色logo)',
+                price: 2800,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=1XYbG_pHgB54u14W7UqRaSFUre-EpBZTA&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1XYbG_pHgB54u14W7UqRaSFUre-EpBZTA&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1QDVI8AixhdXfWxDBg-44lKWAN-EfVAoF&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權黑色帽T，金色logo設計。',
+                variants: [
+                    { id: 80051, name: 'XS', price: 2800, image: 'https://drive.google.com/thumbnail?id=1XYbG_pHgB54u14W7UqRaSFUre-EpBZTA&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80052, name: 'S', price: 2800, image: 'https://drive.google.com/thumbnail?id=1XYbG_pHgB54u14W7UqRaSFUre-EpBZTA&sz=w1000', description: 'S 尺寸' },
+                    { id: 80053, name: 'M', price: 2800, image: 'https://drive.google.com/thumbnail?id=1XYbG_pHgB54u14W7UqRaSFUre-EpBZTA&sz=w1000', description: 'M 尺寸' },
+                    { id: 80054, name: 'L', price: 2800, image: 'https://drive.google.com/thumbnail?id=1XYbG_pHgB54u14W7UqRaSFUre-EpBZTA&sz=w1000', description: 'L 尺寸' },
+                    { id: 80055, name: 'XL', price: 2800, image: 'https://drive.google.com/thumbnail?id=1XYbG_pHgB54u14W7UqRaSFUre-EpBZTA&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10006,
+                name: '勇士隊 球員外套',
+                price: 5200,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=1VKSFcktSRlUPT5muftDmTB-iTgxIkXee&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1VKSFcktSRlUPT5muftDmTB-iTgxIkXee&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1i0_3-Q7hHoRp50ygD-hmiZJD-PU4MogX&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權球員外套，高品質設計。',
+                variants: [
+                    { id: 80061, name: 'XS', price: 5200, image: 'https://drive.google.com/thumbnail?id=1VKSFcktSRlUPT5muftDmTB-iTgxIkXee&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80062, name: 'S', price: 5200, image: 'https://drive.google.com/thumbnail?id=1VKSFcktSRlUPT5muftDmTB-iTgxIkXee&sz=w1000', description: 'S 尺寸' },
+                    { id: 80063, name: 'M', price: 5200, image: 'https://drive.google.com/thumbnail?id=1VKSFcktSRlUPT5muftDmTB-iTgxIkXee&sz=w1000', description: 'M 尺寸' },
+                    { id: 80064, name: 'L', price: 5200, image: 'https://drive.google.com/thumbnail?id=1VKSFcktSRlUPT5muftDmTB-iTgxIkXee&sz=w1000', description: 'L 尺寸' },
+                    { id: 80065, name: 'XL', price: 5200, image: 'https://drive.google.com/thumbnail?id=1VKSFcktSRlUPT5muftDmTB-iTgxIkXee&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10007,
+                name: 'Curry 藍色 短袖帽T',
+                price: 2600,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=14ALPI-TniJ-IwVXRur1J_Vq_X7WPhG-o&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=14ALPI-TniJ-IwVXRur1J_Vq_X7WPhG-o&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1MKp6j3f7U_oDicnGxG3la7IXre5oI6V0&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權 Curry 藍色短袖帽T，兒童尺寸。',
+                variants: [
+                    { id: 80071, name: '2XB', price: 2600, image: 'https://drive.google.com/thumbnail?id=14ALPI-TniJ-IwVXRur1J_Vq_X7WPhG-o&sz=w1000', description: '2XB 尺寸' },
+                    { id: 80072, name: '3XB', price: 2600, image: 'https://drive.google.com/thumbnail?id=14ALPI-TniJ-IwVXRur1J_Vq_X7WPhG-o&sz=w1000', description: '3XB 尺寸' },
+                    { id: 80073, name: '4XB', price: 2600, image: 'https://drive.google.com/thumbnail?id=14ALPI-TniJ-IwVXRur1J_Vq_X7WPhG-o&sz=w1000', description: '4XB 尺寸' },
+                    { id: 80074, name: '5XB', price: 2600, image: 'https://drive.google.com/thumbnail?id=14ALPI-TniJ-IwVXRur1J_Vq_X7WPhG-o&sz=w1000', description: '5XB 尺寸' },
+                    { id: 80075, name: '6XB', price: 2600, image: 'https://drive.google.com/thumbnail?id=14ALPI-TniJ-IwVXRur1J_Vq_X7WPhG-o&sz=w1000', description: '6XB 尺寸' }
+                ]
+            },
+            {
+                id: 10008,
+                name: 'Curry 黑色帽T',
+                price: 3000,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=18RzMVenEr4P6aJWdE4owQkzCHCNqVs18&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=18RzMVenEr4P6aJWdE4owQkzCHCNqVs18&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Dd4QSqx0VnokK1ORICdWmnndEF3fAkfd&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權 Curry 黑色帽T。',
+                variants: [
+                    { id: 80081, name: 'XS', price: 3000, image: 'https://drive.google.com/thumbnail?id=18RzMVenEr4P6aJWdE4owQkzCHCNqVs18&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80082, name: 'S', price: 3000, image: 'https://drive.google.com/thumbnail?id=18RzMVenEr4P6aJWdE4owQkzCHCNqVs18&sz=w1000', description: 'S 尺寸' },
+                    { id: 80083, name: 'M', price: 3000, image: 'https://drive.google.com/thumbnail?id=18RzMVenEr4P6aJWdE4owQkzCHCNqVs18&sz=w1000', description: 'M 尺寸' },
+                    { id: 80084, name: 'L', price: 3000, image: 'https://drive.google.com/thumbnail?id=18RzMVenEr4P6aJWdE4owQkzCHCNqVs18&sz=w1000', description: 'L 尺寸' },
+                    { id: 80085, name: 'XL', price: 3000, image: 'https://drive.google.com/thumbnail?id=18RzMVenEr4P6aJWdE4owQkzCHCNqVs18&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10009,
+                name: '勇士隊 黑色帽T',
+                price: 3000,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=1cqXeOxn8X1q4LEqwZQPSmJeWpUrtSwLi&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1cqXeOxn8X1q4LEqwZQPSmJeWpUrtSwLi&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=10XJIA8-q3Dx5zaFYm-kgdQuCftyIxNo1&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權黑色帽T。',
+                variants: [
+                    { id: 80091, name: 'XS', price: 3000, image: 'https://drive.google.com/thumbnail?id=1cqXeOxn8X1q4LEqwZQPSmJeWpUrtSwLi&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80092, name: 'S', price: 3000, image: 'https://drive.google.com/thumbnail?id=1cqXeOxn8X1q4LEqwZQPSmJeWpUrtSwLi&sz=w1000', description: 'S 尺寸' },
+                    { id: 80093, name: 'M', price: 3000, image: 'https://drive.google.com/thumbnail?id=1cqXeOxn8X1q4LEqwZQPSmJeWpUrtSwLi&sz=w1000', description: 'M 尺寸' },
+                    { id: 80094, name: 'L', price: 3000, image: 'https://drive.google.com/thumbnail?id=1cqXeOxn8X1q4LEqwZQPSmJeWpUrtSwLi&sz=w1000', description: 'L 尺寸' },
+                    { id: 80095, name: 'XL', price: 3000, image: 'https://drive.google.com/thumbnail?id=1cqXeOxn8X1q4LEqwZQPSmJeWpUrtSwLi&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10010,
+                name: '勇士隊 米色帽T',
+                price: 3000,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=1YpCCBseIhvyaDctrqMQd4lyGWpPzOAX_&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1YpCCBseIhvyaDctrqMQd4lyGWpPzOAX_&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=16Q-lHR7OW2AVgkNcNQmL7x179-UmUWdo&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權米色帽T。',
+                variants: [
+                    { id: 80101, name: 'XS', price: 3000, image: 'https://drive.google.com/thumbnail?id=1YpCCBseIhvyaDctrqMQd4lyGWpPzOAX_&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80102, name: 'S', price: 3000, image: 'https://drive.google.com/thumbnail?id=1YpCCBseIhvyaDctrqMQd4lyGWpPzOAX_&sz=w1000', description: 'S 尺寸' },
+                    { id: 80103, name: 'M', price: 3000, image: 'https://drive.google.com/thumbnail?id=1YpCCBseIhvyaDctrqMQd4lyGWpPzOAX_&sz=w1000', description: 'M 尺寸' },
+                    { id: 80104, name: 'L', price: 3000, image: 'https://drive.google.com/thumbnail?id=1YpCCBseIhvyaDctrqMQd4lyGWpPzOAX_&sz=w1000', description: 'L 尺寸' },
+                    { id: 80105, name: 'XL', price: 3000, image: 'https://drive.google.com/thumbnail?id=1YpCCBseIhvyaDctrqMQd4lyGWpPzOAX_&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10011,
+                name: '勇士隊 白色帽T',
+                price: 2700,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=11yn3bSk4_0sHb7b_XTMTTQR8zZM24yp1&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=11yn3bSk4_0sHb7b_XTMTTQR8zZM24yp1&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1zE5hJsjCCSQFjh_kDtSpPcUociO9gL_K&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權白色帽T。',
+                variants: [
+                    { id: 80111, name: 'XS', price: 2700, image: 'https://drive.google.com/thumbnail?id=11yn3bSk4_0sHb7b_XTMTTQR8zZM24yp1&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80112, name: 'S', price: 2700, image: 'https://drive.google.com/thumbnail?id=11yn3bSk4_0sHb7b_XTMTTQR8zZM24yp1&sz=w1000', description: 'S 尺寸' },
+                    { id: 80113, name: 'M', price: 2700, image: 'https://drive.google.com/thumbnail?id=11yn3bSk4_0sHb7b_XTMTTQR8zZM24yp1&sz=w1000', description: 'M 尺寸' },
+                    { id: 80114, name: 'L', price: 2700, image: 'https://drive.google.com/thumbnail?id=11yn3bSk4_0sHb7b_XTMTTQR8zZM24yp1&sz=w1000', description: 'L 尺寸' },
+                    { id: 80115, name: 'XL', price: 2700, image: 'https://drive.google.com/thumbnail?id=11yn3bSk4_0sHb7b_XTMTTQR8zZM24yp1&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            {
+                id: 10012,
+                name: '全明星 黑色帽T',
+                price: 3000,
+                description: '多款尺寸可選',
+                image: 'https://drive.google.com/thumbnail?id=1w2zgAf16-k7F8S1PsGA8yBmFS8QDhRUT&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1w2zgAf16-k7F8S1PsGA8yBmFS8QDhRUT&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=13f_JQ0eBHrG_tw4B791P4oEOqbN4MKnL&sz=w1000'
+                ],
+                category: 'nba-warriors-apparel',
+                country: 'usa',
+                detailedDescription: 'NBA 全明星官方授權黑色帽T。',
+                variants: [
+                    { id: 80121, name: 'XS', price: 3000, image: 'https://drive.google.com/thumbnail?id=1w2zgAf16-k7F8S1PsGA8yBmFS8QDhRUT&sz=w1000', description: 'XS 尺寸' },
+                    { id: 80122, name: 'S', price: 3000, image: 'https://drive.google.com/thumbnail?id=1w2zgAf16-k7F8S1PsGA8yBmFS8QDhRUT&sz=w1000', description: 'S 尺寸' },
+                    { id: 80123, name: 'M', price: 3000, image: 'https://drive.google.com/thumbnail?id=1w2zgAf16-k7F8S1PsGA8yBmFS8QDhRUT&sz=w1000', description: 'M 尺寸' },
+                    { id: 80124, name: 'L', price: 3000, image: 'https://drive.google.com/thumbnail?id=1w2zgAf16-k7F8S1PsGA8yBmFS8QDhRUT&sz=w1000', description: 'L 尺寸' },
+                    { id: 80125, name: 'XL', price: 3000, image: 'https://drive.google.com/thumbnail?id=1w2zgAf16-k7F8S1PsGA8yBmFS8QDhRUT&sz=w1000', description: 'XL 尺寸' }
+                ]
+            },
+            // ========== 美國商品 - NBA 勇士隊周邊 ==========
+            {
+                id: 10101,
+                name: '勇士水杯 (Tumbler)',
+                price: 950,
+                description: '710 ml (容量)',
+                image: 'https://drive.google.com/thumbnail?id=1Sf0b0BldwlbGoh3vPnBjLJLITuCm98QS&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權 Tumbler 水杯，710ml 大容量，適合日常使用及運動攜帶。'
+            },
+            {
+                id: 10102,
+                name: '勇士隊標鑰匙扣',
+                price: 500,
+                description: '壓克力製',
+                image: 'https://drive.google.com/thumbnail?id=1ZuAS30r3JYHckLt7E4Jwk2jMbeE47pR1&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權壓克力鑰匙扣，精緻小巧，球迷必備配件。'
+            },
+            {
+                id: 10103,
+                name: '勇士水杯 (Arctic)',
+                price: 950,
+                description: '710 ml (容量)',
+                image: 'https://drive.google.com/thumbnail?id=18K8uBOqPiCLKWsu9-AidUe7BzchC9yUW&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=18K8uBOqPiCLKWsu9-AidUe7BzchC9yUW&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1YhlosO-wJvsnQL376ZftsS5-t0fIFu7T&sz=w1000'
+                ],
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權 Arctic 系列水杯，710ml 容量，保溫保冷效果佳。'
+            },
+            {
+                id: 10104,
+                name: '勇士水杯 (Tumbler) - 特別款',
+                price: 950,
+                description: '710 ml (容量)',
+                image: 'https://drive.google.com/thumbnail?id=1TqVdraRL7geR-Tq_NODy0YeynZqAfxyZ&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權 Tumbler 水杯特別款，710ml 容量，限量設計。'
+            },
+            {
+                id: 10105,
+                name: 'NBA 全明星帽子',
+                price: 1350,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1EVi2MiILLJx-TtLV06fzbmzFMUhHW32W&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1EVi2MiILLJx-TtLV06fzbmzFMUhHW32W&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1amlCn_nYckXUFi_AmNKggUp-3JQG2qUt&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1VaHURh_ELUQgd6EQGUJSVoLpPUMwe6_H&sz=w1000'
+                ],
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 全明星官方授權帽子，經典設計，展現籃球熱情。'
+            },
+            {
+                id: 10106,
+                name: '勇士隊 帽子 (經典款式)',
+                price: 1250,
+                description: '多款顏色可選',
+                image: 'https://drive.google.com/thumbnail?id=1HVcyThYLuFJ2XY10c0JYu-lGAKnlTMzL&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權經典款帽子，多款顏色可選，展現你的勇士精神！',
+                variants: [
+                    {
+                        id: 101061,
+                        name: '藍色1',
+                        price: 1250,
+                        image: 'https://drive.google.com/thumbnail?id=1HVcyThYLuFJ2XY10c0JYu-lGAKnlTMzL&sz=w1000',
+                        description: '經典藍色款式'
+                    },
+                    {
+                        id: 101062,
+                        name: '藍色2',
+                        price: 1300,
+                        image: 'https://drive.google.com/thumbnail?id=1LYkOpl6ws97i3ltBk8BfyWrndWqHNnKu&sz=w1000',
+                        description: '特別藍色款式'
+                    },
+                    {
+                        id: 101063,
+                        name: '深藍色',
+                        price: 1250,
+                        image: 'https://drive.google.com/thumbnail?id=1bCxLnvYyg3iIorBgx5pPKQoZN47maJFp&sz=w1000',
+                        description: '深藍色款式'
+                    },
+                    {
+                        id: 101064,
+                        name: '淺藍色',
+                        price: 1250,
+                        image: 'https://drive.google.com/thumbnail?id=1z6A1tSarFx9zd96k4FKjNo9n2kCZeNAJ&sz=w1000',
+                        description: '淺藍色款式'
+                    },
+                    {
+                        id: 101065,
+                        name: '黃色',
+                        price: 1250,
+                        image: 'https://drive.google.com/thumbnail?id=17DGlf6ISImScYZyNhOEWU8B_gdeDpfjA&sz=w1000',
+                        description: '黃色款式'
+                    },
+                    {
+                        id: 101066,
+                        name: '藍白混色',
+                        price: 1350,
+                        image: 'https://drive.google.com/thumbnail?id=1j58owUZscaKRxKVx4EW3dtK-2WtaXJdN&sz=w1000',
+                        description: '藍白混色款式'
+                    }
+                ]
+            },
+            {
+                id: 10107,
+                name: '勇士隊 帽子 (特別款式1)',
+                price: 1350,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1EJhCm_fstYUfi3aydcifD7xO_nuy5BRn&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1EJhCm_fstYUfi3aydcifD7xO_nuy5BRn&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Ccdnt3nJxjchw_IvyEcdoyEbQSqlnfnE&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=14dKltBQ3HzHDwhLgMooMeeEWY2JfzEJ8&sz=w1000'
+                ],
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權特別款式帽子，獨特設計，限量發售。'
+            },
+            {
+                id: 10108,
+                name: '勇士隊 帽子 (特別款式2)',
+                price: 1350,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1gRLCj3wFoMwNPiliqvELDbyAhTry2Mz1&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1gRLCj3wFoMwNPiliqvELDbyAhTry2Mz1&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1PqhGl8vPgPjVMnvkYJ4U2vkF_w9LjExd&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1G5SA4zmGX1FE1oM-q0ZQDRmw0YbYtlfz&sz=w1000'
+                ],
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權特別款式帽子，時尚設計。'
+            },
+            {
+                id: 10109,
+                name: '勇士隊 帽子 (特別款式3)',
+                price: 1450,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1GJYaOrw7bHSmRH6OMc077UUdlBlcmqyx&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1GJYaOrw7bHSmRH6OMc077UUdlBlcmqyx&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1POcqzSyTJUVYJU5UQKrqQkuteEqmlOEU&sz=w1000'
+                ],
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權特別款式帽子，高級材質。'
+            },
+            {
+                id: 10110,
+                name: '勇士隊 帽子 (特別款式4)',
+                price: 1450,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1oyn1kx0awxGz5dUVdQqrVPbOf2XZPFQa&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1oyn1kx0awxGz5dUVdQqrVPbOf2XZPFQa&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=17WKWEuaXUTSPSFIk-0-y1-CZ0VmFUwiL&sz=w1000'
+                ],
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權特別款式帽子，精緻工藝。'
+            },
+            {
+                id: 10111,
+                name: '勇士隊 帽子 (特別款式5)',
+                price: 1350,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=16LXd3lmYMNQwe6sLw3bQJy89ExmsEpkF&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=16LXd3lmYMNQwe6sLw3bQJy89ExmsEpkF&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1ccARiDwmTNuqKL7YLb_P83NRMReMphuR&sz=w1000'
+                ],
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權特別款式帽子。'
+            },
+            {
+                id: 10112,
+                name: '勇士隊 帽子 (特別款式6)',
+                price: 1350,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1Iqa5OV9DIuwYw5388igB_19PJLSdLRAQ&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1Iqa5OV9DIuwYw5388igB_19PJLSdLRAQ&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1MUwRS72ZStfplPpwNDvw486MWjYfELNQ&sz=w1000'
+                ],
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權特別款式帽子。'
+            },
+            {
+                id: 10113,
+                name: '勇士隊 帽子 (特別款式7)',
+                price: 1450,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1ByP60UxEt62CHlCRPhhiVrRyoDbMmWjj&sz=w1000',
+                images: [
+                    'https://drive.google.com/thumbnail?id=1ByP60UxEt62CHlCRPhhiVrRyoDbMmWjj&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1RtKq9DRPD-rNb2t6h5nwc3kZQpEmqyed&sz=w1000',
+                    'https://drive.google.com/thumbnail?id=1Yi8KrxuzOA8hBUt1tlotFayEt-CG2bZc&sz=w1000'
+                ],
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權特別款式帽子。'
+            },
+            {
+                id: 10114,
+                name: '勇士隊 帽子 (特別款式8)',
+                price: 1250,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1Xp3VvhL7jNLuZirqxCFbkXXZnEZ2Y3Jq&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權特別款式帽子。'
+            },
+            {
+                id: 10115,
+                name: '勇士隊 運動用藍芽耳機',
+                price: 2000,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1kBbFcptsgIV_iP-8pnoJxCLdRqtObuve&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權藍芽耳機，運動專用，音質出色。'
+            },
+            {
+                id: 10116,
+                name: '勇士隊 馬克杯 *2 藍白各一',
+                price: 1500,
+                description: '440ml 容量',
+                image: 'https://drive.google.com/thumbnail?id=1P6olkqqdnEU6K5mPuE6Nt03dTic9HWV9&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權馬克杯組，藍白各一個，440ml 容量，適合日常使用。'
+            },
+            {
+                id: 10117,
+                name: '勇士隊 馬克杯 *2 復古款',
+                price: 2000,
+                description: '440ml 容量',
+                image: 'https://drive.google.com/thumbnail?id=1096RjWL72Ug_QfOOb5e89S4UAyhDCKZc&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權馬克杯組復古款，440ml 容量，經典設計。'
+            },
+            {
+                id: 10118,
+                name: '勇士隊 馬克杯 *2 特別款',
+                price: 2000,
+                description: '440ml 容量',
+                image: 'https://drive.google.com/thumbnail?id=1640Li89trtVG7Qgqw6GM_BfSsNjCiGTz&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: 'NBA 勇士隊官方授權馬克杯組特別款，440ml 容量，限量設計。'
+            },
+            {
+                id: 10119,
+                name: '勇士隊 紀念品禮盒',
+                price: 3000,
+                description: '',
+                image: 'https://drive.google.com/thumbnail?id=1EaA25VMuUqa5-8v1Vs8jV7tUDPrh_d9d&sz=w1000',
+                category: 'nba-warriors',
+                country: 'usa',
+                detailedDescription: '此禮盒內含以下物品：\n\n• 30吋 x 60吋沙灘巾\n• 雙面花園旗，配金屬花園旗桿\n• 多用途貼紙，內含三張貼紙\n• 7吋耐用不銹鋼陡峭開瓶器\n• 纖薄型罐裝保溫套 2 件裝及普通型罐裝保溫套 2 件裝\n• 官方授權'
             }
         ];
 
@@ -5429,6 +6054,7 @@
             document.getElementById('singapore-categories').style.display = 'none';
             document.getElementById('korea-categories').style.display = 'none';
             document.getElementById('japan-categories').style.display = 'none';
+            document.getElementById('usa-categories').style.display = 'none';
 
             // 顯示對應國家的分類導航
             if (country === 'singapore') {
@@ -5440,6 +6066,9 @@
             } else if (country === 'japan') {
                 document.getElementById('japan-categories').style.display = 'block';
                 console.log('日本代購服務開放中，截止日期：2025/1/25');
+            } else if (country === 'usa') {
+                document.getElementById('usa-categories').style.display = 'block';
+                console.log('美國代購服務開放中');
             }
 
             // 更新當前國家
